@@ -1,0 +1,135 @@
+body{
+    background-color: #002855;
+}
+.main-header{   
+     background-color: #002855;
+     height: 100%;
+     width: 100%;
+     padding: 10px;
+}
+.primerboton{
+    padding: 0px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.fa-home-alt{
+    display: flex;
+    align-items: center;
+    width: 150px;
+    height: 100px;
+    font-size: 250%;
+    text-align: start;
+}
+.fa-heart{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 250%;
+}
+.fa-shopping-cart{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 250%;
+}
+.fa-user-circle{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 250%;
+}
+
+.tamanioicono{
+    display:flex;
+    align-items: flex-start;
+}
+
+.botones-abajo ul {
+    background-color: rgb(255, 255, 255);
+    list-style: none;
+    border-radius: 20px;
+}
+.botones-abajo1 ul {
+    background-color: rgb(255, 255, 255);
+    list-style: none;
+    border-radius: 20px;
+}
+.parte-arriba ul{
+    padding: 0px;
+    background-color: #00489b;
+    list-style: none;
+    border-radius: 20px;
+}
+
+.segundo{
+    display: flex;
+    justify-content: space-between;
+}
+.Logo{
+    padding: 0px;
+    display: flex;
+    border-radius: 20px;
+    width: 50%;
+    height: 100%;
+}
+.fa-times-circle{
+    padding : 10px;
+    color:rgb(255, 255, 255);
+    font-size: 300%;
+}
+.conteiner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.Titulo-descripction{
+    padding: 0px;
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+}
+h3{
+    width: 40%;
+    height: 40%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color:rgb(202, 202, 202);
+    font-family: 'Mulish', sans-serif;
+}
+h6{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Mulish', sans-serif;
+    color:rgb(202, 202, 202);
+}
+.imagen{
+    border : solid;
+    border-color: rgb(57, 57, 58);
+    border-radius: 20px;
+    margin: auto;
+    display: flex;
+    width: 80%;
+    height: 80%;
+}
+
+@media (min-width: 768px){
+    .main-header{
+        display: flex;
+    }
+    .parte-arriba{
+        width: 100%;
+        height: 100%;
+    }
+    .conteiner{
+        display: block;
+    }
+    .botones-abajo ul{
+        display: flex;
+    }
+}
