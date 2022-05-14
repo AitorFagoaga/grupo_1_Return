@@ -14,7 +14,7 @@ myLocalServer.get('/', (request, response) => {
     response.sendFile(path.join(__dirname, '/views/index.html'));
 })
 
-myLocalServer.get('/cart', (request, response) => {
+myLocalServer.get('/productCart', (request, response) => {
     response.sendFile(path.join(__dirname, '/views/productCart.html'));
 })
 
@@ -22,7 +22,7 @@ myLocalServer.get('/login', (request, response) => {
     response.sendFile(path.join(__dirname, '/views/login.html'));
 })
 
-myLocalServer.get('/product', (request, response) => {
+myLocalServer.get('/productDetail', (request, response) => {
     response.sendFile(path.join(__dirname, '/views/productDetail.html'));
 })
 
