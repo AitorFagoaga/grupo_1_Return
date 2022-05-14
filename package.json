@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
+  },
+  "name": "return",
+  "description": "Somos una empresa dedicada a la venta de productos electrónicos. Porque sabemos que los grandes pensadores del futuro necesitan de un equipamiento acorde que los acompañen en su camino de innovación y revolución tecnológica, brindamos una amplia gama de equipos que cuenta con la última tecnología.",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrunoSecchiari/grupo_1_Return.git"
+  },
+  "author": "Bruno Secchiari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrunoSecchiari/grupo_1_Return/issues"
+  },
+  "homepage": "https://github.com/BrunoSecchiari/grupo_1_Return#readme"
+}
