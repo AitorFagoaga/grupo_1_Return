@@ -7,6 +7,7 @@
     <!-- <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet"> -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
     <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> -->
 
     <!-- Meta -->
@@ -49,24 +50,24 @@
         <h2 class="headline">Offers you can't miss!</h2>
         <section>
             <!-- 1st Featured Product -->
-            <form class="featured-product-1" name="featured-product-1">
+            <form action="" class="featured-product-1" method="get" name="featured-product-1">
                 <h3 class="featured-product-discount">50%</h3>
                 <div>
                     <img alt="" class="featured-product-image" src="">
                 </div>
                 <h4 class="featured-product-title">Product Name</h4>
                 <h4 class="featured-product-price">U$D 999.99</h4>
-                <button class="featured-product-button" for="featured-product-1" type="submit">View Detail</button>
+                <button class="featured-product-button" type="submit">View Detail</button>
             </form>
             <!-- 2nd Featured Product -->
-            <form class="featured-product-2" name="featured-product-2">
+            <form action="" class="featured-product-2" method="get" name="featured-product-2">
                 <h3 class="featured-product-discount">20%</h3>
                 <div>
                     <img alt="" class="featured-product-image" src="">
                 </div>
                 <h4 class="featured-product-title">Product Name</h4>
                 <h4 class="featured-product-price">U$D 750.00</h4>
-                <button class="featured-product-button" for="featured-product-2" type="submit">View Detail</button>
+                <button class="featured-product-button" type="submit">View Detail</button>
             </form>
             <!-- 3rd Featured Product -->
             <form class="featured-product-3" name="featured-product-3">
@@ -76,26 +77,28 @@
                 </div>
                 <h4 class="featured-product-title">Product Name</h4>
                 <h4 class="featured-product-price">U$D 750.00</h4>
-                <button class="featured-product-button" for="featured-product-1" type="submit">View Detail</button>
+                <button class="featured-product-button" type="submit">View Detail</button>
             </form>
         </section>
     </main>
     <footer>
         <!-- Navigation Bar -->
-        <nav class="navigation-bar" name="navigation-bar">
+        <form action="" class="navigation-bar" method="get" name="navigation-bar">
             <div>
-                <i class="fa-solid fa-house house-icon"></i>
+                <button class="navigation-bar-button" type="submit">
+                    <i class="fa-solid fa-house navigation-bar-icon"></i>
+                </button>
+                <button class="navigation-bar-button" type="submit">
+                    <i class="fa-solid fa-heart navigation-bar-icon"></i>
+                </button>
+                <button class="navigation-bar-button" type="submit">            
+                    <i class="fa-solid fa-cart-shopping navigation-bar-icon"></i>
+                </button>
+                <button class="navigation-bar-button" type="submit">
+                    <i class="fa-solid fa-user navigation-bar-icon"></i>
+                </button>
             </div>
-            <div>
-                <i class="fa-solid fa-cart-shopping cart-icon"></i>
-            </div>
-            <div>
-                <i class="fa-solid fa-heart heart-icon"></i>
-            </div>
-            <div>
-                <i class="fa-solid fa-user person-icon"></i>
-            </div>
-        </nav>
+        </form>
     </footer>
 </body>
 </html>
