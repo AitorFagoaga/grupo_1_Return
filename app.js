@@ -29,3 +29,4 @@ myLocalServer.get('/productDetail', (request, response) => {
 myLocalServer.get('/register', (request, response) => {
     response.sendFile(path.join(__dirname, '/views/register.html'));
 })
+
