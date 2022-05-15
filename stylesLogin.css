@@ -1,0 +1,141 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin:0% ;
+    background-color: #002855;
+    font-family: sans-serif
+}
+header {
+    background-color:#3A506B;
+    height: 130px;
+    width:100%;
+    margin-bottom: 5%;
+   
+}
+img {
+    flex-direction: column;
+    height: 130px;
+    width:30%;
+    max-width: 150px;
+    margin: auto;
+    border-radius: 180%;
+
+}
+.cornerheader {
+    color: rgb(244, 244, 244) ;
+    text-align:center;
+    font-family: sans-serif;
+    float: right;
+    position: relative;
+    bottom:80%   
+}
+.link-header {
+    color: white;
+    text-decoration:none;
+    font-weight: bold;
+    width: 100%;
+    max-width: 150px;
+    margin: auto;
+    text-align: center;
+    
+}
+.link-header:hover {
+    color:#5BC0BE 
+}
+ 
+h1{
+    text-align:center;
+    color:#fcfcfc;
+
+}
+.form-login{
+    height: 300px;
+    max-width: 600px;
+    background-color: #fcfcfc;
+    border-radius: 7px;
+    margin: auto;
+    position: relative;
+    top: 20px;
+    font-family: sans-serif;
+    text-align: center;
+    
+}
+.form-titulo {
+    color:#002855;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+.sinborde {
+    border: 0;
+}
+.input-contenedor {
+    margin-bottom:20px;
+    border: 1px solid #002855;
+    margin-right: 30px;
+    margin-left: 30px;
+
+}
+.icon {
+    color:#002855;
+    size: 50px;
+}
+
+.link-form {
+    color:#002855;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 0;
+    ;
+}
+.link-form:hover {
+    color:#5BC0BE 
+}
+.button {
+    border:none;
+    color:white;
+    font-size: 20px;
+    background:#002855;
+    border-radius: 4px;
+    padding: 9px;
+    cursor:pointer;
+    width: 90%;
+    margin:20px;
+  
+}
+.button:hover {
+    background-color: #5BC0BE
+}
+p{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5%;
+}
+
+@media(win-width:768px)
+{.header {
+    background-color:#1a2537;
+    height: 100px;
+    width:100%;
+    padding: 10px;
+}
+.link-header {
+    color: white;
+    text-decoration:none;
+    font-weight: 600;
+    margin-top: 17px;
+}
+.link-header:hover {
+    color: cadetblue;
+}
+.formulario {
+        background: rgba(253, 251, 251);
+        margin-top:150px;
+        margin-left:100px;
+        margin-right:100px;
+        border-radius: 7%;
+}
+}

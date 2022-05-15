@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap" rel="stylesheet">
+    <title>Ingresa</title>
+    <link rel="stylesheet" href="stylesLogin.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    rel="stylesheet"/>
+    
+<header>
+    <div class="img"><img src="Logo.png" alt="logoReturn"> 
+    </div>
+    <div class="cornerheader">
+    <i class="icono fa-solid fa-circle-user"></i>
+    <p> ¿No tienes cuenta? </p><a class="link-header" href="register.html">Registrate</a>
+    </div>
+</header>
+</head>
+<body>
+    
+    <form action="login.html" method="post" class="form-login">
+        <h1 class =" form-titulo"> Inicia Sesion </h1>
+
+
+        <div class="input-contenedor">
+           <i class="fa-solid fa-user icon"></i>
+           <input type="text" name ="email" class="sinborde" placeholder="Correo Electronico" maxlength="15"required/>
+
+
+        </div>
+
+        <div class="input-contenedor">
+            <i class="fa-solid fa-lock icon"></i>
+            <input type="password" name= "password" class="sinborde" placeholder="Contraseña" maxlength="8" required/>
+
+         </div>
+
+         <div>
+         <p>¿Olvidaste tu contraseña? </p>
+         <a class="link-form" href="passwordrecovery.html">Recuperala aqui</a>
+         </div>
+
+         <div><input type="submit" value="Continua" class="button"></div>
+         
+        
+        </div>
+    
+    </form>
+</body>
+
+</html>
