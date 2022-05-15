@@ -3,8 +3,6 @@ body{
 }
 .main-header{   
      background-color: #002855;
-     height: 100%;
-     width: 100%;
      padding: 10px;
 }
 .primerboton{
@@ -63,6 +61,8 @@ body{
 }
 
 .segundo{
+    width: 50%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -70,8 +70,8 @@ body{
     padding: 0px;
     display: flex;
     border-radius: 20px;
-    width: 50%;
-    height: 100%;
+    width: 150px;
+    height: 150px;
 }
 .fa-times-circle{
     padding : 10px;
@@ -86,27 +86,27 @@ body{
     width: 100%;
     height: 100%;
 }
-.Titulo-descripction{
-    padding: 0px;
+h1{
     display: flex;
-    list-style: none;
-    flex-direction: column;
-}
-h3{
-    width: 40%;
-    height: 40%;
     justify-content: center;
-    align-items: center;
-    display: flex;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    font-size: 250%;
     color:rgb(202, 202, 202);
     font-family: 'Mulish', sans-serif;
 }
-h6{ 
+h2{
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-family: 'Mulish', sans-serif;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    font-size: 150%;
     color:rgb(202, 202, 202);
+    font-family: 'Mulish', sans-serif;
 }
 .imagen{
     border : solid;
