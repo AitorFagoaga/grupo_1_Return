@@ -14,8 +14,12 @@ myLocalServer.get('/', (request, response) => {
     response.sendFile(path.join(__dirname, '/views/index.html'));
 })
 
-myLocalServer.get('/productCart', (request, response) => {
-    response.sendFile(path.join(__dirname, '/views/productCart.html'));
+myLocalServer.get('/productCartEmpty', (request, response) => {
+    response.sendFile(path.join(__dirname, '/views/productCartEmpty.html'));
+})
+
+myLocalServer.get('/productCartFull', (request, response) => {
+    response.sendFile(path.join(__dirname, '/views/productCartFull.html'));
 })
 
 myLocalServer.get('/login', (request, response) => {
