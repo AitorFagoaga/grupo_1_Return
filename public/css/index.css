@@ -8,7 +8,7 @@
 
 body {
     background: linear-gradient(180deg, rgba(11, 19, 43, 1) 0%, rgba(58, 80, 107, 1) 50%, rgba(111, 255, 233, 1) 100%);
-    font-family: "Raleway";
+    font-family: "Mulish";
     margin-bottom: 60px;
     padding: 20px;
 }
@@ -24,28 +24,30 @@ body {
 
 .category-1,
 .category-2, 
-.category-3 {
-    background: linear-gradient(180deg, rgba(11, 19, 43, 1) 0%, rgba(58, 80, 107, 1) 50%, rgba(11, 19, 43, 1) 100%);
+.category-3, 
+.category-4 {
+    background: linear-gradient(180deg, rgba(11, 19, 43, 1) 0%, rgba(58, 80, 107, 1) 100%);
     border: solid 1px #0B132B;
-    border-radius: 5px;
+    border-radius: 15px;
     box-shadow: 4px 2px 2px #000000;
     color: #FFFFFF;
-    font-family: "Raleway";
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: bold;
     list-style: none;
     margin-right: 8px;
-    padding: 10px;
+    padding-top: 10px;
+    text-align: center;
     text-decoration: none;
+    width: 100px;
 }
 
-.category-4, 
 .category-5 {
     display: none;
 }
 
 .filter {
     background-color: #FFFFFF;
-    border: solid 1px #0B132B;
+    border: solid 1px #000000;
     border-radius: 5px;
     box-shadow: 4px 2px 2px #000000;
     font-size: 18px; 
@@ -54,7 +56,7 @@ body {
 }
 
 .headline {
-    border-top: solid 3px #000000;
+    border-top: solid 1px #000000;
     font-size: 18px;
     padding: 20px 0px 10px 0px;
 }
@@ -81,7 +83,8 @@ body {
 
 .navigation-bar {
     background: linear-gradient(180deg, rgba(11, 19, 43, 1) 0%, rgba(58, 80, 107, 1) 100%);
-    border-radius: 50px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
     bottom: 0px;
     display: flex;
     height: 60px;
@@ -93,21 +96,20 @@ body {
 }
 
 .navigation-bar-button {
-    border: none;
     transition: all 0.45s;
 }
 
 .navigation-bar-icon {
-    color: #FFFFFF;
-    font-size: 20px;
-    margin-top: 15px;
+    color: #6FFFE9;
+    font-size: 18px;
+    margin-top: 17px;
     padding: 5px;
 }
 
 .product-1, 
 .product-2 {
     margin-left: 5px;
-    margin-top: 20px;
+    margin-top: 30px;
     position: relative;
 }
 
@@ -123,27 +125,26 @@ body {
 }
 
 .product-button {
+    background: linear-gradient(180deg, rgba(11, 19, 43, 1) 0%, rgba(58, 80, 107, 1) 100%);
+    border: solid 1px #000000;
+    border-radius: 5px;
     bottom: 15px;
-    border: solid 1px #0B132B;
-    border-radius: 10px;
-    font-family: "Raleway";
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 13px;
     padding: 5px;
     right: 10px;
     text-decoration: none;
 }
 
 .product-discount {
-    background: linear-gradient(180deg, rgba(11, 19, 43, 1) 0%, rgba(58, 80, 107, 1) 50%, rgba(11, 19, 43, 1) 100%);
+    background: linear-gradient(180deg, rgba(11, 19, 43, 1) 0%, rgba(58, 80, 107, 1) 100%);
     border: solid 1px #000000;
     border-radius: 50%;
-    font-size: 18px;
+    font-size: 19px;
     height: 50px;
     left: -23px;
-    line-height: normal;
-    padding: 12px 5px;
+    padding: 12px 0px;
     position: absolute;
+    text-align: center;
     transition: all 0.5s;
     top: -40px;
     width: 50px;
@@ -152,13 +153,14 @@ body {
 .product-image {
     border: solid 1px #000000;
     border-radius: 10px;
+    box-shadow: 4px 2px 2px #000000;
     height: 150px;
     width: 300px;
 }
 
 .product-price, 
 .product-title {
-    font-size: 16px;
+    font-size: 13px;
     left: 10px;
     position: absolute;
 }
@@ -190,6 +192,6 @@ body {
 /* Pseudo Selectores (A-Z) */
 
 .navigation-bar-button:hover {
-    transform: translate(0px, 5px);
+    transform: rotate(180deg) scale(0.1, 0.1);
 }
 
