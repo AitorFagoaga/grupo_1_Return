@@ -3,7 +3,7 @@ const path = require('path');
 
 const myLocalServer = express();
 
-const publicFolderPath = path.join(__dirname, '/public');
+const publicFolderPath = path.join(__dirname, './public');
 myLocalServer.use(express.static(publicFolderPath));
 
 myLocalServer.listen(3000, () => {
