@@ -87,15 +87,12 @@ body {
 
 .magnifying-glass {
     background: linear-gradient(180deg, rgba(58, 80, 107, 1) 0%, rgba(111, 255, 233, 1) 100%);
-    border-bottom: solid 1px #0B132B;
+    border: none;
     border-bottom-right-radius: 20px;
-    border-left: none;
-    border-right: solid 1px #0B132B;
-    border-top: solid 1px #0B132B;
     border-top-right-radius: 20px;
     color: #1C2541;
     font-size: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     padding: 10px 15px;
 }
 
@@ -191,7 +188,7 @@ body {
 }
 
 .sale-product-1 {
-    margin-bottom: 45px;
+    margin-bottom: 40px;
     margin-left: 10px; 
     position: relative;
 }
@@ -243,13 +240,10 @@ body {
 
 .search-bar {
     background: linear-gradient(180deg, rgba(58, 80, 107, 1) 0%, rgba(111, 255, 233, 1) 100%);
-    border-bottom: solid 1px #0B132B;
+    border: none;
     border-bottom-left-radius: 20px;
-    border-left: solid 1px #0B132B;
-    border-right: none;
-    border-top: solid 1px #0B132B;
     border-top-left-radius: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     width: 100%;
 }
 
