@@ -3,33 +3,30 @@
 }
 
 body {
-    margin:0% ;
-    background-color: #002855;
-    font-family: sans-serif
+    background: linear-gradient(180deg, rgba(11, 19, 43, 1) 0%, rgba(58, 80, 107, 1) 50%, rgba(111, 255, 233, 1) 100%);
+    font-family: "Mulish";
+    padding: 20px;
+    margin-bottom: 40%;
+
 }
 header {
-    background-color:#3A506B;
-    height: 130px;
-    width:100%;
-    margin-bottom: 5%;
+    font-family: "Mulish";
    
 }
 img {
-    flex-direction: column;
-    height: 130px;
-    width:30%;
-    max-width: 150px;
-    margin: auto;
-    border-radius: 180%;
+        border-radius: 5px;
+        height: 100px;
+        margin-bottom: 15px;
+        width: 100px;
 
 }
 .cornerheader {
     color: rgb(244, 244, 244) ;
     text-align:center;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: "Mulish";
     float: right;
     position: relative;
-    bottom:80%   
+    bottom:100px    
 }
 .link-header {
     color: white;
@@ -66,8 +63,6 @@ h1{
     color:#002855;
     margin: auto;
     margin-bottom: 25px;
-
-
 }
 
 .sinborde {
@@ -94,6 +89,7 @@ h1{
     border:none;
     color:white;
     font-size: 20px;
+    font-family: "Mulish";
     background:#002855;
     border-radius: 4px;
     padding: 9px;
