@@ -40,6 +40,9 @@ body{
     margin-top: 17px;
     padding: 5px;
 }
+.navigation-bar-button:hover {
+    transform: rotate(180deg) scale(0.1, 0.1);
+}
 
 .cart-empty{
     text-align: center; 
@@ -86,7 +89,7 @@ body{
 
 /* Tablets */
 @media (min-width: 769px) {
-    .menu-phone {
+    .navigation-bar-button:hover{
         display: none;
     }
     .menu-desktop{

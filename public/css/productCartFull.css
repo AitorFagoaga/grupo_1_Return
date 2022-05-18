@@ -39,7 +39,9 @@ body{
     margin-top: 17px;
     padding: 5px;
 }
-
+.navigation-bar-button:hover {
+    transform: rotate(180deg) scale(0.1, 0.1);
+}
 .menu-desktop{
     display: none;
 }
@@ -103,7 +105,7 @@ body{
 }
 /* Tablets */
 @media (min-width: 769px) {
-    .menu-phone {
+    .navigation-bar-button:hover{
         display: none;
     }
     .menu-desktop{
