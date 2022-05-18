@@ -105,7 +105,7 @@ body{
 }
 /* Tablets */
 @media (min-width: 769px) {
-    .navigation-bar-button:hover{
+    .navigation-bar{
         display: none;
     }
     .menu-desktop{
