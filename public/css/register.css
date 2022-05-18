@@ -48,7 +48,7 @@ h1{
 
 }
 .form-register {
-    height: 300px;
+    height: 400px;
     max-width: 600px;
     background-color: #fcfcfc;
     border-radius: 7px;
@@ -69,10 +69,13 @@ h1{
     border: 0;
 }
 .input-contenedor {
-    margin-bottom:20px;
-    border: 1px solid #002855;
-    margin-right: 30px;
-    margin-left: 30px;
+        margin-bottom:20px;
+        border: 1px solid #002855;
+        margin-right: 30px;
+        margin-left: 30px;
+        text-align: center;
+        height: 40px;
+        max-width: 680px
 
 }
 .icon {
@@ -137,5 +140,15 @@ p{
         margin-left:100px;
         margin-right:100px;
         border-radius: 7%;
+}
+
+.input-contenedor {
+    margin-bottom:20px;
+    border: 1px solid #002855;
+    margin-right: 30px;
+    margin-left: 30px;
+    text-align: center;
+    height: 40px;
+    max-width: 680px;
 }
 }
