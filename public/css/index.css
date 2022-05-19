@@ -93,19 +93,20 @@ body {
     color: #1C2541;
     font-size: 16px;
     margin-bottom: 12px;
+    margin-right: 1%;
     padding: 10px 15px;
 }
 
 .navigation-bar {
-    background: linear-gradient(180deg, rgba(11, 19, 43, 1) 0%, rgba(58, 80, 107, 1) 100%);
+    background: rgba(58, 80, 107, 1);
     border-radius: 230px;
     bottom: 10px;
     display: flex;
     height: 50px;
     justify-content: space-evenly;
-    left: 5%;
+    left: 10%;
     position: fixed;
-    width: 90%;
+    width: 80%;
     z-index: 10;
 }
 
@@ -173,6 +174,7 @@ body {
 
 .new-product-price, 
 .new-product-title {
+    color: #0B132B;
     left: 10px;
     position: absolute;
 }
@@ -187,75 +189,75 @@ body {
     font-size: 12px;
 }
 
-.sale-product-1 {
-    margin-bottom: 40px;
-    margin-left: 10px; 
-    position: relative;
-}
-
-.sale-product-border-1 {
-    background: linear-gradient(180deg, rgba(58, 80, 107, 1) 0%, rgba(11, 19, 43, 1) 100%);
-    border-radius: 10px;
-    height: 135px;
-    left: 24px;
-    margin-left: 20px;
-    position: absolute;
-    top: -14px;
-    width: 75%;
-    z-index: 2;
-}
-
-.sale-product-border-2 {
-    background: linear-gradient(180deg, rgba(58, 80, 107, 1) 0%, rgba(11, 19, 43, 1) 100%);
-    border-radius: 10px;
-    height: 135px;
-    left: 39px;
-    margin-left: 20px;
-    position: absolute;
-    top: -27px;
-    width: 75%;
-    z-index: 1;
-}
-
-.sale-product-discount {
-    background: linear-gradient(180deg, rgba(58, 80, 107, 1) 0%, rgba(11, 19, 43, 1) 100%);
-    border-radius: 50%;
-    color: #6FFFE9;
-    font-size: 24px;
-    height: 45px;
-    left: 22.5px;
-    margin-left: 22px;
-    padding: 7px 13.5px;
-    position: absolute;
-    top: -10px;
-    width: 45px;
-    z-index: 4;
-}
-
-.sale-product-image {
-    border-radius: 10px;
-    height: 135px;
-    margin-left: 30px;
-    position: absolute;
-    width: 75%;
-    z-index: 3;
-}
-
 .search-bar {
     background: linear-gradient(180deg, rgba(58, 80, 107, 1) 0%, rgba(111, 255, 233, 1) 100%);
     border: none;
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
     margin-bottom: 12px;
-    margin-left: 15px;
-    width: 80%;
+    margin-left: 3%;
+    width: 85%;
 }
 
 .search-menu-1 {
     display: flex;
 }
 
+.trending-product-1 {
+    margin-bottom: 40px;
+    margin-left: 7%;
+    margin-right: 5%;
+    position: relative;
+}
+
+.trending-product-border-1 {
+    background: linear-gradient(180deg, rgba(58, 80, 107, 1) 0%, rgba(111, 255, 233, 1) 100%);
+    border-radius: 10px;
+    height: 135px;
+    left: 24px;
+    position: absolute;
+    top: -14px;
+    width: 90%;
+    z-index: 2;
+}
+
+.trending-product-border-2 {
+    background: linear-gradient(180deg, rgba(58, 80, 107, 1) 0%, rgba(111, 255, 233, 1) 100%);
+    border-radius: 10px;
+    height: 135px;
+    left: 39px;
+    position: absolute;
+    top: -27px;
+    width: 90%;
+    z-index: 1;
+}
+
+.trending-product-discount {
+    background: linear-gradient(180deg, rgba(58, 80, 107, 1) 0%, rgba(11, 19, 43, 1) 100%);
+    border-radius: 50%;
+    color: #6FFFE9;
+    font-size: 22px;
+    height: 45px;
+    left: 3px;
+    margin-left: 22px;
+    padding: 8.5px 12px;
+    position: absolute;
+    top: -10px;
+    width: 45px;
+    z-index: 4;
+}
+
+.trending-product-image {
+    border-radius: 10px;
+    height: 135px;
+    margin-left: 10px;
+    position: absolute;
+    width: 90%;
+    z-index: 3;
+}
+
 .wallpaper {
+    display: flex;
     margin: 10px 0px;
     position: relative;
 }
@@ -286,7 +288,7 @@ body {
     border-radius: 10px;
     bottom: -122px;
     height: 110px;
-    left: 14px;
+    left: 13.5px;
     margin-top: 5px;
     position: absolute;
     width: 95%;
@@ -298,13 +300,14 @@ body {
     border-radius: 10px;
     color: #6FFFE9;
     font-size: 12px;
-    font-weight: bold; 
+    font-weight: bold;
+    justify-self: center;
     left: 30px;
     padding: 18px 15px;
     position: absolute;
     text-decoration: none;
     top: 65px;
-    width: 33%;
+    transition: all 0.5s;
     z-index: 4;
 }
 
