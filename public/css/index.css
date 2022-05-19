@@ -9,7 +9,7 @@
 body {
     background: linear-gradient(180deg, rgba(11, 19, 43, 1) 0%, rgba(58, 80, 107, 1) 50%, rgba(111, 255, 233, 1) 100%);
     font-family: "Mulish";
-    margin-bottom: 200px;
+    margin-bottom: 195px;
     padding: 25px;
 }
 
@@ -101,7 +101,7 @@ body {
     border-radius: 230px;
     bottom: 10px;
     display: flex;
-    height: 60px;
+    height: 50px;
     justify-content: space-evenly;
     left: 5%;
     position: fixed;
@@ -116,7 +116,7 @@ body {
 .navigation-bar-icon {
     color: #6FFFE9;
     font-size: 16px;
-    margin-top: 18px;
+    margin-top: 13px;
     padding: 5px;
 }
 
@@ -198,6 +198,7 @@ body {
     border-radius: 10px;
     height: 135px;
     left: 24px;
+    margin-left: 20px;
     position: absolute;
     top: -14px;
     width: 75%;
@@ -209,6 +210,7 @@ body {
     border-radius: 10px;
     height: 135px;
     left: 39px;
+    margin-left: 20px;
     position: absolute;
     top: -27px;
     width: 75%;
@@ -222,6 +224,7 @@ body {
     font-size: 24px;
     height: 45px;
     left: 22.5px;
+    margin-left: 22px;
     padding: 7px 13.5px;
     position: absolute;
     top: -10px;
@@ -232,7 +235,7 @@ body {
 .sale-product-image {
     border-radius: 10px;
     height: 135px;
-    margin-left: 10px;
+    margin-left: 30px;
     position: absolute;
     width: 75%;
     z-index: 3;
@@ -244,7 +247,8 @@ body {
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
     margin-bottom: 12px;
-    width: 100%;
+    margin-left: 15px;
+    width: 80%;
 }
 
 .search-menu-1 {
