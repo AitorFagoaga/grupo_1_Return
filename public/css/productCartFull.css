@@ -103,11 +103,38 @@ body{
 .container-button-end-shop{
     display: none;
 }
+
+.image-phone{
+    display: flex;
+    align-items: center;
+    width: 130px;
+    height: 130px;
+    border: 1px solid black;
+    border-radius: 1vh;
+}
+.nombre-producto-phone{
+margin-top: 2vh;
+margin-left: 1vh;
+}
+.price-phone{
+margin-top: 7vh;
+margin-top: 15vh;
+}
+
 /* Tablets */
 @media (min-width: 769px) {
     .navigation-bar{
         display: none;
     }
+    .logo {
+        display: flex;
+        height: 100px;
+        width: 100px;
+        border: solid black;
+        border-radius: 5px;
+        margin-left: 2vh;
+    }
+
     .menu-desktop{
         display: block;
         border-bottom: solid black;
