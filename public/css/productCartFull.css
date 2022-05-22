@@ -234,6 +234,14 @@ margin-top: 15vh;
         border: 2px solid black;
         border-radius: 1vh;
     }
+    .boxe-empty{
+        width: 35vh;
+        height: 45vh;
+        background-color: #0B132B;
+        margin-right: 5vh;
+        border: 2px solid black;
+        border-radius: 1vh;
+    }
     .image{
         display: flex;
         align-items: center;
