@@ -37,39 +37,31 @@ body {
     padding-top: 13.5px;
     text-align: center;
     text-decoration: none;
+    transition: ;
     width: 45px;
 }
 
 .category-button {
     bottom: 67px;
-    color: #6FFFE9;
+    color: #FFFFFF;
     font-size: 12px;
     font-weight: bold;
     position: absolute;
     right: 0px;
+    text-align: center;
     text-decoration: none;
-}
-
-.filter {
-    background-color: #FFFFFF;
-    border: solid 1px #000000;
-    border-radius: 5px;
-    box-shadow: 4px 2px 2px #000000;
-    display: none;
-    font-size: 18px; 
-    margin-left: 10px;
-    padding: 10px;
+    transition: color 0.25s;
 }
 
 .headline-1, 
 .headline-2, 
 .headline-3 {
-    color: #6FFFE9;
+    color: #FFFFFF;
     font-weight: bold;
 }
 
 .headline-1 {
-    margin-top: 170px;
+    margin-top: 25px;
 }
 
 .headline-2, 
@@ -86,13 +78,13 @@ body {
 }
 
 .magnifying-glass {
-    background: linear-gradient(180deg, rgba(58, 80, 107, 1) 0%, rgba(111, 255, 233, 1) 100%);
+    background: #FFFFFF;
     border: none;
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
-    color: #1C2541;
+    color: #0B132B;
     font-size: 16px;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
     margin-right: 1%;
     padding: 10px 15px;
 }
@@ -111,14 +103,17 @@ body {
 }
 
 .navigation-bar-button {
-    transition: all 0.45s;
+    display: flex;
+    justify-content: center;
+    width: 10%;
 }
 
 .navigation-bar-icon {
-    color: #6FFFE9;
+    color: #FFFFFF;
     font-size: 16px;
     margin-top: 13px;
     padding: 5px;
+    transition: transform 0.5s;
 }
 
 .new-product {
@@ -174,7 +169,7 @@ body {
 
 .new-product-price, 
 .new-product-title {
-    color: #0B132B;
+    color: #FFFFFF;
     left: 10px;
     position: absolute;
 }
@@ -190,11 +185,11 @@ body {
 }
 
 .search-bar {
-    background: linear-gradient(180deg, rgba(58, 80, 107, 1) 0%, rgba(111, 255, 233, 1) 100%);
+    background: #FFFFFF;
     border: none;
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
     margin-left: 3%;
     width: 85%;
 }
@@ -235,12 +230,13 @@ body {
 .trending-product-discount {
     background: linear-gradient(180deg, rgba(58, 80, 107, 1) 0%, rgba(11, 19, 43, 1) 100%);
     border-radius: 50%;
-    color: #6FFFE9;
-    font-size: 22px;
+    color: #FFFFFF;
+    font-size: 18px;
     height: 45px;
     left: 3px;
     margin-left: 22px;
-    padding: 8.5px 12px;
+    margin-top: 23px;
+    padding: 11px 12.5px;
     position: absolute;
     top: -10px;
     width: 45px;
@@ -266,7 +262,6 @@ body {
     border-radius: 10px;
     height: 110px;
     margin-top: 25px;
-    position: absolute;
     width: 95%;
     z-index: 3;
 }
@@ -274,31 +269,29 @@ body {
 .wallpaper-border-1 {
     background: linear-gradient(180deg, rgba(11, 19, 43, 1) 0%, rgba(58, 80, 107, 1) 100%);
     border-radius: 10px;
-    bottom: -110px;
+    bottom: 15px;
     height: 110px;
-    left: 27px;
-    margin-top: 5px;
-    position: absolute;
-    width: 95%;
-    z-index: 1;
-}
-
-.wallpaper-border-2 {
-    background: linear-gradient(180deg, rgba(11, 19, 43, 1) 0%, rgba(58, 80, 107, 1) 100%);
-    border-radius: 10px;
-    bottom: -122px;
-    height: 110px;
-    left: 13.5px;
-    margin-top: 5px;
+    left: 15px;
     position: absolute;
     width: 95%;
     z-index: 2;
 }
 
+.wallpaper-border-2 {
+    background: linear-gradient(180deg, rgba(11, 19, 43, 1) 0%, rgba(58, 80, 107, 1) 100%);
+    border-radius: 10px;
+    bottom: 30px;
+    height: 110px;
+    left: 30px;
+    position: absolute;
+    width: 95%;
+    z-index: 1;
+}
+
 .wallpaper-button {
     background: linear-gradient(180deg, rgba(58, 80, 107, 1) 0%, rgba(11, 19, 43, 1) 100%);
     border-radius: 10px;
-    color: #6FFFE9;
+    color: #FFFFFF;
     font-size: 12px;
     font-weight: bold;
     justify-self: center;
@@ -307,13 +300,76 @@ body {
     position: absolute;
     text-decoration: none;
     top: 65px;
-    transition: all 0.5s;
     z-index: 4;
 }
 
 /* Pseudo Selectores (A-Z) */
 
-.navigation-bar-button:hover {
+.category-1:hover, 
+.category-2:hover, 
+.category-3:hover, 
+.category-4:hover, 
+.category-5:hover {
+    animation: vibration 0.5s linear;
+}
+
+.navigation-bar-button:hover .navigation-bar-icon {
     transform: rotate(180deg) scale(0.1, 0.1);
+}
+
+.wallpaper-button::before {
+    background: linear-gradient(180deg, rgba(11, 19, 43, 1) 0%, rgba(58, 80, 107, 1) 100%);
+    border-radius: 10px;
+    bottom: 0;
+    content: "";
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    transition: opacity 0.25s;
+    top: 0;
+    z-index: -1;
+}
+
+.wallpaper-button:hover::before {
+    opacity: 1;   
+}
+
+/* Animaciones (A-Z) */
+
+@keyframes vibration {
+    0% { transform: translateX(3px); }
+    25% { transform: translateX(-3px); }
+    50% { transform: translateX(3px); }
+    100% { transform: translateX(-3px); }
+}
+
+/* Media Querys (A-Z) */
+
+@media (min-width:769px) {
+
+    .wallpaper-background, 
+    .wallpaper-border-1, 
+    .wallpaper-border-2 {
+        height: 300px;
+        width: 97.5%;
+    }
+
+    .wallpaper-border-1 {
+        bottom: 15px;
+        left: 15px;
+    }
+
+    .wallpaper-border-2 {
+        bottom: 30px;
+        left: 30px;
+    }
+
+    .wallpaper-button {
+        top: 254px;
+        left: 30px;
+        position: absolute;
+    }
+
 }
 
