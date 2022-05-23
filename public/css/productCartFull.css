@@ -58,6 +58,7 @@ body{
     margin-top: 2vh;
 }
 .boxes-phone{
+        display: flex;
         width: 70vw;
         height: 20vh;
         background-color: #0B132B;
@@ -103,11 +104,38 @@ body{
 .container-button-end-shop{
     display: none;
 }
+
+.image-phone{
+    display: flex;
+    align-items: center;
+    width: 130px;
+    height: 130px;
+    border: 1px solid black;
+    border-radius: 1vh;
+}
+.nombre-producto-phone{
+margin-top: 2vh;
+margin-left: 1vh;
+}
+.price-phone{
+margin-top: 7vh;
+margin-top: 15vh;
+}
+
 /* Tablets */
 @media (min-width: 769px) {
     .navigation-bar{
         display: none;
     }
+    .logo {
+        display: flex;
+        height: 100px;
+        width: 100px;
+        border: solid black;
+        border-radius: 5px;
+        margin-left: 2vh;
+    }
+
     .menu-desktop{
         display: block;
         border-bottom: solid black;
@@ -200,6 +228,14 @@ body{
     }
     .boxes{
         width: 40vh;
+        height: 45vh;
+        background-color: #0B132B;
+        margin-right: 5vh;
+        border: 2px solid black;
+        border-radius: 1vh;
+    }
+    .boxe-empty{
+        width: 35vh;
         height: 45vh;
         background-color: #0B132B;
         margin-right: 5vh;

@@ -92,6 +92,14 @@ body{
     .navigation-bar{
         display: none;
     }
+    .logo {
+        display: flex;
+        height: 100px;
+        width: 100px;
+        border: solid black;
+        border-radius: 5px;
+        margin-left: 2vh;
+    }
     .menu-desktop{
         display: block;
         border-bottom: solid black;
