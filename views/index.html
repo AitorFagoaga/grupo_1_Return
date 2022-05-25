@@ -13,37 +13,46 @@
 </head>
 <body>
     <header>
-        <div>
-            <img alt="" class="logo" src="/images/Logo.png">
+        <div class="top-navigation-bar">
+            <div name="left-column">
+                <img alt="" class="logo" src="/images/Background.png">
+            </div>
+            <form action="" class="search-menu" method="get" name="search-meni">
+                <a class="search-filter" href="" name="search-filter">
+                    All products<i class="fa-solid fa-chevron-down search-filter-button"></i>
+                </a>
+                <input class="search-bar" name="search-bar" type="text"/>   
+                <button class="magnifying-glass" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            <div class="right-column">
+                <i class="fa-solid fa-user top-navigation-bar-icon"></i>
+                <i class="fa-solid fa-chevron-down right-column-dropdown-menu"></i>
+                <i class="fa-solid fa-cart-shopping top-navigation-bar-icon"></i>
+                <i class="fa-solid fa-chevron-down right-column-dropdown-menu"></i>
+            </div>
         </div>
-        <form action="" class="search-menu-1" method="get" name="search-menu-1">
-            <input class="search-bar" name="search-bar" type="text"/>   
-            <button class="magnifying-glass" type="submit">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-        </form>
     </header>
     <main>
-        <div class="wallpaper">
-            <div class="wallpaper-border-1"></div>
-            <div class="wallpaper-border-2"></div>
+        <div class="wallpaper" name="wallpaper">
             <img alt="" class="wallpaper-background" src="/images/Wallpaper.jpg">
-            <a class="wallpaper-button" href="">Take me there</a>
+            <a class="wallpaper-button" href="" name="wallpaper-button">Take me there</a>
         </div>
         <h4 class="headline-1">Popular categories</h4>
-        <ul class="category">
-            <a class="category-1" href=""><i class="fa-solid fa-tv"></i></a>
-            <a class="category-2" href=""><i class="fa-solid fa-headset"></i></a>
-            <a class="category-3" href=""><i class="fa-solid fa-gamepad"></i></a>
-            <a class="category-4" href=""><i class="fa-brands fa-playstation"></i></a>
-            <a class="category-5" href=""><i class="fa-brands fa-xbox"></i></a>
-            <a class="category-button" href="">All categories</a>
+        <ul class="category" name="category">
+            <a class="category-1" href="" name="category-1"><i class="fa-solid fa-tv category-icon"></i></a>
+            <a class="category-2" href="" name="category-2"><i class="fa-solid fa-headset category-icon"></i></a>
+            <a class="category-3" href="" name="category-3"><i class="fa-solid fa-gamepad category-icon"></i></a>
+            <a class="category-4" href="" name="category-4"><i class="fa-brands fa-playstation category-icon"></i></a>
+            <a class="category-5" href="" name="category-5"><i class="fa-brands fa-xbox category-icon"></i></a>
+            <a class="category-button" href="" name="category-button">All categories</a>
         </ul>
         <h4 class="headline-2">New arrivals</h4>
-        <section class="new-product">
+        <section class="new-product" name="new-product">
             <article class="new-product-1" name="new-product-1">
                 <h3 class="new-product-discount"><i class="fa-solid fa-bookmark"></i></h3>
-                <a href="" type="submit">
+                <a href="" name="new-product-image" type="submit">
                     <img alt="" class="new-product-image" src="/images/Wallpaper.jpg">
                 </a>
                 <h3 class="new-product-title">Product Name</h3>
@@ -51,7 +60,7 @@
             </article>
             <article class="new-product-2" name="new-product-2">
                 <h3 class="new-product-discount"><i class="fa-solid fa-bookmark"></i></h3>
-                <a href="" type="submit">
+                <a href="" name="new-product-image" type="submit">
                     <img alt="" class="new-product-image" src="/images/Wallpaper.jpg">
                 </a>
                 <h3 class="new-product-title">Product Name</h3>
@@ -59,7 +68,7 @@
             </article>
             <article class="new-product-3" name="new-product-3">
                 <h3 class="new-product-discount"><i class="fa-solid fa-tags"></i></h3>
-                <a href="" type="submit">
+                <a href="" name="new-product-image" type="submit">
                     <img alt="" class="new-product-image" src="">
                 </a>
                 <h3 class="new-product-title">Product Name</h3>
@@ -67,11 +76,9 @@
             </article>
         </section>
         <h4 class="headline-3">Trending</h4>
-        <section class="trending-product">
+        <section class="trending-product" name="trending-product">
             <article class="trending-product-1" name="trending-product-1">
                 <h3 class="trending-product-discount"><i class="fa-solid fa-wand-magic-sparkles"></i></h3>
-                <div class="trending-product-border-1" name="trending-product-border-1"></div>
-                <div class="trending-product-border-2" name="trending-product-border-2"></div>
                 <a href="" type="submit">
                     <img alt="" class="trending-product-image" src="/images/Wallpaper.jpg">
                 </a>
@@ -79,18 +86,18 @@
         </section>
     </main>
     <footer>
-        <div class="navigation-bar" name="navigation-bar">
-            <a class="navigation-bar-button" href="" type="submit">
-                <i class="fa-solid fa-house navigation-bar-icon"></i>
+        <div class="bottom-navigation-bar" name="bottom-navigation-bar">
+            <a class="bottom-navigation-bar-button" href="" type="submit">
+                <i class="fa-solid fa-house bottom-navigation-bar-icon"></i>
             </a>
-            <a class="navigation-bar-button" href="" type="submit">
-                <i class="fa-solid fa-heart navigation-bar-icon"></i>
+            <a class="bottom-navigation-bar-button" href="" type="submit">
+                <i class="fa-solid fa-heart bottom-navigation-bar-icon"></i>
             </a>
-            <a class="navigation-bar-button" href="" type="submit">            
-                <i class="fa-solid fa-cart-shopping navigation-bar-icon"></i>
+            <a class="bottom-navigation-bar-button" href="" type="submit">            
+                <i class="fa-solid fa-cart-shopping bottom-navigation-bar-icon"></i>
             </a>
-            <a class="navigation-bar-button" href="" type="submit">
-                <i class="fa-solid fa-user navigation-bar-icon"></i>
+            <a class="bottom-navigation-bar-button" href="" type="submit">
+                <i class="fa-solid fa-user bottom-navigation-bar-icon"></i>
             </a>
             </div>
     </footer>
