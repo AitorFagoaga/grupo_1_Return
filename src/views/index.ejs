@@ -12,32 +12,8 @@
     <title>Home</title>
 </head>
 <body>
-    <header>
-        <div class="top-navigation-bar">
-            <div name="left-column">
-                <img alt="" class="logo" src="/images/Background.png">
-            </div>
-            <form action="" class="search-menu" method="get" name="search-meni">
-                <a class="search-filter" href="" name="search-filter">
-                    All products<i class="fa-solid fa-chevron-down search-filter-button"></i>
-                </a>
-                <input class="search-bar" name="search-bar" type="text"/>   
-                <button class="magnifying-glass" type="submit">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-            </form>
-            <div class="right-column">
-                <a class="top-navigation-bar-button" href="" name="top-navigation-bar-button">
-                    <i class="fa-solid fa-user top-navigation-bar-icon"></i>
-                    <i class="fa-solid fa-chevron-down right-column-dropdown-menu"></i>
-                </a>
-                <a class="top-navigation-bar-button" href="" name="top-navigation-bar-button">
-                    <i class="fa-solid fa-cart-shopping top-navigation-bar-icon"></i>
-                    <i class="fa-solid fa-chevron-down right-column-dropdown-menu"></i>
-                </a>
-            </div>
-        </div>
-    </header>
+    <!-- header -->
+    <%- include('./partials/header.ejs') %>
     <main>
         <div class="wallpaper" name="wallpaper">
             <img alt="" class="wallpaper-background" src="/images/Wallpaper.jpg">
@@ -88,21 +64,7 @@
             </article>
         </section>
     </main>
-    <footer>
-        <div class="bottom-navigation-bar" name="bottom-navigation-bar">
-            <a class="bottom-navigation-bar-button" href="" type="submit">
-                <i class="fa-solid fa-house bottom-navigation-bar-icon"></i>
-            </a>
-            <a class="bottom-navigation-bar-button" href="" type="submit">
-                <i class="fa-solid fa-heart bottom-navigation-bar-icon"></i>
-            </a>
-            <a class="bottom-navigation-bar-button" href="" type="submit">            
-                <i class="fa-solid fa-cart-shopping bottom-navigation-bar-icon"></i>
-            </a>
-            <a class="bottom-navigation-bar-button" href="" type="submit">
-                <i class="fa-solid fa-user bottom-navigation-bar-icon"></i>
-            </a>
-            </div>
-    </footer>
+    <!-- Footer  -->
+    <%- include('./partials/footer.ejs') %>
 </body>
 </html>
