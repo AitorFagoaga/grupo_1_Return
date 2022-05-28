@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="/css/productCartFull.css">
 </head>
 <body>
-    <header class="header">
+    <!-- header   -->
+    <%- include('./partials/header.ejs') %>
+    <!-- <header class="header">
         <nav class="menu-desktop">
             <div class="containe-logo-search-bar-profile-cart">
                 <div class="logo"><img src="/images/Logo.png" alt="Logo"></div>
@@ -38,7 +40,7 @@
             </div>
             
         </nav>
-    </header> 
+    </header>  -->
     <main>
         <div class="container-boxes-desktop">
             <div class="boxes"><img src="/images/Macbook.jpg" alt="producto" class="image"> <p class="nombre-producto">Nombre</p><p class="price">$100</p></div>
@@ -66,21 +68,10 @@
             <div class="container-button-end-shop">
                 <button type="submit" class="button-end-shop">Finalizar compra<i class="fa-solid fa-chevron-right right-arrow"></i></button>
             </div>
-            <div class="navigation-bar" name="navigation-bar">
-                <a class="navigation-bar-button" href="" type="submit">
-                    <i class="fa-solid fa-house navigation-bar-icon"></i>
-                </a>
-                <a class="navigation-bar-button" href="" type="submit">
-                    <i class="fa-solid fa-heart navigation-bar-icon"></i>
-                </a>
-                <a class="navigation-bar-button" href="" type="submit">            
-                    <i class="fa-solid fa-cart-shopping navigation-bar-icon"></i>
-                </a>
-                <a class="navigation-bar-button" href="" type="submit">
-                    <i class="fa-solid fa-user navigation-bar-icon"></i>
-                </a>
-                </div>
+
         </section>
+        <!-- Footer  -->
+    <%- include('./partials/footer.ejs') %>
     </main>
 </body>
 </html>

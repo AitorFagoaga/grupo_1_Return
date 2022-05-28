@@ -15,7 +15,10 @@
 </head>
 
 <body>
-        <nav class="parte-arriba">
+        <!-- header   -->
+    <%- include('./partials/header.ejs') %>
+
+        <!-- <nav class="parte-arriba">
             <ul class="segundo">
                 <li><img src="/images/Logo.png" class="Logo"></li>
                 <li><i class="fas fa-times-circle"></i></li>
@@ -57,7 +60,7 @@
                     </a>
                 </li>
             </ul>
-         </nav>
+         </nav> -->
 
          
     <div class="conteiner">
@@ -77,23 +80,8 @@
     
 
 
-   <footer>
-    <!-- Fixed Row -->
-    <div class="navigation-bar" name="navigation-bar">
-        <a class="navigation-bar-button" href="" type="submit">
-            <i class="fa-solid fa-house navigation-bar-icon"></i>
-        </a>
-        <a class="navigation-bar-button" href="" type="submit">
-            <i class="fa-solid fa-heart navigation-bar-icon"></i>
-        </a>
-        <a class="navigation-bar-button" href="" type="submit">            
-            <i class="fa-solid fa-cart-shopping navigation-bar-icon"></i>
-        </a>
-        <a class="navigation-bar-button" href="" type="submit">
-            <i class="fa-solid fa-user navigation-bar-icon"></i>
-        </a>
-        </div>
-</footer>
+   <!-- Footer  -->
+    <%- include('./partials/footer.ejs') %>
 
 
     <nav class="text">
