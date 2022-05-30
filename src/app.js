@@ -16,5 +16,3 @@ app.use('/products', productsRoutes);
 app.use('/users', usersRoutes);
 
 app.listen(3000 || process.env.PORT, () => console.log('El servidor se ha iniciado correctamente.'));
-
-let EstoEsUnaPrueba = '';
