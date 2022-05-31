@@ -9,7 +9,7 @@ A diferencia de la mayoria de las empresas que se dedican a este rubro, entendem
 ## Integrantes 🤜🤛
 * **Aitor Fagoaga**: Estudiante de Finanzas. Tengo gran entusiamos por los deportes, y también por la tecnología.  
 
-* **Alexandra Daza**: Profesional en Gestion Cultural y Comunicación. Gran pasion por los animales, el arte y la tecnología.  
+* **Alexandra Daza**: Profesional en Gestion Cultural y Comunicación.  Apasionada por los animales, el arte y la tecnología.  
 
 * **Bruno Morales**: Estudiante de Ingenieria en Informática. Gran predisposicion para con el desarrollo de ideas innovadoras y revolucionarias.  
 
