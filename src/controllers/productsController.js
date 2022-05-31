@@ -10,6 +10,9 @@ const productsController = {
 
     productDetail: (req, res) => {
         res.render('./products/productDetail')
+    },
+    productList: (req, res) => {
+        res.render ('./products/productList')
     }
 
 }
