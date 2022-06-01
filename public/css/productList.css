@@ -10,8 +10,8 @@ body {
 .producto {
     max-width: 280px;
     display:flex;
-    flex-flow:wrap ;
-    background-color: aliceblue;
+    flex-wrap: wrap;
+    background-color: rgb(255, 255, 255);
     border-radius: 6px;
     box-shadow:0 0 0.2em rgba(0,0,0,0.3);
     cursor: pointer;
@@ -24,6 +24,7 @@ body {
 .producto > img {
     width: 100%;
     object-fit: cover;
+    
 }
 .informacion {
     border-top: 1px solid
@@ -37,7 +38,7 @@ body {
 }
 .tipo-envio {
     background: linear-gradient(180deg, rgba(11, 19, 43, 1) 0%, rgba(58, 80, 107, 1) 50%, rgba(111, 255, 233, 1) 100%);
-    color:white;
+    color:rgb(255, 255, 255);
     font-weight: 600;
     max-width: max-content;
     padding:0 0.2em ;
@@ -49,13 +50,11 @@ body {
 .precio-envio{
     color:rgb(58, 80, 107);
     font-weight: 800;
-}
 
-.descripcion {
-    font-weight: 300;
 }
 .descripcion {
     font-size: 0.9em;
+     font-weight: 300;
 }
 .calificacion {
     transition-duration: 0.3s;
