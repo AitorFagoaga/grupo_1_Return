@@ -13,6 +13,12 @@ const productsController = {
     },
     productList: (req, res) => {
         res.render ('./products/productList')
+    },
+    vistaAdministrador: (req, res) => {
+        res.render('./products/vistaAdministrador')
+    },
+    agregarProducto: (req, res) => {
+        res.render('./products/agregarProducto')
     }
 
 }

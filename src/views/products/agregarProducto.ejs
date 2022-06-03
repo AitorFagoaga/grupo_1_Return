@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="/css/vistaAdmin.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VistaAdministrador</title>
+</head>
+<body>
+    <!-- header -->
+    <%- include('../partials/header.ejs') %>
+    
+    </br>
+    <div class="conteiner-agregado">
+    </br>
+        <input type="text" placeholder="Titulo" class="titulo"></input>
+    </br>
+    </br>
+    <div class="imagen-agregado">
+        <i class="fas fa-download"></i>
+    </div>
+</br>
+    <div>
+        <textarea name="descripcion" id="descripcion" cols="30" rows="10" class="text-area" placeholder="Descripcion completa."></textarea>
+    </div>
+    </div>
+
+    <!-- Footer  -->
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>
