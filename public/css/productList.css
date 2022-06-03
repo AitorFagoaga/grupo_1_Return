@@ -71,3 +71,10 @@ body {
    color: rgba(11, 19, 43, 1)
     
 }
+
+
+@media (max-width:768px) {
+    .new-product{
+        display:table-row;
+     }
+}
