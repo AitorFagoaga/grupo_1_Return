@@ -10,6 +10,15 @@ const productsController = {
 
     productDetail: (req, res) => {
         res.render('./products/productDetail')
+    },
+    productList: (req, res) => {
+        res.render ('./products/productList')
+    },
+    vistaAdministrador: (req, res) => {
+        res.render('./products/vistaAdministrador')
+    },
+    agregarProducto: (req, res) => {
+        res.render('./products/agregarProducto')
     }
 
 }
