@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Macbook Pro",
-    "price": 750,
+    "price": 750000,
     "discount": 40,
     "category": "On Sale",
     "description": "Descripcion de Macbook Pro",
@@ -11,7 +11,7 @@
   {
     "id": 2,
     "name": "iPhone 13 Pro",
-    "price": 1000,
+    "price": 250000,
     "discount": 0,
     "category": "Trending",
     "description": "Descripcion de iPhone 13 Pro",
@@ -20,7 +20,7 @@
   {
     "id": 3,
     "name": "Televisor Samsung Crystal UHD",
-    "price": 675,
+    "price": 90000,
     "discount": 25,
     "category": "On Sale",
     "description": "Descripcion de Televisor Samsung Crystal UHD",
@@ -28,11 +28,29 @@
   },
   {
     "id": 4,
-    "name": "Teclado HyperX",
-    "price": 250,
+    "name": "Monitor Samsung Odyssey G3",
+    "price": 55000,
     "discount": 0,
     "category": "Trending",
-    "description": "Descripcion de Teclado HyperX",
-    "image": "Teclado HyperX.png"
+    "description": "Descripcion de Monitor Samsung Odyssey G3",
+    "image": "Monitor Samsung Odyssey G3.png"
+  },
+  {
+    "id": 5,
+    "name": "Google ChromeCast",
+    "price": 27000,
+    "discount": 15,
+    "category": "On Sale",
+    "description": "Descripcion de Google ChromeCast",
+    "image": "Google ChromeCast.png"
+  },
+  {
+    "id": 6,
+    "name": "PlayStation 5",
+    "price": 210000,
+    "discount": 0,
+    "category": "Trending",
+    "description": "Descripcion de PlayStation 5",
+    "image": "PlayStation 5.png"
   }
 ]
