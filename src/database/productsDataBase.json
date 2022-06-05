@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Macbook Pro",
+    "price": 750,
+    "discount": 40,
+    "category": "On Sale",
+    "description": "Descripcion de Macbook Pro",
+    "image": "Macbook Pro.png"
+  },
+  {
+    "id": 2,
+    "name": "iPhone 13 Pro",
+    "price": 1000,
+    "discount": 0,
+    "category": "Trending",
+    "description": "Descripcion de iPhone 13 Pro",
+    "image": "iPhone 13 Pro.png"
+  },
+  {
+    "id": 3,
+    "name": "Televisor Samsung Crystal UHD",
+    "price": 675,
+    "discount": 25,
+    "category": "On Sale",
+    "description": "Descripcion de Televisor Samsung Crystal UHD",
+    "image": "Televisor Samsung Crystal UHD.png"
+  },
+  {
+    "id": 4,
+    "name": "Teclado HyperX",
+    "price": 250,
+    "discount": 0,
+    "category": "Trending",
+    "description": "Descripcion de Teclado HyperX",
+    "image": "Teclado HyperX.png"
+  }
+]
