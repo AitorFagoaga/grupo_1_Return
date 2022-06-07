@@ -15,7 +15,7 @@ const mainController = {
             return product.category == 'Trending';
         })
 
-        res.render('./index', {productsOnSale: productsOnSale, productsTrending: productsTrending});
+        res.render('./index', { productsOnSale: productsOnSale, productsTrending: productsTrending });
     }
 
 }

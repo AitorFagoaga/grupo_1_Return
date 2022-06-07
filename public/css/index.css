@@ -179,7 +179,6 @@ body {
     color: #FFFFFF;
     display: flex;
     font-size: 14px;
-    font-weight: bold;
     justify-content: center;
     width: 85%;
 }
@@ -511,6 +510,10 @@ body {
 
 @media (min-width: 992px) {
 
+    .headline-3 {
+        margin-top: 10px;
+    }
+
     .logo {
         height: 120px;
         top: -25px;
@@ -561,6 +564,10 @@ body {
     .new-product-detail, 
     .trending-product-detail {
         max-width: 400px;
+    }
+
+    .trending-product-price {
+        padding-bottom: 6%;
     }
 
     .right-column {

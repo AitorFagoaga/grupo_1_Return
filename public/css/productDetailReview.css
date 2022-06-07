@@ -1,0 +1,224 @@
+/* Selector Universal */
+
+* {
+    box-sizing: border-box;
+}
+
+/* Etiqueta (A-Z) */
+
+body {
+    background: linear-gradient(180deg, rgba(11, 19, 43, 1) 0%, rgba(58, 80, 107, 1) 50%, rgba(111, 255, 233, 1) 100%);
+    font-family: "Oxygen";
+    height: 100vh;
+    margin-bottom: 50px;
+    width: 100vw;
+}
+
+/* Clase (A-Z) */
+
+.bank-promotion-icon {
+    color: rgba(250, 250, 250, 0.9);
+    font-size: 35px;
+}
+
+.bank-promotion-icon-row {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    margin-top: 0.75rem;
+    width: 150px;
+}
+
+.bank-promotion-list {
+    align-items: flex-start;
+    color: rgba(250, 250, 250, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    left: 0rem;
+    list-style: none;
+    position: absolute;
+    top: 20.25rem;
+    width: 300px;
+}
+
+.bank-promotion-list-item {
+    margin: 0.25rem 0rem;    
+}
+
+.bank-promotion-title {
+    color: rgba(250, 250, 250, 0.9);
+    margin-bottom: 0.5rem;
+    width: 300px;
+}
+
+.bank-promotion-section {
+    height: 77%;
+    margin-bottom: -1rem;
+    position: relative;
+    width: 100%;
+}
+
+.buy-button {
+    background: linear-gradient(180deg, rgba(11, 19, 43, 0.5) 0%, rgba(58, 80, 107, 1) 100%);
+    border: solid 1px rgba(0, 0, 0, 1);
+    border-radius: 7.5px;
+    bottom: 1rem;
+    color: rgba(250, 250, 250, 0.9);
+    font-family: "Oxygen";
+    font-size: 18px;
+    font-weight: bold;
+    height: 3rem;
+    position: absolute;
+    right: 4rem;
+    width: 70%;
+}
+
+.payment-method-link {
+    color: darkblue;
+    left: 2.5rem;
+    position: absolute;
+    text-decoration: none;
+    top: 33.75rem;
+    width: 250px;
+}
+
+.price-with-discount {
+    color: rgba(250, 250, 250, 0.9);
+    font-size: 30px;
+    font-weight: bold;
+    left: 2.5rem;
+    position: absolute;
+    top: 16.5rem;
+    width: 150px;
+}
+
+.price-without-discount {
+    color: rgba(250, 250, 250, 0.4);
+    font-size: 22px;
+    font-weight: bold;
+    left: 3.75rem;
+    margin-bottom: 5px;
+    position: absolute;
+    text-decoration: line-through;
+    top: 19rem;
+    width: 150px;
+}
+
+.product-brand-icon {
+    color: rgba(250, 250, 250, 0.9);
+    font-size: 40px;
+    left: 2rem;
+    position: absolute;
+    top: 1.5rem;
+}
+
+.product-description {
+    color: rgba(250, 250, 250, 0.7);
+    left: 2rem;
+    position: absolute;
+    top: 8.5rem;
+    width: 380px;
+}
+
+.product-detail {
+    align-self: start;
+    justify-self: start;
+    padding-bottom: 10%;
+    padding-left: 10%;
+    position: relative;
+}
+
+.product-discount {
+    align-items: center;
+    background: rgba(250, 0, 0, 0.7);
+    border-bottom: solid 1px rgba(0, 0, 0, 1);
+    border-bottom-left-radius: 25px;
+    border-left: solid 1px rgba(0, 0, 0, 1);
+    border-top: solid 1px rgba(0, 0, 0, 1);
+    border-top-left-radius: 25px;
+    color: rgba(250, 250, 250, 0.9);
+    display: flex;
+    font-size: 22px;
+    font-weight: bold;
+    justify-content: flex-start;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    right: 0;
+    top: 0.5rem;
+    width: 10rem;
+}
+
+.product-image {
+    padding: 10%;
+    width: 75%;
+}
+
+.product-name {
+    color: rgba(250, 250, 250, 0.9);
+    font-size: 20px;
+    font-weight: bold;
+    left: 2rem;
+    position: absolute;
+    top: 4.5rem;
+    width: 350px;
+}
+
+/*
+.shipping-method-icon-1, 
+.shipping-method-icon-2 {
+    color: rgba(250, 250, 250, 0.8);
+    font-size: 25px;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.shipping-method-section {
+    height: 25%;
+    margin-left: 2.5rem;
+}
+
+.shipping-method-title {
+    color: rgba(250, 250, 250, 0.8);
+    font-size: 16px;
+}
+*/
+
+.webpage {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.webpage-left-column, 
+.webpage-right-column {
+    background: linear-gradient(180deg, rgba(58, 80, 107, 0.5) 0%, rgba(11, 19, 43, 0.5) 100%);
+    border: solid 1px rgba(0, 0, 0, 1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 3%;
+    width: 30%;
+}
+
+.webpage-left-column {
+    align-items: center;
+    height: 90vh;
+    justify-content: center;
+    margin-left: 5rem;
+    width: 50%;
+}
+
+.webpage-right-column {
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 95vh;
+    justify-content: space-between;
+    margin-right: 5rem;
+    margin-top: 3rem;
+    position: relative;
+    width: 30%;
+}
