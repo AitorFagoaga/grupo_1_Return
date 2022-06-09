@@ -20,7 +20,7 @@
   {
     "id": 3,
     "name": "Televisor Samsung Crystal UHD",
-    "price": 90000,
+    "price": "900",
     "discount": 25,
     "category": "On Sale",
     "description": "Descripcion de Televisor Samsung Crystal UHD",

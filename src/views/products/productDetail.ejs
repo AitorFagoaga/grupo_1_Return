@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/productDetailReview.css">
+    <link rel="stylesheet" href="/css/productDetailUpdated.css">
     <!-- <link rel="stylesheet" href="/css/productDetail.css"> -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet"/>
@@ -22,6 +22,9 @@
                 <img alt="" class="product-image" src="/images/<%= productSelection.image %>"/>
             </article>
             <article class="webpage-right-column">
+                <div class="product-discount">
+                    <%= productSelection.discount %>% OFF
+                </div>
                 <i class="fa-brands fa-apple product-brand-icon"></i>
                 <h3 class="product-name">
                     <%= productSelection.name %>
@@ -29,39 +32,34 @@
                 <p class="product-description">
                     <%= productSelection.description %>
                 </p>
-                <div class="price-without-discount">
-                    $ <%= productSelection.price + ",000" %>
-                </div>
-                <div class="product-discount">
-                    <%= productSelection.discount %>% OFF
-                </div>
                 <div class="price-with-discount">
                     $ <%= discountPrice + ",000" %>
                 </div>
-                <div class="bank-promotion-section">
-                    <ul class="bank-promotion-list">
-                        <h3 class="bank-promotion-title">
-                            ¡Nuestra promociones bancarias!
-                        </h3>
-                        <li class="bank-promotion-list-item">
-                            6 cuotas sin interes de $<%= Math.round(discountPrice / 6) + ",000" %>
-                        </li>
-                        <li class="bank-promotion-list-item">
-                            9 cuotas sin interes de $<%= Math.round(discountPrice / 9) + ",000" %>
-                        </li>
-                        <li class="bank-promotion-list-item">
-                            12 cuotas sin interes de $<%= Math.round(discountPrice / 12) + ",000" %>
-                        </li>
-                        <div class="bank-promotion-icon-row">
-                            <i class="fa-brands fa-cc-visa bank-promotion-icon"></i>
-                            <i class="fa-brands fa-cc-mastercard bank-promotion-icon"></i>
-                            <i class="fa-brands fa-cc-amex bank-promotion-icon"></i>
-                        </div>
-                    </ul>
-                    <a class="payment-method-link" href="" type="submit">
-                        Ver todos los medios de pago
-                    </a>
+                <div class="price-without-discount">
+                    $ <%= productSelection.price + ",000" %>
                 </div>
+                <h3 class="bank-promotion-title">
+                    ¡Nuestra promociones bancarias!
+                </h3>
+                <ul class="bank-promotion-list">
+                    <li class="bank-promotion-list-item">
+                        6 cuotas sin interes de $<%= Math.round(discountPrice / 6) + ",000" %>
+                    </li>
+                    <li class="bank-promotion-list-item">
+                        9 cuotas sin interes de $<%= Math.round(discountPrice / 9) + ",000" %>
+                    </li>
+                    <li class="bank-promotion-list-item">
+                        12 cuotas sin interes de $<%= Math.round(discountPrice / 12) + ",000" %>
+                    </li>
+                    <li class="bank-promotion-icon-row">
+                        <i class="fa-brands fa-cc-visa bank-promotion-icon"></i>
+                        <i class="fa-brands fa-cc-mastercard bank-promotion-icon"></i>
+                        <i class="fa-brands fa-cc-amex bank-promotion-icon"></i>
+                    </li>
+                </ul>
+                <a class="payment-method-link" href="" type="submit">
+                    Ver todos los medios de pago
+                </a>
                 <!-- <div class="shipping-method-section">
                     <p class="shipping-method-title">
                         <i class="fa-solid fa-truck-fast shipping-method-icon-1"></i>
@@ -72,9 +70,7 @@
                         Retiro <strong>GRATIS</strong> por sucursal
                     </p>
                 </div> -->
-                <form action="" id="productDetailForm" method="" name="productDetailForm">
-                    <button class="buy-button" form="productDetailForm" type="submit">C O M P R A R</button>
-                </form>
+                <button class="buy-button" type="submit">C O M P R A R</button>
             </article>
         </section>
     </main>
