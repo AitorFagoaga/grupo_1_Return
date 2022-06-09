@@ -4,6 +4,10 @@ const path = require('path');
 const productsFilePath = path.join(__dirname, '../database/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+// Agregando funcionalidad clase 23
+const archivoRuta= path.join(__dirname, '../data/products.json');
+const dataProudctos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
 const productsController = {
 
     productCartEmpty: (req, res) => {
@@ -34,8 +38,18 @@ const productsController = {
         res.render('./products/vistaAdministrador')
     },
 
-    agregarProducto: (req, res) => {
+    vistaAgregarProducto: (req, res) => {
         res.render('./products/agregarProducto')
+    },
+    agregarProducto: (req, res) => {
+        var newProduct = {
+            id: dataProudctos[dataProudctos.length - 1].id+1,
+            titulo: req.body.titulo
+            }
+            
+            dataProudctos.push(newProduct);
+            fs.writeFileSync(archivoRuta, JSON.stringify(dataProudctos, null, 2));
+        res.redirect('/products/productList')
     }
 
 }
