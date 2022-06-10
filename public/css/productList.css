@@ -71,6 +71,9 @@ body {
    color: rgba(11, 19, 43, 1)
     
 }
+article{
+    background-color: aliceblue;
+}
 
 
 @media (max-width:768px) {

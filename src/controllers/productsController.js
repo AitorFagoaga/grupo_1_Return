@@ -6,7 +6,7 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 // Agregando funcionalidad clase 23
 const archivoRuta= path.join(__dirname, '../data/products.json');
-const dataProudctos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const dataProudctos = JSON.parse(fs.readFileSync(archivoRuta, 'utf-8'));
 
 const productsController = {
 
@@ -30,10 +30,6 @@ const productsController = {
         res.render('./products/productDetail', { productSelection: productSelection[0], discountPrice: discountPrice })
     },
 
-    productList: (req, res) => {
-        res.render ('./products/productList')
-    },
-
     vistaAdministrador: (req, res) => {
         res.render('./products/vistaAdministrador')
     },
@@ -42,15 +38,41 @@ const productsController = {
         res.render('./products/agregarProducto')
     },
     agregarProducto: (req, res) => {
-        var newProduct = {
-            id: dataProudctos[dataProudctos.length - 1].id+1,
-            titulo: req.body.titulo
+        //importante : en la base de datos, el archivo debe contener el array vacio [], para iniciar.
+        //dato por si la lista de la base de datos es vacia
+
+        let idinicio=1;
+        //sino es vacia entro al if
+        
+        if(dataProudctos.length != 0){
+            var newProduct = {
+                id: dataProudctos[dataProudctos.length - 1].id+1,
+                titulo: req.body.titulo,
+                descripcion: req.body.descripcion
             }
             
             dataProudctos.push(newProduct);
             fs.writeFileSync(archivoRuta, JSON.stringify(dataProudctos, null, 2));
-        res.redirect('/products/productList')
-    }
+            res.redirect('/products/productList')
+        }
+        //si es vacia entro al else y le asigno el idinicio=1 de arriba
+
+        else{
+        var newProduct = {
+            id: idinicio,
+            titulo: req.body.titulo,
+            descripcion: req.body.descripcion
+            }
+            dataProudctos.push(newProduct);
+            fs.writeFileSync(archivoRuta, JSON.stringify(dataProudctos, null, 2));
+            res.redirect('/products/productList')
+        }
+    },
+
+    productList: (req, res) => {
+        res.render ('./products/productList', {dataProudctos:dataProudctos})
+    },
+
 
 }
 

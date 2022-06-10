@@ -2,10 +2,11 @@ const express = require('express');
 const router = express.Router();
 const productsController = require('../controllers/productsController');
 const multer = require('multer');
+const path = require('path');
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, path.join(__dirname, "../../public/images/products"));
+        cb(null, path.join(__dirname, "../../public/images/productos/"));
     }, 
     filename: function (req, file, cb) {
         let imageName = Date.now() + "-" + path.extname(file.originalname);
@@ -23,7 +24,7 @@ router.get('/vistaAdministrador', productsController.vistaAdministrador);
 
 // Modificar image con el nombre del input
 router.get('/agregarProducto', productsController.vistaAgregarProducto);
-router.post('/productList', upload.single('image'), productsController.agregarProducto);
+router.post('/productList', upload.single('imagenA'), productsController.agregarProducto);
 
 
 module.exports = router;
