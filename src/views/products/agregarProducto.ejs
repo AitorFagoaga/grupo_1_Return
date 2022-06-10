@@ -17,20 +17,22 @@
     <%- include('../partials/header.ejs') %>
     
     </br>
-    <div class="conteiner-agregado">
+    <form action="/products/productList" method="post" enctype="multipart/form-data">
+        <div class="conteiner-agregado">
+        </br>
+            <input type="text" placeholder="Titulo" class="titulo" name="titulo"></input>
+        </br>
+        </br>
+        <div class="imagen-agregado">
+            <i class="fas fa-download"></i>
+        </div>
     </br>
-        <input type="text" placeholder="Titulo" class="titulo"></input>
-    </br>
-    </br>
-    <div class="imagen-agregado">
-        <i class="fas fa-download"></i>
-    </div>
-</br>
-    <div>
-        <textarea name="descripcion" id="descripcion" cols="30" rows="10" class="text-area" placeholder="Descripcion completa."></textarea>
-    </div>
-    </div>
-
+        <div>
+            <textarea name="descripcion" id="descripcion" cols="30" rows="10" class="text-area" placeholder="Descripcion completa."></textarea>
+        </div>
+        <input type="submit"> </input> 
+        </div>
+    </form>
     <!-- Footer  -->
     <%- include('../partials/footer.ejs') %>
 </body>
