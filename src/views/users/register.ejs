@@ -21,26 +21,56 @@
 </header>
 </head>
 <body>
-    <form action="register.html" method="post" class="form-register">
+    
+    <form action="/users/register" method="POST" class="form-register">
         <h1 class =" form-titulo"> Registrate </h1>
 
         <div class="input-contenedor">
            <i class="fa-solid fa-user icon"></i>
-           <input type="text" name ="nombre" class="sinborde" placeholder="Nombre Completo" maxlength="15"required/>
-
-
+           <input type="text" 
+                name ="name" 
+                class="sinborde" 
+                value="<%= locals.oldData ? oldData.name : null %>" 
+                placeholder="Nombre Completo" 
+                maxlength="15"
+            />
+           <% if (locals.errors && errors.name){ %>
+                <div class="error-msg">
+                    <%= errors.name.msg %>
+                </div>
+            <% } %>
         </div>
 
         <div class="input-contenedor">
             <i class="fa-solid fa-at icon"></i>
-            <input type="text" name="correo" class="sinborde" placeholder="Correo Electronico" maxlength="20"required/>
-
+            <input type="text" 
+                name="email" 
+                class="sinborde" 
+                value="<%= locals.oldData ? oldData.email : null %>" 
+                placeholder="Correo Electronico" 
+                maxlength="20"
+            />
+            <% if (locals.errors && errors.email){ %>
+                <div class="error-msg">
+                    <%= errors.email.msg %>
+                </div>
+            <% } %>
          </div>
 
         <div class="input-contenedor">
             <i class="fa-solid fa-lock icon"></i>
-            <input type="password" name= "password" class="sinborde" placeholder="Crea Contraseña" maxlength="8" required/>
-
+            <input type="password" 
+                name= "password" 
+                class="sinborde" 
+                value="<%= locals.oldData ? oldData.password : null %>"  
+                placeholder="Crea Contraseña" 
+                maxlength="8" 
+            />
+            <% if (locals.errors && errors.password){ %>
+                <div class="error-msg">
+                    <%= errors.password.msg %>
+                </div>
+            <% } %>
          </div>
         
          <label><input type="checkbox" class="checkbox">Aceptas nuestras condiciones de uso y política de privacidad</label></br>
