@@ -6,10 +6,10 @@ const path = require('path');
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, path.join(__dirname, "../../public/images/productos/"));
+        cb(null, path.join(__dirname, "../../public/images/productos"));
     }, 
     filename: function (req, file, cb) {
-        let imageName = Date.now() + "-" + path.extname(file.originalname);
+        let imageName = Date.now() + path.extname(file.originalname);
         cb(null, imageName);
     }  
 })
@@ -24,7 +24,16 @@ router.get('/vistaAdministrador', productsController.vistaAdministrador);
 
 // Modificar image con el nombre del input
 router.get('/agregarProducto', productsController.vistaAgregarProducto);
-router.post('/productList', upload.single('imagenA'), productsController.agregarProducto);
+router.post('/productList', upload.single('imagen'), (req, res, next) => {
+    if(req.file){
+        next();
+    }
+    else{
+      res.send("Error al subir imagen, seleccione una")
+      next();
+    }
+},
+productsController.agregarProducto);
 
 
 module.exports = router;

@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-
 const productsFilePath = path.join(__dirname, '../database/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
@@ -43,13 +42,15 @@ const productsController = {
 
         let idinicio=1;
         //sino es vacia entro al if
+
         
         if(dataProudctos.length != 0){
             var newProduct = {
                 id: dataProudctos[dataProudctos.length - 1].id+1,
                 titulo: req.body.titulo,
-                descripcion: req.body.descripcion
+                imagen : req.file.filename,
             }
+            
             
             dataProudctos.push(newProduct);
             fs.writeFileSync(archivoRuta, JSON.stringify(dataProudctos, null, 2));
@@ -58,10 +59,11 @@ const productsController = {
         //si es vacia entro al else y le asigno el idinicio=1 de arriba
 
         else{
-        var newProduct = {
+            var newProduct = {
             id: idinicio,
             titulo: req.body.titulo,
-            descripcion: req.body.descripcion
+            descripcion: req.body.descripcion,
+            imagen : req.file.filename,
             }
             dataProudctos.push(newProduct);
             fs.writeFileSync(archivoRuta, JSON.stringify(dataProudctos, null, 2));

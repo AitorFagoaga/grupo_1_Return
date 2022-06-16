@@ -60,17 +60,17 @@
    </div> -->
 
        <div>
-            <div><% dataProudctos.forEach(proudctos => { %>
+            <div><% dataProudctos.forEach(productos => { %>
             </br>
             <section class="new-product" name="new-product">
                 <article class="new-product" name="new-product">
                     <h3 class="new-product-discount"><i class="fa-solid fa-heart"></i></h3>
-                            <img src="/images/macbok.jpg" alt="macbook">
+                    <img src="/images/productos/<%=productos.imagen%>">
                             <div class="informacion">
                                 <span class="tipo-envio">Envio con normalidad </span>
                                 <span class="precio"> $550 </span>
                                 <span class="precio-envio" >Envio Gratis </span>
-                                <span class="descripcion"><%= proudctos.titulo%></span>
+                                <span class="descripcion"><%= productos.titulo%></span>
                                  <div>  <a class="link2" href="productDetail">Ver Producto</a></div>
                                  <div class="calificacion">
                                     <span> <i class="fa-solid fa-star"></i>

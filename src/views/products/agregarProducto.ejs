@@ -17,7 +17,7 @@
     <%- include('../partials/header.ejs') %>
     
     </br>
-    <form action="/products/productList" method="post" enctype="multipart/form-data">
+    <form action="/products/productList" method="POST" enctype="multipart/form-data">
         <div class="conteiner-agregado">
         </br>
             <input type="text" placeholder="Titulo" class="titulo" name="titulo"></input>
@@ -27,6 +27,7 @@
         </br>
                  <i class="fas fa-download"></i>
         </div>
+        <div><input type="file" name="imagen"></div>
     </br>
         <div>
             <textarea name="descripcion" id="descripcion" cols="30" rows="10" class="text-area" placeholder="Descripcion completa."></textarea>
