@@ -19,5 +19,12 @@
   "name": "aitor",
   "email": "aitor@gmail.com",
   "password": "1234"
+ },
+ {
+  "id": 18,
+  "name": "ad",
+  "category": "Comprador",
+  "email": "ad@mail.com",
+  "password": "123456"
  }
 ]

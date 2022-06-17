@@ -22,7 +22,7 @@
 </head>
 <body>
     
-    <form action="/users/register" method="POST" class="form-register">
+    <form action="/users/register" method="POST" class="form-register" enctype="multipart/form-data">
         <h1 class =" form-titulo"> Registrate </h1>
 
         <div class="input-contenedor">
@@ -40,7 +40,46 @@
                 </div>
             <% } %>
         </div>
-
+        <div class="input-contenedor">
+            <!-- <i class="fa-solid fa-at icon"></i> -->
+            <input type="file" 
+                name="image" 
+                class="sinborde" 
+                value="<%= locals.oldData ? oldData.email : null %>" 
+                placeholder="Correo Electronico" 
+                maxlength="20"
+            />
+            <% if (locals.errors && errors.image){ %>
+                <div class="error-msg">
+                    <%= errors.image.msg %>
+                </div>
+            <% } %>
+         </div>
+         
+        <div class="input-contenedor">
+            <label><b>Categoria:</b></label>
+            <select 
+                name="category" 
+                class="sinborde"
+            >
+                <option value="">Elegí una Categoria</option>
+                <%  
+                    let categories = ['Comprador', 'Vendedor'];
+                %>
+                <% for (const oneCategory of categories) { %>
+                    <option 
+                        value="<%= oneCategory %>"
+                        <%= locals.oldData && (oneCategory === oldData.category) ? 'selected' : null %> 
+                    > <%= oneCategory %> </option>
+                <% } %>
+            </select>
+            <% if (locals.errors && errors.category) { %>
+                <div class="text-danger">
+                    <%= errors.category.msg %>
+                </div>
+            <% } %>
+        </div>
+        
         <div class="input-contenedor">
             <i class="fa-solid fa-at icon"></i>
             <input type="text" 

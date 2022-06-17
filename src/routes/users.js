@@ -1,11 +1,39 @@
 
 const express = require('express');
 const router = express.Router();
+const path = require('path');
 const usersController = require('../controllers/usersController');
 const { body } = require('express-validator');
+const multer = require('multer');
+
+const storage = multer.diskStorage({
+    destination: (req,file,cb) => {
+        cb(null, path.join(__dirname, "../../public/images/users"));
+    },
+    filename: (req,file,cb) => {
+        let imageName = Date.now() + "-" +  path.extname(file.originalname);
+        cb(null, imageName);
+    }
+})
+
+const upload = multer({storage});
 
 const validations = [
     body('name').notEmpty().withMessage('Debes poner tu nombre'),
+    body('category').notEmpty().withMessage('Debes elegir una categoria'),
+    body('image').custom((value, {req})=>{
+        let image = req.file;
+        let fileExtention = path.extname(image.originalname);
+        let extensions = ['.jpg','.png'];
+        if(!image){
+            throw new Error ("Debes colocar una foto de perfil")
+        }else{
+            if(!extensions.includes(fileExtention)){
+                throw new Error ("Debes colocar una imagen con .jpg o .png")
+            }
+        }
+        return true;
+    }),
     body('email')
         .notEmpty().withMessage('Debes colocar un email').bail()
         .isEmail().withMessage('Debes colocar un formato de email valido'),
@@ -15,6 +43,6 @@ const validations = [
 router.get('/login', usersController.login);
 
 router.get('/register', usersController.register);
-router.post('/register', validations ,usersController.processRegister);
+router.post('/register', upload.single('image'), validations, usersController.processRegister);
 
 module.exports = router;
