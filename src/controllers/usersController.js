@@ -1,4 +1,5 @@
 const { validationResult } = require('express-validator');
+const userModel = require('../models/User');
 
 const usersController = {
 
@@ -16,6 +17,8 @@ const usersController = {
             oldData: req.body
         });
        };
+       userModel.create(req.body);
+       return res.redirect('/');
     }
 
 };
