@@ -17,13 +17,13 @@ const User = {
         let userFound = allUsers.find(oneUser => oneUser.id === id);
         return userFound;
     }, 
-    //buscar usuario por campo (ejemplo: name o email)
+    //buscar usuario por campo (ejemplo: field: (name o email) value:(aitor o aitor@mail.com) )
     findByField: function (field,value) {
         let allUsers = this.findAllUsers();
         let userFound = allUsers.find(oneUser => oneUser[field] === value);
         return userFound;
     }, 
-    //generar un id para el campo
+    //generar un id para el usuario
     generateId: function () {
         let allUsers = this.findAllUsers();
         let lastUser = allUsers.pop();
