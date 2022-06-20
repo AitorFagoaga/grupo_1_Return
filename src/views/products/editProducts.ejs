@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="/css/vistaAdmin.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VistaAdministrador</title>
+</head>
+<body>
+    <!-- header -->
+    <%- include('../partials/header.ejs') %>
+    <form class="form-new" action="/products/<%= product.id %>?_method=put" method="POST" >
+        <div>
+            <label for="name">Nombre</label>
+            <input type="text" name="titulo"  value="<%= product.titulo %>">
+        </div>
+
+        <div>
+            <label for="descripcion">Descripcion</label>
+            <input type="text" name="descripcion"  value="<%= product.descripcion %>">
+        </div>
+        <div>
+          <img src="/images/productos/<%=product.imagen%>" alt="profileImage">  
+        </div>
+        <!-- <div>
+            <input type="file" name="imagen">
+        </div> -->
+
+        <div></div>
+
+        <div>
+            <button type="submit">Editar</button>
+        </div>
+
+    </form>
+    </br>
+    <!-- Footer  -->
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>

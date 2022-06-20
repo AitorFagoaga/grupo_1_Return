@@ -20,6 +20,10 @@
         <form action="/products/productDetail/<%= productSelection.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
             <input type="submit">  </input> 
         </form>
+        <!-- <form action="/products/editProducts/<%= productSelection.id %>" method="get" >
+            <input type="submit">  </input> 
+        </form> -->
+        <a href="/products/editProducts/<%= productSelection.id %>"> <input type="submit"> Editar </input></a>
         <section class="webpage">
             <article class="webpage-left-column">
                 <img alt="" class="product-image" src="/images/<%= productSelection.image %>"/>

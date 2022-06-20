@@ -37,5 +37,8 @@ productsController.agregarProducto);
 
 router.delete('/productDetail/:id', productsController.delete);
 
+router.get('/editProducts/:id', productsController.edit); 
+router.put('/:id/', productsController.editUpdate); 
+
 
 module.exports = router;

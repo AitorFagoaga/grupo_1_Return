@@ -80,8 +80,35 @@ const productsController = {
 		let productDelete = dataProudctos.filter(prod => {return prod.id != id});
         fs.writeFileSync(archivoRuta, JSON.stringify(productDelete, null,  ' '));
         res.redirect ('/products/productList')
-	}
-    
+	},
+    edit: (req,res) => {
+        //filtrar y buscar
+        let product = dataProudctos.filter(productos => {
+            return productos.id == req.params.id
+        })
+
+        //si no existe el producto??
+        //let product = { id: 99, name: 'producto a editar', price: 1200, img: 'ruta..' }
+
+        return res.render('products/editProducts', {product: product[0]});
+    },
+    editUpdate: (req,res) =>{
+       let prod = dataProudctos
+        prod = prod.map(producto => {
+            if (producto.id == req.params.id) {
+                producto.titulo = req.body.titulo
+                producto.descripcion = req.body.descripcion
+            }
+            return producto
+        })
+        
+        //reescribo el json
+        //databaseJson.writeJson(prod, archivoRuta)
+        fs.writeFileSync(archivoRuta, JSON.stringify(prod, null,  ' '));
+
+        //redireccionar
+        return res.redirect('/products/productList')
+    }
 
 }
 
