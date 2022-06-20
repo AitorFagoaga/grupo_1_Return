@@ -75,6 +75,10 @@ const productsController = {
         res.render ('./products/productList', {dataProudctos:dataProudctos})
     },
 
+    delete: (req, res) => {
+		let productDelete = dataProudctos.filter(prod => {return prod.id !== req.params.id});
+        fs.writeFileSync(archivoRuta, JSON.stringify(productDelete, null,  ' '));
+	}
 
 }
 
