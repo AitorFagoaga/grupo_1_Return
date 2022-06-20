@@ -35,7 +35,7 @@ router.post('/productList', upload.single('imagen'), (req, res, next) => {
 },
 productsController.agregarProducto);
 
-router.delete('/productDetail', productsController.delete);
+router.delete('/productDetail/:id', productsController.delete);
 
 
 module.exports = router;

@@ -20,7 +20,7 @@ const productsController = {
     productDetail: (req, res) => {
         const id = req.params.id;
 
-        const productSelection = products.filter(product => {
+        const productSelection = dataProudctos.filter(product => {
             return product.id == id;
         });
 
@@ -75,10 +75,13 @@ const productsController = {
         res.render ('./products/productList', {dataProudctos:dataProudctos})
     },
 
-    delete: (req, res) => {
-		let productDelete = dataProudctos.filter(prod => {return prod.id !== req.params.id});
+    delete: (req,res) => {
+        const id = req.params.id;
+		let productDelete = dataProudctos.filter(prod => {return prod.id != id});
         fs.writeFileSync(archivoRuta, JSON.stringify(productDelete, null,  ' '));
+        res.redirect ('/products/productList')
 	}
+    
 
 }
 

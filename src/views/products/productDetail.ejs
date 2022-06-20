@@ -17,6 +17,9 @@
     <%- include('../partials/header.ejs') %>
         <!-- /Header  -->
     <main>
+        <form action="/products/productDetail/<%= productSelection.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
+            <input type="submit">  </input> 
+        </form>
         <section class="webpage">
             <article class="webpage-left-column">
                 <img alt="" class="product-image" src="/images/<%= productSelection.image %>"/>
@@ -24,24 +27,24 @@
             <article class="webpage-right-column">
                 <div class="product-discount">
                     <%= productSelection.discount %>% OFF
-                </div>
+                </div> 
                 <i class="fa-brands fa-apple product-brand-icon"></i>
                 <h3 class="product-name">
-                    <%= productSelection.name %>
+                    <%= productSelection.titulo %>
                 </h3>
                 <p class="product-description">
-                    <%= productSelection.description %>
+                    <%= productSelection.descripcion %>
                 </p>
                 <div class="price-with-discount">
                     $ <%= discountPrice + ",000" %>
-                </div>
-                <div class="price-without-discount">
+                </div> 
+                 <div class="price-without-discount">
                     $ <%= productSelection.price + ",000" %>
-                </div>
-                <h3 class="bank-promotion-title">
+                </div> 
+                <!-- <h3 class="bank-promotion-title">
                     ¡Nuestra promociones bancarias!
-                </h3>
-                <ul class="bank-promotion-list">
+                </h3> -->
+                <!-- <ul class="bank-promotion-list">
                     <li class="bank-promotion-list-item">
                         6 cuotas sin interes de $<%= Math.round(discountPrice / 6) + ",000" %>
                     </li>
@@ -56,7 +59,7 @@
                         <i class="fa-brands fa-cc-mastercard bank-promotion-icon"></i>
                         <i class="fa-brands fa-cc-amex bank-promotion-icon"></i>
                     </li>
-                </ul>
+                </ul> -->
                 <a class="payment-method-link" href="" type="submit">
                     Ver todos los medios de pago
                 </a>
