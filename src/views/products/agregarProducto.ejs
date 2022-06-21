@@ -20,18 +20,16 @@
     <form action="/products/productList" method="POST" enctype="multipart/form-data">
         <div class="conteiner-agregado">
         </br>
-            <input type="text" placeholder="Titulo" class="titulo" name="titulo"></input>
+            <input type="text" placeholder="Titulo" class="titulo" name="titulo" required></input>
         </br>
         </br>
         <div class="imagen-agregado" name="imagen-agregado"> 
         </br>
                  <i class="fas fa-download"></i>
         </div>
-        <div><input type="file" name="imagen"></div>
+        <div><input type="file" name="imagen" required></div>
     </br>
-        <div>
-            <textarea name="descripcion" id="descripcion" cols="30" rows="10" class="text-area" placeholder="Descripcion completa."></textarea>
-        </div>
+            <textarea name="descripcion" id="descripcion" cols="30" rows="10" class="text-area" placeholder="Descripcion completa." required></textarea>
         <input type="submit"> </input> 
         </div>
     </form>

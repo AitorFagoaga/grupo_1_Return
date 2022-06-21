@@ -26,5 +26,19 @@
   "category": "Comprador",
   "email": "ad@mail.com",
   "password": "123456"
+ },
+ {
+  "id": 19,
+  "name": "Bruno",
+  "category": "Vendedor",
+  "email": "adsads@hotmail.com",
+  "password": "dasasdas"
+ },
+ {
+  "id": 20,
+  "name": "dssdsd",
+  "category": "Comprador",
+  "email": "sdsdasd@hotmail.com",
+  "password": "sdsdsdsd"
  }
 ]
