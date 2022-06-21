@@ -22,7 +22,8 @@ body {
     box-shadow: 0 0 1.5em rgba (0,0,0,0.5);
 }
 .producto > img {
-    width: 100%;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     
 }
@@ -73,11 +74,21 @@ body {
 }
 article{
     background-color: aliceblue;
+   
+}
+.tamano-img{
+    width: 200px;
+    height: 200px;
 }
 
 
 @media (max-width:768px) {
     .new-product{
         display:table-row;
+        
      }
+     .tamano-img{
+        width: 200px;
+        height: 200px;
+    }
 }
