@@ -48,6 +48,7 @@ const productsController = {
             var newProduct = {
                 id: dataProudctos[dataProudctos.length - 1].id+1,
                 titulo: req.body.titulo,
+                descripcion: req.body.descripcion,
                 imagen : req.file.filename,
             }
             
@@ -72,7 +73,8 @@ const productsController = {
     },
 
     productList: (req, res) => {
-        res.render ('./products/productList', {dataProudctos:dataProudctos})
+        let rutaJson= JSON.parse(fs.readFileSync(archivoRuta, 'utf-8'));
+        res.render ('./products/productList', {dataProudctos: rutaJson})
     },
 
     delete: (req,res) => {
@@ -81,6 +83,7 @@ const productsController = {
         fs.writeFileSync(archivoRuta, JSON.stringify(productDelete, null,  ' '));
         res.redirect ('/products/productList')
 	},
+
     edit: (req,res) => {
         //filtrar y buscar
         let product = dataProudctos.filter(productos => {
@@ -102,8 +105,7 @@ const productsController = {
             return producto
         })
         
-        //reescribo el json
-        //databaseJson.writeJson(prod, archivoRuta)
+
         fs.writeFileSync(archivoRuta, JSON.stringify(prod, null,  ' '));
 
         //redireccionar
