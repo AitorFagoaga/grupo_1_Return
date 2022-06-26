@@ -10,8 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/productList.css">
+    <link rel="stylesheet" href="/css/productDetail.css"> 
+    
 </head>
 <body>
+    <br/>
+        <br/>
+        <br/>
+        <br/>
        <!-- header   -->
     <%- include('../partials/header.ejs') %>
     <!-- <header class="header">
@@ -42,8 +48,8 @@
             
         </nav>
     </header> -->
-    
-    <h4 class="headline-1">Popular categories</h4>
+        <br/>
+        <br/>
         <ul class="category" name="category">
             <a class="category-1" href="" name="category-1"><i class="fa-solid fa-tv category-icon"></i></a>
             <a class="category-2" href="" name="category-2"><i class="fa-solid fa-headset category-icon"></i></a>
@@ -53,7 +59,13 @@
             <a class="category-button" href="" name="category-button">All categories</a>
         </ul>
     </h4>
- <!-- <div><% dataProudctos.forEach(proudctos => { %>
+
+    <br/>
+    <br/>
+    <br/>
+        <br/>    <!-- <div><% dataProudctos.forEach(proudctos => { %>
+            <br/>
+        <br/>
       <h1>
          <%= proudctos.titulo%>
         </h1>
@@ -61,11 +73,11 @@
    </div> -->
 
        <div>
+        <div><a href="./agregarProducto" > <input type="submit" value="Agregar Producto" class="botonAgregar"> </a></div>
             <div><% dataProudctos.forEach(productos => { %>
             </br>
             <section class="new-product" name="new-product">
                 <article class="new-product" name="new-product">
-                    <h3 class="new-product-discount"><i class="fa-solid fa-heart"></i></h3>
                        <img src="/images/productos/<%=productos.imagen%>" width="300px" >
                     
                             <div class="informacion">
@@ -87,13 +99,13 @@
             </br>
                 <% }) %>
             </div>
+
         </div>
-
-
-       
             <!-- Footer  -->
-    <%- include('../partials/footer.ejs') %>
-                    </section>
+    
+          </section>
+          <%- include('../partials/footerdos.ejs') %>
     </main>
+    
 </body>
 </html>

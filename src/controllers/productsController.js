@@ -42,7 +42,6 @@ const productsController = {
 
         let idinicio=1;
         //sino es vacia entro al if
-
         
         if(dataProudctos.length != 0){
             var newProduct = {
@@ -55,7 +54,7 @@ const productsController = {
             
             dataProudctos.push(newProduct);
             fs.writeFileSync(archivoRuta, JSON.stringify(dataProudctos, null, 2));
-            res.redirect('/products/productList')
+            res.redirect('/products/productList');
         }
         //si es vacia entro al else y le asigno el idinicio=1 de arriba
 

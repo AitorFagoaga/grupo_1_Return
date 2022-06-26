@@ -2,8 +2,9 @@
 <html lang="es">
 <head>
     <link rel="stylesheet" href="/css/index.css">
+
     <link rel="stylesheet" href="/css/productDetailUpdated.css">
-    <!-- <link rel="stylesheet" href="/css/productDetail.css"> -->
+    <link rel="stylesheet" href="/css/productDetail.css"> 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Oxygen&display=swap" rel="stylesheet">
@@ -17,20 +18,28 @@
     <%- include('../partials/header.ejs') %>
         <!-- /Header  -->
     <main>
-        <form action="/products/productDetail/<%= productSelection.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
-            <input type="submit" value="Borrar">  </input> 
-        </form>
-        
-        <a href="/products/editProducts/<%= productSelection.id %>"> <input type="submit" value="Editar"> </a>
+
         <section class="webpage">
+            
             <article class="webpage-left-column">
-                <img alt="" class="product-image" src="/images/<%= productSelection.image %>"/>
+                <img src="/images/productos/<%=productSelection.imagen%>" width="300px" >
             </article>
+            
             <article class="webpage-right-column">
                 <div class="product-discount">
                     <%= productSelection.discount %>% OFF
                 </div> 
+             <div class="botonesBorraryEditar">
+                <form action="/products/productDetail/<%= productSelection.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
+                    <input type="submit" value="Borrar" class="botonesBorraryEditar"></input> 
+                </form>
+            </div>
+            
+            <div class="botonesBorraryEditar">
+                <a href="/products/editProducts/<%= productSelection.id %>"> <input type="submit" value="Editar" class="botonesBorraryEditar"> </a>
+            </div>
                 <i class="fa-brands fa-apple product-brand-icon"></i>
+
                 <h3 class="product-name">
                     <%= productSelection.titulo %>
                 </h3>
@@ -40,6 +49,7 @@
                 <div class="price-with-discount">
                     $ <%= discountPrice + ",000" %>
                 </div> 
+                
                  <div class="price-without-discount">
                     $ <%= productSelection.price + ",000" %>
                 </div> 
@@ -141,31 +151,6 @@
    <!-- Footer  -->
     <!-- <%- include('../partials/footer.ejs') %> -->
 
-    <!-- <nav class="text">
-        <ul class="nav-pc">
-            <li>Hypertexto1</li>
-            <br/>
-            <li>Hypertexto1</li>
-            <br/>
-            <li>Hypertexto1</li>
-            <br/>
-            <div class="textocentro">
-            <li>Hypertexto1</li>
-            <br/>
-            <li>Hypertexto1</li>
-            <br/>
-            <li>Hypertexto1</li>
-            <br/>
-            </div>
-            <div class="textofinal">
-            <li>Hypertexto1</li>
-            <br/>
-            <li>Hypertexto1</li>
-            <br/>
-            <li>Hypertexto1</li>
-            <br/>
-            </div>
-        </ul>
-     </nav> -->
+    <%- include('../partials/footerdos.ejs') %>
 </body>
 </html>
