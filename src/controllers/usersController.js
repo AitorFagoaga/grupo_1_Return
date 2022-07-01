@@ -6,6 +6,12 @@ const usersController = {
     login: (req, res) => {
         return res.render('./users/login');
     },
+    processLogin: (req, res) => {
+        let usuario = userModel.findByField('email', req.body.email);
+        let usuarioLogeado = req.cookies.userLogged = usuario;
+        console.log(usuarioLogeado)
+        return res.redirect('/')
+    },
 
     register: (req, res) => {
         return res.render('./users/register');

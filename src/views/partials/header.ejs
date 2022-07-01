@@ -12,11 +12,14 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
         </form>
-        <div class="right-column">
-            <a class="top-navigation-bar-button" href="/users/login">
-                User
-                <i class="fa-solid fa-chevron-down right-column-dropdown-menu"></i>
-            </a>
+        <% if(locals.isLogged) {%>
+            <% } else { %>
+                <div class="right-column">
+                    <a class="top-navigation-bar-button" href="/users/login">
+                        User
+                        <i class="fa-solid fa-chevron-down right-column-dropdown-menu"></i>
+                    </a>
+             <% }%>
             <a class="top-navigation-bar-favorite-button" href="">
                 Favorites
                 <i class="fa-solid fa-chevron-down right-column-dropdown-menu"></i>
