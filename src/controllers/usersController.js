@@ -9,9 +9,10 @@ const usersController = {
     },
     processLogin: (req, res) => {
         let usuario = userModel.findByField('email', req.body.email);
-        //let usuarioLogeado = req.cookies.userLogged = usuario;
+        
         console.log(usuario)
         if (usuario){
+            let usuarioLogeado = req.session.userLogged = usuario
             let comparePassword = bcryptjs.compareSync(req.body.password, usuario.password)
             if(comparePassword == true){
                 return res.redirect('/')
@@ -68,6 +69,11 @@ const usersController = {
 
        userModel.create(newUsers);
        return res.redirect('/');
+    },
+    profile: (req,res) => {
+        return res.render('profile',{
+            user: req.session.userLogged
+        })
     }
 
 };

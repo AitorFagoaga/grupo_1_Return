@@ -1,7 +1,7 @@
 const userModel = require('../models/User');
 
 
-function usuarioRegistrado(req, res, next) {
+function userRegister(req, res, next) {
 	res.locals.isLogged = false;
 
 	let emailInCookie = req.cookies.email;
@@ -19,4 +19,4 @@ function usuarioRegistrado(req, res, next) {
 	next();
 }
 
-module.exports = usuarioRegistrado
+module.exports = userRegister;
