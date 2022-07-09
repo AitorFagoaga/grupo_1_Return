@@ -40,5 +40,50 @@
   "category": "Comprador",
   "email": "sdsdasd@hotmail.com",
   "password": "sdsdsdsd"
+ },
+ {
+  "id": 21,
+  "name": "Brunito",
+  "category": "Comprador",
+  "email": "bruno@hotmail.com",
+  "password": "ass"
+ },
+ {
+  "id": 22,
+  "name": "Brunito",
+  "category": "Comprador",
+  "email": "bruno@hotmail.com",
+  "password": "asd"
+ },
+ {
+  "id": 23,
+  "name": "Brunito",
+  "imagen": "1657324905245-.jpg",
+  "category": "Comprador",
+  "email": "bruno@hotmail.com",
+  "password": "sdsd"
+ },
+ {
+  "id": 24,
+  "name": "Brunito",
+  "imagen": "1657324985348-.jpg",
+  "category": "Comprador",
+  "email": "bruno@hotmail.com",
+  "password": "sdsdsd"
+ },
+ {
+  "id": 25,
+  "name": "elbrunaso",
+  "imagen": "1657330518789-.jpg",
+  "category": "Vendedor",
+  "email": "nada@hotmail.com",
+  "password": "nada"
+ },
+ {
+  "name": "neneasdsa",
+  "imagen": "1657332263474-.jpg",
+  "category": "Comprador",
+  "email": "bruno@hotmail.commmm",
+  "password": "sdsdsd"
  }
 ]
