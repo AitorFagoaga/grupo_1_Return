@@ -27,8 +27,17 @@
 
         <div class="input-contenedor">
            <i class="fa-solid fa-user icon"></i>
+<<<<<<< HEAD
            <input type="text" name ="email" class="sinborde" placeholder="Correo Electronico" maxlength="30"required/>
 
+=======
+           <input type="text" name ="email" class="sinborde" placeholder="Correo Electronico" required/>
+            <% if (locals.errors && errors.email) { %>
+                <div class="error-msg">
+                    <%= errors.email.msg %>
+                </div>
+            <% } %>
+>>>>>>> 3666df8a2f866a2fd6f50c41c4b0d73dea355f29
 
         </div>
 
