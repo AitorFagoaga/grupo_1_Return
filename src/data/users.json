@@ -40,5 +40,12 @@
   "category": "Comprador",
   "email": "sdsdasd@hotmail.com",
   "password": "sdsdsdsd"
+ },
+ {
+  "id": 21,
+  "name": "ai",
+  "category": "Comprador",
+  "email": "ai@mail.com",
+  "password": "$2a$10$omA7VISNGuPLNjT8qctEHuItqo6pjTjbDpM7jLRFYGoRrx0yExvp6"
  }
 ]
