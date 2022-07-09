@@ -3,11 +3,8 @@ const userModel = require('../models/User');
 const path = require('path');
 const fs = require('fs');
 const archivoRuta = path.join(__dirname, '../data/users.json');
-
 const bcryptjs = require('bcryptjs');
-
 const usersController = {
-
     login: (req, res) => {
         return res.render('./users/login');
     },
@@ -16,13 +13,10 @@ const usersController = {
        // let usuarioLogeado = req.cookies.userLogged;
        console.log(usuario);
         // if(usuario){
-
         //     return res.render("./usersLogin", {database:database})
-
         // }
         // return res.send('credenciales invalidas')
         // console.log(usuario)
-
     if (usuario){
         let usuarioLogeado = req.session.userLogged = usuario
         let comparePassword = bcryptjs.compareSync(req.body.password, usuario.password)
@@ -46,13 +40,7 @@ const usersController = {
             }
         })
     };
-    
-    return res.redirect('/')
-    let usuarioLogeado = req.cookies.userLogged = usuario;
-    console.log(usuarioLogeado)
-    return res.redirect('/')
 },
-
     register: (req, res) => {
         return res.render('./users/register');
     },
@@ -70,18 +58,13 @@ const usersController = {
         email: req.body.email,
         password: req.body.password,
        }
-
        userModel.create(modelo);
-
-
        let newUsers = {
      // ...req.body = todo lo que trajo el body del request
            ...req.body,
            password: bcryptjs.hashSync(req.body.password, 10)
        };
-
        let existingUser = userModel.findByField("email", req.body.email);
-
        if (existingUser){
            return res.render ('./users/register', {
                errors: {
@@ -91,10 +74,7 @@ const usersController = {
                }, oldData: req.body
            })
        };
-
        userModel.create(newUsers);
-
-
        userModel.create(req.body);
        return res.redirect('/');
     },
@@ -103,7 +83,5 @@ const usersController = {
             user: req.session.userLogged
         })
     }
-
 };
-
 module.exports = usersController;
