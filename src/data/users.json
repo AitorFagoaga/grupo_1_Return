@@ -40,6 +40,7 @@
   "category": "Comprador",
   "email": "sdsdasd@hotmail.com",
   "password": "sdsdsdsd"
+<<<<<<< HEAD
  },
  {
   "id": 21,
@@ -92,5 +93,7 @@
   "email": "ai@mail.com",
   "password": "$2a$10$omA7VISNGuPLNjT8qctEHuItqo6pjTjbDpM7jLRFYGoRrx0yExvp6"
 >>>>>>> 3666df8a2f866a2fd6f50c41c4b0d73dea355f29
+=======
+>>>>>>> parent of 7b93b49... Rutas de usuarios(commit5)
  }
 ]

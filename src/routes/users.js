@@ -42,12 +42,8 @@ const validations = [
 
 router.get('/login', usersController.login);
 router.post('/login', usersController.processLogin);
+
 router.get('/register', usersController.register);
-
-//entrando al login//
-router.post('/usersLogin', usersController.processLogin);
-
-
 router.post('/register', upload.single('image'), validations, usersController.processRegister);
 
 module.exports = router;
