@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/index.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>UsuarioRegistrado</title>
+</head>
+
+        <%- include('../partials/header.ejs') %>
+</head>
+<body>
+
+    
+    </br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+
+<div><% database.forEach(usuario => { %>
+</br>
+<section class="new-product" name="new-product">
+    <article class="new-product" name="new-product">
+           <img src="/images/users/<%=usuario.imagen%>" width="300px" >
+        
+                <div class="informacion">
+                    <span class="descripcion"><%= usuario.name%></span>
+                 </div>
+    </article>
+</section>
+</br>
+    <% }) %>
+</div>
+
+
+
+</br>
+</br>
+</br>
+</br>
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+    <!-- Footer  -->
+    <%- include('../partials/footer.ejs') %>
+    <%- include('../partials/footerdos.ejs') %>
+</body>
+
+</html>
