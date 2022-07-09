@@ -1,16 +1,10 @@
 const { validationResult } = require('express-validator');
 const userModel = require('../models/User');
-<<<<<<< HEAD
-<<<<<<< HEAD
 const path = require('path');
 const fs = require('fs');
 const archivoRuta = path.join(__dirname, '../data/users.json');
 
-=======
-const bcryptjs = require('bcryptjs'); 
->>>>>>> 3666df8a2f866a2fd6f50c41c4b0d73dea355f29
-=======
->>>>>>> parent of 7b93b49... Rutas de usuarios(commit5)
+const bcryptjs = require('bcryptjs');
 
 const usersController = {
 
@@ -19,58 +13,45 @@ const usersController = {
     },
     processLogin: (req, res) => {
         let usuario = userModel.findByField('email', req.body.email);
-<<<<<<< HEAD
-        
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
        // let usuarioLogeado = req.cookies.userLogged;
-
        console.log(usuario);
+        // if(usuario){
 
-        if(usuario){
+        //     return res.render("./usersLogin", {database:database})
 
-            return res.render("./usersLogin", {database:database})
+        // }
+        // return res.send('credenciales invalidas')
+        // console.log(usuario)
 
-        }
-        return res.send('credenciales invalidas')
-=======
-        //let usuarioLogeado = req.cookies.userLogged = usuario;
->>>>>>> 9c301ca4ac375731eb7005a2313d5e6270e13ba6
-        console.log(usuario)
-        if (usuario){
-            let usuarioLogeado = req.session.userLogged = usuario
-            let comparePassword = bcryptjs.compareSync(req.body.password, usuario.password)
-            if(comparePassword == true){
-                return res.redirect('/')
-            }else{
-                return res.render ('./users/login', {
-                    errors: {
-                        email: {
-                            msg: "El mail o la contraseña es incorrecta"
-                        }
-                    }
-                })
-            }
-        }else {
+    if (usuario){
+        let usuarioLogeado = req.session.userLogged = usuario
+        let comparePassword = bcryptjs.compareSync(req.body.password, usuario.password)
+        if(comparePassword == true){
+            return res.redirect('/')
+        }else{
             return res.render ('./users/login', {
                 errors: {
                     email: {
-                        msg: "Este mail no esta registrado"
+                        msg: "El mail o la contraseña es incorrecta"
                     }
                 }
             })
-        };
-        
-        return res.redirect('/')
->>>>>>> 3666df8a2f866a2fd6f50c41c4b0d73dea355f29
-=======
-        let usuarioLogeado = req.cookies.userLogged = usuario;
-        console.log(usuarioLogeado)
-        return res.redirect('/')
->>>>>>> parent of 7b93b49... Rutas de usuarios(commit5)
-    },
+        }
+    }else {
+        return res.render ('./users/login', {
+            errors: {
+                email: {
+                    msg: "Este mail no esta registrado"
+                }
+            }
+        })
+    };
+    
+    return res.redirect('/')
+    let usuarioLogeado = req.cookies.userLogged = usuario;
+    console.log(usuarioLogeado)
+    return res.redirect('/')
+},
 
     register: (req, res) => {
         return res.render('./users/register');
@@ -82,8 +63,6 @@ const usersController = {
             oldData: req.body
         });
        };
-<<<<<<< HEAD
-<<<<<<< HEAD
        const modelo = {
         name: req.body.name,
         imagen : req.file.filename,
@@ -94,7 +73,6 @@ const usersController = {
 
        userModel.create(modelo);
 
-=======
 
        let newUsers = {
      // ...req.body = todo lo que trajo el body del request
@@ -115,10 +93,9 @@ const usersController = {
        };
 
        userModel.create(newUsers);
->>>>>>> 3666df8a2f866a2fd6f50c41c4b0d73dea355f29
-=======
+
+
        userModel.create(req.body);
->>>>>>> parent of 7b93b49... Rutas de usuarios(commit5)
        return res.redirect('/');
     },
     profile: (req,res) => {
