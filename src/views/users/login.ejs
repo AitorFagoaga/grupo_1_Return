@@ -21,37 +21,21 @@
 </head>
 <body>
     
-    <form action="login" method="post" class="form-login">
+    <form action="./usersLogin" method="post" class="form-login">
         <h1 class =" form-titulo"> Inicia Sesion </h1>
 
 
         <div class="input-contenedor">
            <i class="fa-solid fa-user icon"></i>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-           <input type="text" name ="email" class="sinborde" placeholder="Correo Electronico" maxlength="30"required/>
-=======
-           <input type="text" name ="email" class="sinborde" placeholder="Correo Electronico" maxlength="15"required/>
->>>>>>> parent of 7b93b49... Rutas de usuarios(commit5)
-
-=======
->>>>>>> 9c301ca4ac375731eb7005a2313d5e6270e13ba6
-           <input type="text" name ="email" class="sinborde" placeholder="Correo Electronico" required/>
+           <input type="text" name ="email" class="sinborde" placeholder="Correo Electronico" maxlength="30"required>
+           
             <% if (locals.errors && errors.email) { %>
                 <div class="error-msg">
                     <%= errors.email.msg %>
                 </div>
             <% } %>
-<<<<<<< HEAD
-=======
            <input type="text" name ="email" class="sinborde" placeholder="Correo Electronico" maxlength="15"required/>
 
->>>>>>> parent of 7b93b49 (Rutas de usuarios(commit5))
-=======
->>>>>>> 3666df8a2f866a2fd6f50c41c4b0d73dea355f29
->>>>>>> 9c301ca4ac375731eb7005a2313d5e6270e13ba6
 
         </div>
 
@@ -70,6 +54,7 @@
          <div> ¿No tienes cuenta? <a class="link2" href="register">Registrate</a></div>
          <br>
             <div><input type="submit" value="Continuar" class="button"></div>
+            <div>  <a href="./usersLogin">Ver Producto</a></div>
          
         
         </div>
