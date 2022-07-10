@@ -45,6 +45,7 @@ const usersController = {
             oldData: req.body
         });
        };
+<<<<<<< HEAD
        /*
        const modelo = {
         name: req.body.name,
@@ -55,6 +56,8 @@ const usersController = {
        }
        userModel.create(modelo);
        */
+=======
+>>>>>>> ead9596af17346e248bae629491d6cd779031a41
        let newUsers = {
      // ...req.body = todo lo que trajo el body del request
            ...req.body,
@@ -71,7 +74,6 @@ const usersController = {
            })
        };
        userModel.create(newUsers);
-       userModel.create(req.body);
        return res.redirect('/');
     },
     profile: (req,res) => {
