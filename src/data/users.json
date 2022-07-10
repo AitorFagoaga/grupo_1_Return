@@ -88,13 +88,6 @@
  },
  {
   "id": null,
-<<<<<<< HEAD
-  "name": "Brunito",
-  "imagen": "1657418303355-.jpg",
-  "category": "Comprador",
-  "email": "bruno@hotmail.commnk",
-  "password": "nada"
-=======
   "name": "ju",
   "imagen": "1657418448061-.png",
   "category": "Comprador",
@@ -129,6 +122,5 @@
   "category": "Comprador",
   "email": "hola@gmail.com",
   "password": "$2a$10$U/yRcos.OolJOxRuvSCaqeOr8am2dJqK3k6At0gwLFUSB2PFxfG8m"
->>>>>>> ead9596af17346e248bae629491d6cd779031a41
  }
 ]
