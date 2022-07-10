@@ -17,10 +17,19 @@ const usersController = {
     processLogin: (req, res) => {
         let usuario = userModel.findByField('email', req.body.email);
     if (usuario){
+<<<<<<< HEAD
 
         let comparePassword = bcryptjs.compareSync(req.body.password, usuario.password)
         if(comparePassword == true){
             req.session.userLogged = usuario;   
+=======
+        //let usuarioLogeado = req.session.userLogged = usuario
+        let comparePassword = bcryptjs.compareSync(req.body.password, usuario.password)
+        if(comparePassword == true){
+            //borro password del usuario por seguridad
+            delete usuario.password;
+            req.session.userLogged = usuario
+>>>>>>> 3e36d4a18ecbb5b1e92969f236338e41754a7b2e
             return res.redirect('/')
         }else{
             return res.render ('./users/login', {
@@ -54,7 +63,8 @@ const usersController = {
        let newUsers = {
      // ...req.body = todo lo que trajo el body del request
            ...req.body,
-           password: bcryptjs.hashSync(req.body.password, 10)
+           password: bcryptjs.hashSync(req.body.password, 10),
+           image: req.file.filename
        };
        let existingUser = userModel.findByField("email", req.body.email);
        if (existingUser){
