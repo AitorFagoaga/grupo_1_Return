@@ -12,7 +12,7 @@ const usersController = {
         let usuario = userModel.findByField('email', req.body.email);
        console.log(usuario);
     if (usuario){
-        let usuarioLogeado = req.session.userLogged = usuario
+        
         let comparePassword = bcryptjs.compareSync(req.body.password, usuario.password)
         if(comparePassword == true){
             return res.redirect('/')
@@ -45,6 +45,7 @@ const usersController = {
             oldData: req.body
         });
        };
+       /*
        const modelo = {
         name: req.body.name,
         imagen : req.file.filename,
@@ -53,6 +54,7 @@ const usersController = {
         password: req.body.password,
        }
        userModel.create(modelo);
+       */
        let newUsers = {
      // ...req.body = todo lo que trajo el body del request
            ...req.body,
@@ -60,7 +62,7 @@ const usersController = {
        };
        let existingUser = userModel.findByField("email", req.body.email);
        if (existingUser){
-           return res.render ('./users/register', {
+           return res.render ('./users/profile', {
                errors: {
                    email: {
                        msg: "Este mail esta en uso"
