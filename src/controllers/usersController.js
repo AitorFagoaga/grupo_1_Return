@@ -45,19 +45,6 @@ const usersController = {
             oldData: req.body
         });
        };
-<<<<<<< HEAD
-       /*
-       const modelo = {
-        name: req.body.name,
-        imagen : req.file.filename,
-        category: req.body.category,
-        email: req.body.email,
-        password: req.body.password,
-       }
-       userModel.create(modelo);
-       */
-=======
->>>>>>> ead9596af17346e248bae629491d6cd779031a41
        let newUsers = {
      // ...req.body = todo lo que trajo el body del request
            ...req.body,
@@ -65,7 +52,7 @@ const usersController = {
        };
        let existingUser = userModel.findByField("email", req.body.email);
        if (existingUser){
-           return res.render ('./users/profile', {
+           return res.render('./users/register', {
                errors: {
                    email: {
                        msg: "Este mail esta en uso"
@@ -74,10 +61,10 @@ const usersController = {
            })
        };
        userModel.create(newUsers);
-       return res.redirect('/');
+       return res.redirect('./profile');
     },
     profile: (req,res) => {
-        return res.render('profile',{
+        res.render('./users/profile',{
             user: req.session.userLogged
         })
     }

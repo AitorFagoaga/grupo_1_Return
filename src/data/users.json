@@ -88,13 +88,6 @@
  },
  {
   "id": null,
-<<<<<<< HEAD
-  "name": "Brunito",
-  "imagen": "1657418303355-.jpg",
-  "category": "Comprador",
-  "email": "bruno@hotmail.commnk",
-  "password": "nada"
-=======
   "name": "ju",
   "imagen": "1657418448061-.png",
   "category": "Comprador",
@@ -129,6 +122,124 @@
   "category": "Comprador",
   "email": "hola@gmail.com",
   "password": "$2a$10$U/yRcos.OolJOxRuvSCaqeOr8am2dJqK3k6At0gwLFUSB2PFxfG8m"
->>>>>>> ead9596af17346e248bae629491d6cd779031a41
+ },
+ {
+  "id": 5,
+  "name": "nbada123",
+  "category": "Comprador",
+  "email": "nadddda123@gmail.com",
+  "password": "$2a$10$w4IObJI97pBWBgM1RrghD.qirb/b/4LU4fR/SuKswxb7.O8.P25ru"
+ },
+ {
+  "id": 6,
+  "name": "n",
+  "category": "Comprador",
+  "email": "n@hotmAIL.cOM",
+  "password": "$2a$10$zyS9S8CTzxy2TvPo889xz.WWCFVj9ufkXQ9UScyxUGZespidNVvCa"
+ },
+ {
+  "id": 7,
+  "name": "nana",
+  "category": "Comprador",
+  "email": "nana@hotmail.com",
+  "password": "$2a$10$zs1Rw18UvhRCWZ/q.HdnEeuHyaePH6A8sA3t2xDQmGURyfC5FvTUm"
+ },
+ {
+  "id": 8,
+  "name": "nana",
+  "category": "Comprador",
+  "email": "nana@hotmail.comdssa",
+  "password": "$2a$10$2FsnU56fAnQUmvW1fqbaXulx27dMlgOJ3SffSmzMkGH6v8cvFZh3i"
+ },
+ {
+  "id": 9,
+  "name": "nana",
+  "category": "Comprador",
+  "email": "nana@hotmail.comssa",
+  "password": "$2a$10$iEdXwLmLObQMfBHXcSUlDeWP2bmiTQ91N8xahu/uTGs1.2AsA/0iO"
+ },
+ {
+  "id": 10,
+  "name": "nana",
+  "category": "Comprador",
+  "email": "nana@hotmail.conssa",
+  "password": "$2a$10$Cf.pdVkttnwF1ZwWIR3sO..RX.U8Uaq5jCWeleZRjjO5rBTXPG8Ly"
+ },
+ {
+  "id": 11,
+  "name": "nana",
+  "category": "Comprador",
+  "email": "nana@hotmsd.aonssa",
+  "password": "$2a$10$Py8y6rCFEYTP8SiIeR0ZdOFwxSAZB3uvp7LmJGoSSJy5yT5F6YDUy"
+ },
+ {
+  "id": 12,
+  "name": "nana",
+  "category": "Comprador",
+  "email": "nana@hotsd.onssa",
+  "password": "$2a$10$FjTsnjaNk.N6ltSyHV6vCOLf5xWvEdSIsfyoez.Vmf8bpXHupKKqu"
+ },
+ {
+  "id": 13,
+  "name": "nana",
+  "category": "Comprador",
+  "email": "nana@dfdf.xcc",
+  "password": "$2a$10$jRyEUyZGpBKFEULBY9jE2eOhVzHb8mOlxEDgxVNWZv8gzls/bThcW"
+ },
+ {
+  "id": 14,
+  "name": "nana",
+  "category": "Comprador",
+  "email": "nana@dfdf.xccsd",
+  "password": "$2a$10$chS8rMJHso39CImZBKZ/4eASyzuOVtjAm0vqeYVumquOd4puiw.x6"
+ },
+ {
+  "id": 15,
+  "name": "nana",
+  "category": "Comprador",
+  "email": "nana@dfdf.xccsds",
+  "password": "$2a$10$LfXJJnqok3wOq6H0Mv2tuOkYn5BSw.j21MKRgO7wLH77U0aSMpGsO"
+ },
+ {
+  "id": 16,
+  "name": "sadsd",
+  "category": "Comprador",
+  "email": "sdasd@hotmail.com",
+  "password": "$2a$10$e9ZbqbBRLIVOVbCxNlgk0urXhnQW2C24MNT8ufOJP.yPhu368p7Ka"
+ },
+ {
+  "id": 17,
+  "name": "sadsd",
+  "category": "Comprador",
+  "email": "sdasd@hotmasil.com",
+  "password": "$2a$10$wt5oWNQRQ47Sw3s78Lij0uMLfqEERT9tcTPO0zOgYlWOFBiqjs6de"
+ },
+ {
+  "id": 18,
+  "name": "sadsd",
+  "category": "Comprador",
+  "email": "sdasd@hotmasil.comsd",
+  "password": "$2a$10$BwIAbqivL3CgKYOWKMHgv.aAQiwEb9UapWPAn7QSCf8OkD9soQQnq"
+ },
+ {
+  "id": 19,
+  "name": "sadsd",
+  "category": "Comprador",
+  "email": "sdasd@hotmasil.co",
+  "password": "$2a$10$hf6OcL2u1LYFtmnyiOqG2OHnIGSBEe.xWZOioJObkCrz0C.zmj30W"
+ },
+ {
+  "id": 20,
+  "name": "sadsd",
+  "category": "Comprador",
+  "email": "sdasd@hotmasil.cosd",
+  "password": "$2a$10$rWusKbq.a4kNDucmOPth9OetHiCxvrfKBtgoWwsZ99OGU30cNxHOu"
+ },
+ {
+  "id": 21,
+  "name": "sadsd",
+  "category": "Comprador",
+  "email": "sdasd@hotmsd.sda",
+  "password": "$2a$10$AKVlJxh8z5UDQsovfZFEyOnbj6.i73PuCpQeq1m00QpqfxBMOz3QO"
  }
 ]
