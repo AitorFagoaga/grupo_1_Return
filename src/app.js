@@ -3,8 +3,10 @@ const methodOverride =  require('method-override');
 const path = require('path');
 const session = require('express-session');
 const cookieParser = require('cookie-parser')
-const usuarioRegistrado =  require('./middlewares/session');
 
+//middlewares de aplicacion
+const usuarioRegistrado =  require('./middlewares/session');
+const onlyUsersMiddleware =  require('./middlewares/onlyUsersMiddleware');
 
 const app = express();
 
@@ -17,6 +19,8 @@ app.use(session({
 app.use(cookieParser());
 
 app.use(usuarioRegistrado);
+
+app.use(onlyUsersMiddleware);
 
 const mainRoutes = require('./routes/main');
 const productsRoutes = require('./routes/products');

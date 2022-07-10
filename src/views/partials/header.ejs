@@ -1,7 +1,9 @@
 <header>
     <div class="top-navigation-bar">
         <div class="left-column">
-            <img alt="" class="logo" src="/images/Background.png">
+            <a href="/">
+                <img alt="" class="logo" src="/images/Background.png">
+            </a>
         </div>
         <form action="" class="search-menu" method="get" name="search-menu">
             <a class="search-filter" href="" name="search-filter">
@@ -12,12 +14,15 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
         </form>
-        <% if(locals.isLogged) {%>
+        <% if(locals.logged) {%>
+            <div class="right-column">
+                <a class="top-navigation-bar-button" href="/users/profile">
+                    Profile
+                </a>
             <% } else { %>
                 <div class="right-column">
                     <a class="top-navigation-bar-button" href="/users/login">
                         User
-                        <i class="fa-solid fa-chevron-down right-column-dropdown-menu"></i>
                     </a>
              <% }%>
             <a class="top-navigation-bar-favorite-button" href="">
