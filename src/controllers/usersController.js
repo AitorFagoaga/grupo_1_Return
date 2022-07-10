@@ -10,13 +10,7 @@ const usersController = {
     },
     processLogin: (req, res) => {
         let usuario = userModel.findByField('email', req.body.email);
-       // let usuarioLogeado = req.cookies.userLogged;
        console.log(usuario);
-        // if(usuario){
-        //     return res.render("./usersLogin", {database:database})
-        // }
-        // return res.send('credenciales invalidas')
-        // console.log(usuario)
     if (usuario){
         let usuarioLogeado = req.session.userLogged = usuario
         let comparePassword = bcryptjs.compareSync(req.body.password, usuario.password)
