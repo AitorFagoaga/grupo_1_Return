@@ -125,6 +125,7 @@
  },
  {
   "id": 5,
+<<<<<<< HEAD
   "name": "nbada123",
   "category": "Comprador",
   "email": "nadddda123@gmail.com",
@@ -241,5 +242,18 @@
   "category": "Comprador",
   "email": "sdasd@hotmsd.sda",
   "password": "$2a$10$AKVlJxh8z5UDQsovfZFEyOnbj6.i73PuCpQeq1m00QpqfxBMOz3QO"
+=======
+  "name": "tr",
+  "category": "Comprador",
+  "email": "tr@mail.com",
+  "password": "$2a$10$.CXkiwQ/PUjmCXmS2dEkDOkMiwuYwEk9mOv9d8yoFxkLIkFbC//bu"
+ },
+ {
+  "id": 6,
+  "name": "MARTIN",
+  "category": "Comprador",
+  "email": "martin@gmail.com",
+  "password": "$2a$10$/ak/7QGWswNBcSTAoNwVPe9gt6OiXn7hL9tYcnYMPfRbohDXhsVS."
+>>>>>>> 99264ce99d1b31f92dcc6c73f13790155de68a3d
  }
 ]

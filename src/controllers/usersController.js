@@ -12,7 +12,7 @@ const usersController = {
         let usuario = userModel.findByField('email', req.body.email);
        console.log(usuario);
     if (usuario){
-        
+        let usuarioLogeado = req.session.userLogged = usuario
         let comparePassword = bcryptjs.compareSync(req.body.password, usuario.password)
         if(comparePassword == true){
             return res.redirect('/')
@@ -52,7 +52,7 @@ const usersController = {
        };
        let existingUser = userModel.findByField("email", req.body.email);
        if (existingUser){
-           return res.render('./users/register', {
+           return res.render ('./users/register', {
                errors: {
                    email: {
                        msg: "Este mail esta en uso"
@@ -64,7 +64,7 @@ const usersController = {
        return res.redirect('./profile');
     },
     profile: (req,res) => {
-        res.render('./users/profile',{
+        return res.render('./users/profile',{
             user: req.session.userLogged
         })
     }
