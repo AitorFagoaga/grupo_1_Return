@@ -45,14 +45,6 @@ const usersController = {
             oldData: req.body
         });
        };
-       const modelo = {
-        name: req.body.name,
-        imagen : req.file.filename,
-        category: req.body.category,
-        email: req.body.email,
-        password: req.body.password,
-       }
-       userModel.create(modelo);
        let newUsers = {
      // ...req.body = todo lo que trajo el body del request
            ...req.body,
@@ -69,7 +61,6 @@ const usersController = {
            })
        };
        userModel.create(newUsers);
-       userModel.create(req.body);
        return res.redirect('/');
     },
     profile: (req,res) => {
