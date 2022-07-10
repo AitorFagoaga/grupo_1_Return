@@ -122,5 +122,19 @@
   "category": "Comprador",
   "email": "hola@gmail.com",
   "password": "$2a$10$U/yRcos.OolJOxRuvSCaqeOr8am2dJqK3k6At0gwLFUSB2PFxfG8m"
+ },
+ {
+  "id": 5,
+  "name": "tr",
+  "category": "Comprador",
+  "email": "tr@mail.com",
+  "password": "$2a$10$.CXkiwQ/PUjmCXmS2dEkDOkMiwuYwEk9mOv9d8yoFxkLIkFbC//bu"
+ },
+ {
+  "id": 6,
+  "name": "MARTIN",
+  "category": "Comprador",
+  "email": "martin@gmail.com",
+  "password": "$2a$10$/ak/7QGWswNBcSTAoNwVPe9gt6OiXn7hL9tYcnYMPfRbohDXhsVS."
  }
 ]

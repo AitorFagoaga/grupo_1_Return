@@ -61,10 +61,10 @@ const usersController = {
            })
        };
        userModel.create(newUsers);
-       return res.redirect('/');
+       return res.redirect('./profile');
     },
     profile: (req,res) => {
-        return res.render('profile',{
+        return res.render('./users/profile',{
             user: req.session.userLogged
         })
     }
