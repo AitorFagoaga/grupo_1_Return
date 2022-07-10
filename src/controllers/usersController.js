@@ -4,17 +4,23 @@ const path = require('path');
 const fs = require('fs');
 const archivoRuta = path.join(__dirname, '../data/users.json');
 const bcryptjs = require('bcryptjs');
+
+
+
 const usersController = {
+
+
+
     login: (req, res) => {
         return res.render('./users/login');
     },
     processLogin: (req, res) => {
         let usuario = userModel.findByField('email', req.body.email);
-       console.log(usuario);
     if (usuario){
-        let usuarioLogeado = req.session.userLogged = usuario
+
         let comparePassword = bcryptjs.compareSync(req.body.password, usuario.password)
         if(comparePassword == true){
+            req.session.userLogged = usuario;   
             return res.redirect('/')
         }else{
             return res.render ('./users/login', {
@@ -64,7 +70,9 @@ const usersController = {
        return res.redirect('./profile');
     },
     profile: (req,res) => {
+        console.log("estas en profile");
         return res.render('./users/profile',{
+
             user: req.session.userLogged
         })
     }
