@@ -1,14 +1,23 @@
-function onlyUsers (req,res,next){
+const User = require('../models/User');
 
-    if (req.session.userLogged){
-        res.locals.logged = true;
-        // con esto paso lo que tengo en session a una varible local
-        res.locals.userLogged = req.locals.userLogged;
-    }else{
-        res.locals.logged = false;
+function onlyUsers (req,res,next){
+    res.locals.isLogged = false;
+
+    let emailInCookie = req.cookies.coockieEmail;
+    let userfromcookie = User.findByField('email', emailInCookie);
+    
+    if(emailInCookie){
+        req.session.userLogged = userfromcookie;
     }
 
-    next()
+     if (req.session.userLogged){
+
+         res.locals.logged = true;
+
+     }
+
+
+     next()
 };
 
-module.exports = onlyUsers;
+ module.exports = onlyUsers;

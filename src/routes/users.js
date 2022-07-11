@@ -8,6 +8,7 @@ const multer = require('multer');
 const loggedUserMiddleware = require('../middlewares/loggedUserMiddleware');
 const profileAuthMiddleware = require('../middlewares/profileAuthMiddleware');
 
+
 const storage = multer.diskStorage({
     destination: (req,file,cb) => {
         cb(null, path.join(__dirname, "../../public/images/users"));
@@ -49,5 +50,6 @@ router.get('/register', loggedUserMiddleware, usersController.register);
 router.post('/register', upload.single('image'), validations, usersController.processRegister);
 
 router.get('/profile', profileAuthMiddleware, usersController.profile);
+router.get('/logout', usersController.logout);
 
 module.exports = router;

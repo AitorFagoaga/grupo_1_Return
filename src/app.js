@@ -2,7 +2,7 @@ const express = require('express');
 const methodOverride =  require('method-override');
 const path = require('path');
 const session = require('express-session');
-const cookieParser = require('cookie-parser')
+const cookie = require('cookie-parser')
 
 //middlewares de aplicacion
 const usuarioRegistrado =  require('./middlewares/session');
@@ -10,13 +10,15 @@ const onlyUsersMiddleware =  require('./middlewares/onlyUsersMiddleware');
 
 const app = express();
 
+
+app.use(cookie());
+
 app.use(session({
     secret: "Secreto",
     resave: false,
     saveUninitialized: false
 }))
 
-app.use(cookieParser());
 
 app.use(usuarioRegistrado);
 

@@ -4,7 +4,7 @@ const path = require('path');
 const fs = require('fs');
 const archivoRuta = path.join(__dirname, '../data/users.json');
 const bcryptjs = require('bcryptjs');
-
+const cookie = require('cookie-parser')
 
 
 const usersController = {
@@ -15,22 +15,22 @@ const usersController = {
         return res.render('./users/login');
     },
     processLogin: (req, res) => {
+        
         let usuario = userModel.findByField('email', req.body.email);
-    if (usuario){
-<<<<<<< HEAD
-
-        let comparePassword = bcryptjs.compareSync(req.body.password, usuario.password)
-        if(comparePassword == true){
-            req.session.userLogged = usuario;   
-=======
+        if (usuario){
         //let usuarioLogeado = req.session.userLogged = usuario
         let comparePassword = bcryptjs.compareSync(req.body.password, usuario.password)
         if(comparePassword == true){
             //borro password del usuario por seguridad
             delete usuario.password;
-            req.session.userLogged = usuario
->>>>>>> 3e36d4a18ecbb5b1e92969f236338e41754a7b2e
-            return res.redirect('/')
+            req.session.userLogged = usuario;
+
+            if(req.body.recordar){
+
+               res.cookie('coockieEmail', req.body.email, { maxAge: (1000 * 60) * 5});
+                
+            }
+            return res.redirect('./profile')
         }else{
             return res.render ('./users/login', {
                 errors: {
@@ -80,11 +80,15 @@ const usersController = {
        return res.redirect('./profile');
     },
     profile: (req,res) => {
-        console.log("estas en profile");
+
         return res.render('./users/profile',{
 
             user: req.session.userLogged
         })
+    },
+    logout: (req, res) => {
+        req.session.destroy();
+        return res.redirect('/')
     }
 };
 module.exports = usersController;
