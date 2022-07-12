@@ -87,6 +87,7 @@ const usersController = {
         })
     },
     logout: (req, res) => {
+        res.clearCookie('coockieEmail');
         req.session.destroy();
         return res.redirect('/')
     }
