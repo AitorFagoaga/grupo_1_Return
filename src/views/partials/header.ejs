@@ -26,19 +26,26 @@
                     Favorites
                     <!-- <i class="fa-solid fa-chevron-down right-column-dropdown-menu"></i> -->
                 </a>
+                <a class="top-navigation-bar-button" href="">
+                    <i class="fa-solid fa-bell top-navigation-bar-icon"></i>
+                </a>
+                <a class="top-navigation-bar-button" href="/products/productCartEmpty">
+                    <i class="fa-solid fa-cart-shopping top-navigation-bar-icon"></i>
             <% } else { %>
                 <div class="right-column">
-                    <a class="top-navigation-bar-button" href="/users/login">
-                        User
-                    </a>
+                    <div class="login-header">
+                        <a class="top-navigation-bar-button" href="/users/login">
+                            Login
+                            <i class="login-icon fa-solid fa-right-to-bracket"></i>
+                        </a>
+                    </div>
+                    <div class="register-header">
+                        <a class="top-navigation-bar-button" href="/users/register">
+                            Register
+                        </a>
+                    </div>
              <% }%>
             
-            <a class="top-navigation-bar-button" href="">
-                <i class="fa-solid fa-bell top-navigation-bar-icon"></i>
-            </a>
-            <a class="top-navigation-bar-button" href="/products/productCartEmpty">
-                <i class="fa-solid fa-cart-shopping top-navigation-bar-icon"></i>
-            </a>
         </div>
     </div>
 </header>

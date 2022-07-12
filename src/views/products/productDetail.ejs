@@ -30,22 +30,25 @@
                 <div class="product-discount">
                     <%= productSelection.discount %>% OFF
                 </div> 
-             <div class="botonesBorraryEditar">
-                <form action="/products/productDetail/<%= productSelection.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
-                    <input type="submit" value="Borrar" class="botonesBorraryEditar"></input> 
-                </form>
-            </div>
-            
-            <div class="botonesBorraryEditar">
-                <a href="/products/editProducts/<%= productSelection.id %>"> <input type="submit" value="Editar" class="botonesBorraryEditar"> </a>
+            <div class="buttonsDeleateAndUpdate">
+                <div class="botonesBorraryEditar">
+                    <form action="/products/productDetail/<%= productSelection.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
+                        <input type="submit" value="Borrar" class="botonesBorraryEditar color-borrar"></input> 
+                    </form>
+                </div>
+                <div class="botonesBorraryEditar">
+                    <a href="/products/editProducts/<%= productSelection.id %>"> 
+                        <input type="submit" value="Editar" class="botonesBorraryEditar color-editar"> 
+                    </a>
+                </div>
             </div>
                 <i class="fa-brands fa-apple product-brand-icon"></i>
 
                 <h3 class="product-name">
-                    <%= productSelection.titulo %>
+                    <%= productSelection.name %>
                 </h3>
                 <p class="product-description">
-                    <%= productSelection.descripcion %>
+                    <%= productSelection.description %>
                 </p>
                 <div class="price-with-discount">
                     $ <%= discountPrice + ",000" %>
@@ -86,7 +89,7 @@
                         Retiro <strong>GRATIS</strong> por sucursal
                     </p>
                 </div> -->
-                <button class="buy-button" type="submit">C O M P R A R</button>
+                <button class="buy-button" type="submit">Add to cart</button>
             </article>
         </section>
     </main>
