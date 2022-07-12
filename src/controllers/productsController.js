@@ -46,8 +46,9 @@ const productsController = {
         if(dataProudctos.length != 0){
             var newProduct = {
                 id: dataProudctos[dataProudctos.length - 1].id+1,
-                titulo: req.body.titulo,
-                descripcion: req.body.descripcion,
+                name: req.body.name,
+                price: req.body.price,
+                description: req.body.description,
                 imagen : req.file.filename,
             }
             
@@ -61,9 +62,10 @@ const productsController = {
         else{
             var newProduct = {
             id: idinicio,
-            titulo: req.body.titulo,
-            descripcion: req.body.descripcion,
-            imagen : req.file.filename,
+            name: req.body.name,
+            price: req.body.price,
+            description: req.body.description,
+            image : req.file.filename,
             }
             dataProudctos.push(newProduct);
             fs.writeFileSync(archivoRuta, JSON.stringify(dataProudctos, null, 2));
@@ -98,8 +100,8 @@ const productsController = {
        let prod = dataProudctos
         prod = prod.map(producto => {
             if (producto.id == req.params.id) {
-                producto.titulo = req.body.titulo
-                producto.descripcion = req.body.descripcion
+                producto.name = req.body.name
+                producto.description = req.body.description
             }
             return producto
         })

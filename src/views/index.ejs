@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
+    <link rel="shortcut icon" href="/images/Logo.png">
   </head>
   <body>
     <!-- Header -->
@@ -35,7 +36,7 @@
         <% productsOnSale.forEach(product => { %>
         <a class="new-product-detail" href="/products/productDetail/<%= product.id %>" type="submit">
             <div class="new-product-discount"><%= product.discount %>%</div>
-            <img alt="" class="new-product-image" src="/images/<%= product.image %>"/>
+            <img alt="" class="new-product-image" src="/images/productos/<%= product.image %>"/>
             <div class="new-product-name"><%= product.name %></div>
             <div class="new-product-price">$ <%= product.price %></div>
         </a>
@@ -45,7 +46,7 @@
       <section class="trending-product">
         <% productsTrending.forEach(product => { %>
             <a class="trending-product-detail" href="" type="submit">
-                <img alt="" class="trending-product-image" src="/images/<%= product.image %>"/>
+                <img alt="" class="trending-product-image" src="/images/productos/<%= product.image %>"/>
                 <div class="trending-product-name"><%= product.name %></div>
                 <div class="trending-product-price">$ <%= product.price %></div>
             </a>
