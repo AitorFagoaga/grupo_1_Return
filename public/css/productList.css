@@ -8,12 +8,21 @@ body {
     
 }
 .botonAgregar{
-    align-items: center;
+    /* align-items: center;
     justify-content: content;
     border: solid 2px;
     top: 25px;
     width: 200px;
-    height: 100px;
+    height: 100px; */
+    display: inline-block;
+    margin: auto;
+    align-items: center; 
+    padding: 10px 20px; 
+    /* background-color: #5BC0BE; */
+    border: none;
+    border-radius: 1vh ;
+    font-size: 2.2vh;
+    cursor: pointer;
 }
 .producto {
     max-width: 280px;
