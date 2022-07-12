@@ -15,7 +15,7 @@ body {
     width: 200px;
     height: 100px; */
     display: inline-block;
-    margin: auto;
+    margin-left: 5%;
     align-items: center; 
     padding: 10px 20px; 
     /* background-color: #5BC0BE; */
