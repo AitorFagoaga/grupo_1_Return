@@ -1,56 +1,4 @@
 [
-<<<<<<< HEAD
-  {
-    "id": 1,
-    "price": "750",
-    "discount": 40,
-    "category": "On Sale",
-    "image": "Macbook Pro.png"
-  },
-  {
-    "id": 2,
-    "price": 250000,
-    "discount": 0,
-    "category": "Trending",
-    "image": "iPhone 13 Pro.png"
-  },
-  {
-    "id": 3,
-    "price": "900",
-    "discount": 25,
-    "category": "On Sale",
-    "image": "Televisor Samsung Crystal UHD.png"
-  },
-  {
-    "id": 4,
-    "price": 55000,
-    "discount": 0,
-    "category": "Trending",
-    "image": "Monitor Samsung Odyssey G3.png"
-  },
-  {
-    "id": 5,
-    "price": 27000,
-    "discount": 15,
-    "category": "On Sale",
-    "image": "Google ChromeCast.png"
-  },
-  {
-    "id": 6,
-    "price": 210000,
-    "discount": 0,
-    "category": "Trending",
-    "image": "PlayStation 5.png"
-  },
-  {
-    "id": 7,
-    "imagen": "1657742893510.jpg"
-  },
-  {
-    "id": 8,
-    "imagen": "1657743648399.jpg"
-  }
-=======
  {
   "id": 1,
   "name": "MacBook Pro 13'' M1 Chip 8-core CPU 8-core GPU 256GB SSD Space Grey",
@@ -126,5 +74,4 @@
   "name": "ai",
   "description": "edicion"
  }
->>>>>>> e520312cdcaed33132db285f08740104ed1a62e2
 ]
