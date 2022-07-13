@@ -46,7 +46,7 @@
       <h4 class="headline-3">Trending</h4>
       <section class="trending-product">
         <% productsTrending.forEach(product => { %>
-            <a class="trending-product-detail" href="" type="submit">
+            <a class="trending-product-detail" href="/products/productDetail/<%= product.id %>" type="submit">
                 <img alt="" class="trending-product-image" src="/images/productos/<%= product.image %>"/>
                 <div class="trending-product-name"><%= product.name %></div>
                 <div class="trending-product-price">$ <%= product.price %></div>
