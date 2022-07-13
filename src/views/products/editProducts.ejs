@@ -16,20 +16,28 @@
 <body>
     <!-- header -->
     <%- include('../partials/header.ejs') %>
+<<<<<<< HEAD
+</br>
+</br>
+    <div class="contenedorprincipal">
+
+=======
     <br>
     <br>
+>>>>>>> e520312cdcaed33132db285f08740104ed1a62e2
     <form class="form-new" action="/products/<%= product.id %>?_method=put" method="POST" >
         <div>
             <label for="name">Nombre</label>
             <input type="text" name="name"  value="<%= product.name %>">
         </div>
         
-
         <div>
             <label for="descripcion">Descripcion</label>
             <input type="text" name="description"  value="<%= product.description %>">
         </div>
-        <div>
+    </div>
+        
+        <div class="imagenajustar">
           <img src="/images/productos/<%=product.image%>" alt="profileImage">  
         </div>
         <!-- <div>
@@ -37,12 +45,16 @@
         </div> -->
 
         <div></div>
-
-        <div>
-            <button type="submit">Editar</button>
+    </br>
+        <div class="btnguardado">
+            <button type="submit" class="btnguardado">Guardar</button>
         </div>
 
     </form>
+
+    
+
+
     </br>
     <!-- Footer  -->
     <%- include('../partials/footer.ejs') %>

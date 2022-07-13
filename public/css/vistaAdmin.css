@@ -9,6 +9,35 @@
     border: solid 1px red;
     border-radius: 10px;
 }
+.btnguardado{
+    margin: auto;
+    width: 100px;
+    height: 80px;
+    background-color: aliceblue;
+    border: solid 1px red;
+    border-radius: 10px;
+}
+.imagenajustar{
+    margin: auto;
+    justify-content: space-between;
+    width: 300px;
+    border-radius: 10px;
+}
+
+
+.contenedorprincipal{
+    margin: auto;
+    align-items: center;
+    width: 300px;
+    height: 80px;
+    background-color: aliceblue;
+    border: solid 1px red;
+    border-radius: 10px;
+}
+
+
+
+
 .conteiner-agregado{
     margin: auto;
     width: 400px;
