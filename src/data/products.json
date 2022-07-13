@@ -1,56 +1,77 @@
 [
-{
-    "id": 1,
-    "name": "MacBook Pro 13'' M1 Chip 8-core CPU 8-core GPU 256GB SSD Space Grey",
-    "price": "750",
-    "discount": 40,
-    "category": "On Sale",
-    "description": "La MacBook Pro ofrece una pantalla de 13 pulgadas y un diseño en color Space Grey. Además, cuenta con M1 Chip, un procesador Octa-Core (8-core CPU 8-core GPU) y una memoria de 256GB SSD.",
-    "image": "Macbook Pro.png"
-  },
-  {
-    "id": 2,
-    "name": "iPhone 13 Pro 256GB Silver",
-    "price": 250000,
-    "discount": 0,
-    "category": "Trending",
-    "description": "iPhone 13 Pro 256GB Silver Marca: Apple Modelo: iPhone 13 Pro Color: Silver Memoria interna: 256 GB Memoria RAM: 4 GB Dual SIM: Sistema operativo: iOS 15 Tamaño de la pantalla: 6.1'' Resolución de la cámara: 12 MP",
-    "image": "iPhone 13 Pro.png"
-  },
-  {
-    "id": 3,
-    "name": "Televisor Samsung Crystal UHD",
-    "price": "900",
-    "discount": 25,
-    "category": "On Sale",
-    "description": "Descripcion de Televisor Samsung Crystal UHD",
-    "image": "Televisor Samsung Crystal UHD.png"
-  },
-  {
-    "id": 4,
-    "name": "Monitor Samsung Odyssey G3",
-    "price": 55000,
-    "discount": 0,
-    "category": "Trending",
-    "description": "Descripcion de Monitor Samsung Odyssey G3",
-    "image": "Monitor Samsung Odyssey G3.png"
-  },
-  {
-    "id": 5,
-    "name": "Google ChromeCast",
-    "price": 27000,
-    "discount": 15,
-    "category": "On Sale",
-    "description": "Descripcion de Google ChromeCast",
-    "image": "Google ChromeCast.png"
-  },
-  {
-    "id": 6,
-    "name": "PlayStation 5",
-    "price": 210000,
-    "discount": 0,
-    "category": "Trending",
-    "description": "Descripcion de PlayStation 5",
-    "image": "PlayStation 5.png"
-  }
+ {
+  "id": 1,
+  "name": "MacBook Pro 13'' M1 Chip 8-core CPU 8-core GPU 256GB SSD Space Grey",
+  "price": "750",
+  "discount": 40,
+  "category": "On Sale",
+  "description": "La MacBook Pro ofrece una pantalla de 13 pulgadas y un diseño en color Space Grey. Además, cuenta con M1 Chip, un procesador Octa-Core (8-core CPU 8-core GPU) y una memoria de 256GB SSD.",
+  "image": "Macbook Pro.png"
+ },
+ {
+  "id": 2,
+  "name": "iPhone 13 Pro 256GB Silver",
+  "price": 250000,
+  "discount": 0,
+  "category": "Trending",
+  "description": "iPhone 13 Pro 256GB Silver Marca: Apple Modelo: iPhone 13 Pro Color: Silver Memoria interna: 256 GB Memoria RAM: 4 GB Dual SIM: Sistema operativo: iOS 15 Tamaño de la pantalla: 6.1'' Resolución de la cámara: 12 MP",
+  "image": "iPhone 13 Pro.png"
+ },
+ {
+  "id": 3,
+  "name": "Televisor Samsung Crystal UHD",
+  "price": "900",
+  "discount": 25,
+  "category": "On Sale",
+  "description": "Descripcion de Televisor Samsung Crystal UHD",
+  "image": "Televisor Samsung Crystal UHD.png"
+ },
+ {
+  "id": 4,
+  "name": "Monitor Samsung Odyssey G3",
+  "price": 55000,
+  "discount": 0,
+  "category": "Trending",
+  "description": "Descripcion de Monitor Samsung Odyssey G3",
+  "image": "Monitor Samsung Odyssey G3.png"
+ },
+ {
+  "id": 5,
+  "name": "Google ChromeCast",
+  "price": 27000,
+  "discount": 15,
+  "category": "On Sale",
+  "description": "Descripcion de Google ChromeCast",
+  "image": "Google ChromeCast.png"
+ },
+ {
+  "id": 6,
+  "name": "PlayStation 5",
+  "price": 210000,
+  "discount": 0,
+  "category": "Trending",
+  "description": "Descripcion de PlayStation 5",
+  "image": "PlayStation 5.png"
+ },
+ {
+  "id": 7,
+  "imagen": "1657746134564.png"
+ },
+ {
+  "id": 8,
+  "description": "otra prueba",
+  "imagen": "1657746724513.png"
+ },
+ {
+  "id": 9,
+  "name": "prueba",
+  "description": "prueba !!",
+  "image": "1657746880676.png"
+ },
+ {
+  "id": 10,
+  "image": "1657747196658.jpg",
+  "name": "ai",
+  "description": "edicion"
+ }
 ]

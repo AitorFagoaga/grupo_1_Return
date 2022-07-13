@@ -24,7 +24,7 @@ router.get('/vistaAdministrador', productsController.vistaAdministrador);
 
 // Modificar image con el nombre del input
 router.get('/agregarProducto', productsController.vistaAgregarProducto);
-router.post('/productList', upload.single('imagen'), (req, res, next) => {
+router.post('/productList', upload.single('image'), (req, res, next) => {
     if(req.file){
         next();
     }
