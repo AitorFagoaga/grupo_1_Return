@@ -6,16 +6,14 @@ Estamos todos de acuerdo en que, más allá de las responsabilidades de cada uno
 
 - **Less Of**
 
-Comenzar con el sprint en cuanto empieza y no dejarlo para las ultimas fechas, para evitar descuidos y puntos sin terminar.
+Encarar el sprint resolviendo de una mejor manera los conflictos con github 
 
 - **More Of**
 
-Otra de las principales caracteristicas positivas del equipo de trabajo, fue la calidez de cada uno de sus miembros. Esto se demostro por la capacidad de entendimiento y la buena predisposicion que cada uno de nosotros expreso en todo momento. Continuar con las reuniones y practicas.
+Buena capacidad de entendimiento y buena predisposicion de cada uno de nosotros. Continuar con las reuniones y practicas. Continuar con la mejora de la usabilidad de la plataforma, para generarle una mejor experiencia al usuario.
 
 - **Start Doing**
 
-Organizarnos mejor con las tareas, ya que por cuestiones personales de cada integrante, el grupo fue reducido a la mitad y tendremos un poco más de trabajo por hacer en cada Sprint.
+Empezar a trabajar en el sprint 6, con los nuevos operadores visto en el modulo 6 de base de datos
 
-- **Stop Doing**
 
-Dejar de olvidarnos de darle estilo, tamaños, formas y color al proyecto.
