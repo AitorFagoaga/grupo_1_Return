@@ -16,19 +16,24 @@
 <body>
     <!-- header -->
     <%- include('../partials/header.ejs') %>
+<<<<<<< HEAD
 </br>
 </br>
     <div class="contenedorprincipal">
 
+=======
+    <br>
+    <br>
+>>>>>>> e520312cdcaed33132db285f08740104ed1a62e2
     <form class="form-new" action="/products/<%= product.id %>?_method=put" method="POST" >
         <div>
             <label for="name">Nombre</label>
-            <input type="text" name="titulo"  value="<%= product.name %>">
+            <input type="text" name="name"  value="<%= product.name %>">
         </div>
         
         <div>
             <label for="descripcion">Descripcion</label>
-            <input type="text" name="descripcion"  value="<%= product.description %>">
+            <input type="text" name="description"  value="<%= product.description %>">
         </div>
     </div>
         

@@ -49,7 +49,7 @@ const productsController = {
                 name: req.body.name,
                 price: req.body.price,
                 description: req.body.description,
-                imagen : req.file.filename,
+                image : req.file.filename,
             }
             
             
