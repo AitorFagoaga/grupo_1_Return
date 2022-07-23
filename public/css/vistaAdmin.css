@@ -17,6 +17,14 @@
     border: solid 1px red;
     border-radius: 10px;
 }
+.botoneditar{
+    margin: auto;
+    width: 100px;
+    height: 80px;
+    background-color: aliceblue;
+    border: solid 1px red;
+    border-radius: 10px;
+}
 .imagenajustar{
     margin: auto;
     justify-content: space-between;
