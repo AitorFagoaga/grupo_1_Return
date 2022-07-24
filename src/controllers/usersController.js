@@ -1,57 +1,73 @@
 const { validationResult } = require('express-validator');
 const userModel = require('../models/User');
-const path = require('path');
-const fs = require('fs');
-const archivoRuta = path.join(__dirname, '../data/users.json');
 const bcryptjs = require('bcryptjs');
+const db = require("../database/models")
+const session = require('express-session');
 const cookie = require('cookie-parser')
 
 
 const usersController = {
 
-
-
     login: (req, res) => {
+
         return res.render('./users/login');
+
     },
     processLogin: (req, res) => {
-        
-        let usuario = userModel.findByField('email', req.body.email);
-        if (usuario){
-        //let usuarioLogeado = req.session.userLogged = usuario
-        let comparePassword = bcryptjs.compareSync(req.body.password, usuario.password)
-        if(comparePassword == true){
-            //borro password del usuario por seguridad
-            delete usuario.password;
-            req.session.userLogged = usuario;
 
-            if(req.body.recordar){
 
-               res.cookie('coockieEmail', req.body.email, { maxAge: (1000 * 60) * 5});
-                
-            }
-            return res.redirect('./profile')
-        }else{
-            return res.render ('./users/login', {
-                errors: {
-                    email: {
-                        msg: "El mail o la contraseña es incorrecta"
-                    }
-                }
-            })
-        }
-    }else {
-        return res.render ('./users/login', {
-            errors: {
-                email: {
-                    msg: "Este mail no esta registrado"
-                }
+       db.Users.findOne({
+            where: {
+                email : req.body.email
             }
         })
-    };
+        .then((usuario) => {
+
+            if(usuario == null){
+                return res.render ('./users/login', {
+                    errors: {
+                        email: {
+                            msg: "el e-mail es incorrecto"
+                        }
+                    }
+                })
+            }
+            const comparePassword = bcryptjs.compareSync(req.body.password, usuario.password)
+
+            if (comparePassword){
+
+                    //borro password del usuario por seguridad
+
+                    req.session.userLogged = usuario;
+        
+                    if(req.body.recordar){
+        
+                       res.cookie('coockieEmail', req.body.email, { maxAge: (1000 * 60) * 5});
+                        
+                    }
+        
+                    return res.redirect('./profile')
+
+            }
+            else {
+                return res.render ('./users/login', {
+                    errors: {
+                        email: {
+                            msg: "La contraseña es incorrecta"
+                        }
+                    }
+                })
+            };
+           
+            
+
+        })
+
 },
     register: (req, res) => {
+
         return res.render('./users/register');
+
     },
     processRegister: (req,res) => {
        const resultValidation =  validationResult(req);
@@ -66,6 +82,8 @@ const usersController = {
            password: bcryptjs.hashSync(req.body.password, 10),
            image: req.file.filename
        };
+
+      
        let existingUser = userModel.findByField("email", req.body.email);
        if (existingUser){
            return res.render ('./users/register', {
@@ -76,6 +94,7 @@ const usersController = {
                }, oldData: req.body
            })
        };
+       
        userModel.create(newUsers);
        return res.redirect('./profile');
     },
@@ -84,6 +103,7 @@ const usersController = {
         return res.render('./users/profile',{
 
             user: req.session.userLogged
+
         })
     },
     logout: (req, res) => {

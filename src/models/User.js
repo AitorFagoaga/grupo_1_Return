@@ -1,53 +1,62 @@
 const fs = require('fs');
 const path = require('path');
 const archivoRuta= path.join(__dirname, '../data/users.json');
+const db = require("../database/models")
+
 
 
 const User = {
-    getData: function () {
-		return JSON.parse(fs.readFileSync(archivoRuta, 'utf-8'));
-	},
+
     //encontrar a todos los usuarios
     findAllUsers: function () {
-        return this.getData();
+        db.Users.findAll()
+        .then(function(user){
+            return user
+        })
     },
     //buscar usuario por id ( pk = private key )
     findByPk: function (id)  {
-        let allUsers = this.findAllUsers();
-        let userFound = allUsers.find(oneUser => oneUser.id === id);
-        return userFound;
+
+        db.Users.findByPk(id)
+        .then(function(user){
+            return user
+        })
+
     }, 
-    //buscar usuario por campo (ejemplo: field: (name o email) value:(aitor o aitor@mail.com) )
+
     findByField: function (field,value) {
-        let allUsers = this.findAllUsers();
-        let userFound = allUsers.find(oneUser => oneUser[field] === value);
-        return userFound;
+
+        const email = field;
+
+        db.Users.findOne({
+            where: email == value
+        })
+        .then((resultado) => {
+            return resultado
+        })
+
     }, 
-    //generar un id para el usuario
-    generateId: function () {
-        let allUsers = this.findAllUsers();
-        let lastUser = allUsers.pop();
-        if(lastUser){
-            return lastUser.id + 1;
-        }
-        return 1;
-    },
-    //guardar el usuario
+
     create: function (userData) {
-        let allUsers = this.findAllUsers();
-        let newUser = {
-            id: this.generateId(),
-            ...userData
-        }
-        allUsers.push(newUser);
-        fs.writeFileSync(archivoRuta, JSON.stringify(allUsers, null,  ' '));
+
+        let newUser = db.Users.create({
+            name:userData.name,
+            category: userData.category,
+            email: userData.email,
+            password: userData.password,
+            image : userData.filename,
+        })
+        
         return newUser;
     },
     //borrar usuario
     delete: function (id){
-        let allUsers = this.findAllUsers();
-        let usersAfterDelete = allUsers.filter(oneUser => oneUser.id !== id);
-        fs.writeFileSync(archivoRuta, JSON.stringify(usersAfterDelete, null,  ' '));
+         db.Users.destroy({
+            where:{
+                id: id
+            }
+        })
+        res.redirect('/products/productList')
     }
 }
 
