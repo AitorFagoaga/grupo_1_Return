@@ -1,163 +1,60 @@
 [
- {
-  "id": 3,
-  "name": "ait",
-  "email": "aitor@gma.com"
- },
- {
-  "id": 14,
-  "name": "juan",
-  "email": "juan@gma.com"
- },
- {
-  "id": 16,
-  "name": "juan",
-  "email": "juan@gma.com"
- },
- {
-  "id": 17,
-  "name": "aitor",
-  "email": "aitor@gmail.com",
-  "password": "1234"
- },
- {
-  "id": 18,
-  "name": "ad",
-  "category": "Comprador",
-  "email": "ad@mail.com",
-  "password": "123456"
- },
- {
-  "id": 19,
-  "name": "Bruno",
-  "category": "Vendedor",
-  "email": "adsads@hotmail.com",
-  "password": "dasasdas"
- },
- {
-  "id": 20,
-  "name": "dssdsd",
-  "category": "Comprador",
-  "email": "sdsdasd@hotmail.com",
-  "password": "sdsdsdsd"
- },
- {
-  "id": 21,
-  "name": "Brunito",
-  "category": "Comprador",
-  "email": "bruno@hotmail.com",
-  "password": "ass"
- },
- {
-  "id": 22,
-  "name": "Brunito",
-  "category": "Comprador",
-  "email": "bruno@hotmail.com",
-  "password": "asd"
- },
- {
-  "id": 23,
-  "name": "Brunito",
-  "imagen": "1657324905245-.jpg",
-  "category": "Comprador",
-  "email": "bruno@hotmail.com",
-  "password": "sdsd"
- },
- {
-  "id": 24,
-  "name": "Brunito",
-  "imagen": "1657324985348-.jpg",
-  "category": "Comprador",
-  "email": "bruno@hotmail.com",
-  "password": "sdsdsd"
- },
- {
-  "id": 25,
-  "name": "elbrunaso",
-  "imagen": "1657330518789-.jpg",
-  "category": "Vendedor",
-  "email": "nada@hotmail.com",
-  "password": "nada"
- },
- {
-  "name": "neneasdsa",
-  "imagen": "1657332263474-.jpg",
-  "category": "Comprador",
-  "email": "bruno@hotmail.commmm",
-  "password": "sdsdsd"
- },
- {
-  "id": null,
-  "name": "ju",
-  "imagen": "1657418448061-.png",
-  "category": "Comprador",
-  "email": "ju@mail.com",
-  "password": "1234"
- },
- {
-  "id": 1,
-  "name": "jun",
-  "imagen": "1657418460592-.png",
-  "category": "Comprador",
-  "email": "jun@mail.com",
-  "password": "1234"
- },
- {
-  "id": 2,
-  "name": "juno",
-  "category": "Comprador",
-  "email": "juno@mail.com",
-  "password": "$2a$10$ufK/6ux1lagMLIm.WDhoN.IySQdPJm.DUBWJsaPOuBCJkV.vMBvEG"
- },
- {
-  "id": 3,
-  "name": "juno",
-  "category": "Comprador",
-  "email": "juno@mail.com",
-  "password": "1234"
- },
- {
-  "id": 4,
-  "name": "hola",
-  "category": "Comprador",
-  "email": "hola@gmail.com",
-  "password": "$2a$10$U/yRcos.OolJOxRuvSCaqeOr8am2dJqK3k6At0gwLFUSB2PFxfG8m"
- },
- {
-  "id": 5,
-  "name": "tr",
-  "category": "Comprador",
-  "email": "tr@mail.com",
-  "password": "$2a$10$.CXkiwQ/PUjmCXmS2dEkDOkMiwuYwEk9mOv9d8yoFxkLIkFbC//bu"
- },
- {
-  "id": 6,
-  "name": "MARTIN",
-  "category": "Comprador",
-  "email": "martin@gmail.com",
-  "password": "$2a$10$/ak/7QGWswNBcSTAoNwVPe9gt6OiXn7hL9tYcnYMPfRbohDXhsVS."
- },
- {
-  "id": 7,
-  "name": "Aj",
-  "category": "Vendedor",
-  "email": "aj@mail.com",
-  "password": "$2a$10$ewPccXNp338gMd.K95mkNOBkfP9lOXXJlkQnVVGjz4z42EK2Y.2Pe"
- },
- {
-  "id": 8,
-  "name": "Rl",
-  "category": "Comprador",
-  "email": "rl@mail.com",
-  "password": "$2a$10$7OJijowa44nMI3a1kfGkOuzeZk3GY1rQ65/3x0BWshn346CSzvUV2",
-  "image": "1657487090697-.jpg"
- },
- {
-  "id": 9,
-  "name": "Bruno",
-  "category": "Comprador",
-  "email": "bruno@gmail.com",
-  "password": "$2a$10$P8/7MJEZdYyFw5S0GAmsJub84tC0.EYHHmlNcVIaWeqP0aFIp.If6",
-  "image": "1657495915223-.jpg"
- }
+  {
+    "id": 1,
+    "name": "juno",
+    "category": "Comprador",
+    "email": "juno@mail.com",
+    "password": "$2a$10$ufK/6ux1lagMLIm.WDhoN.IySQdPJm.DUBWJsaPOuBCJkV.vMBvEG"
+  },
+  {
+    "id": 3,
+    "name": "juno",
+    "category": "Comprador",
+    "email": "juno@mail.com",
+    "password": "1234"
+  },
+  {
+    "id": 4,
+    "name": "hola",
+    "category": "Comprador",
+    "email": "hola@gmail.com",
+    "password": "$2a$10$U/yRcos.OolJOxRuvSCaqeOr8am2dJqK3k6At0gwLFUSB2PFxfG8m"
+  },
+  {
+    "id": 5,
+    "name": "tr",
+    "category": "Comprador",
+    "email": "tr@mail.com",
+    "password": "$2a$10$.CXkiwQ/PUjmCXmS2dEkDOkMiwuYwEk9mOv9d8yoFxkLIkFbC//bu"
+  },
+  {
+    "id": 6,
+    "name": "MARTIN",
+    "category": "Comprador",
+    "email": "martin@gmail.com",
+    "password": "$2a$10$/ak/7QGWswNBcSTAoNwVPe9gt6OiXn7hL9tYcnYMPfRbohDXhsVS."
+  },
+  {
+    "id": 7,
+    "name": "Aj",
+    "category": "Vendedor",
+    "email": "aj@mail.com",
+    "password": "$2a$10$ewPccXNp338gMd.K95mkNOBkfP9lOXXJlkQnVVGjz4z42EK2Y.2Pe"
+  },
+  {
+    "id": 8,
+    "name": "Rl",
+    "category": "Comprador",
+    "email": "rl@mail.com",
+    "password": "$2a$10$7OJijowa44nMI3a1kfGkOuzeZk3GY1rQ65/3x0BWshn346CSzvUV2",
+    "image": "1657487090697-.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Bruno",
+    "category": "Comprador",
+    "email": "bruno@gmail.com",
+    "password": "$2a$10$P8/7MJEZdYyFw5S0GAmsJub84tC0.EYHHmlNcVIaWeqP0aFIp.If6",
+    "image": "1657495915223-.jpg"
+  }
 ]

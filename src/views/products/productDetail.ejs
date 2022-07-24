@@ -23,21 +23,18 @@
         <section class="webpage">
             
             <article class="webpage-left-column">
-                <img src="/images/productos/<%=productSelection.image%>" width="300px" >
+                <img src="/images/productos/<%=product.image%>" width="300px" >
             </article>
             
             <article class="webpage-right-column">
-                <div class="product-discount">
-                    <%= productSelection.discount %>% OFF
-                </div> 
             <div class="buttonsDeleateAndUpdate">
                 <div class="botonesBorraryEditar">
-                    <form action="/products/productDetail/<%= productSelection.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
+                    <form action="/products/productDetail/<%= product.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
                         <input type="submit" value="Borrar" class="botonesBorraryEditar color-borrar"></input> 
                     </form>
                 </div>
                 <div class="botonesBorraryEditar">
-                    <a href="/products/editProducts/<%= productSelection.id %>"> 
+                    <a href="/products/editProducts/<%= product.id %>"> 
                         <input type="submit" value="Editar" class="botonesBorraryEditar color-editar"> 
                     </a>
                 </div>
@@ -45,50 +42,19 @@
                 <i class="fa-brands fa-apple product-brand-icon"></i>
 
                 <h3 class="product-name">
-                    <%= productSelection.name %>
+                    <%= product.name %>
                 </h3>
                 <p class="product-description">
-                    <%= productSelection.description %>
+                    <%= product.description %>
                 </p>
                 <div class="price-with-discount">
-                    $ <%= discountPrice + ",000" %>
+                    $ <%= product.price %>
                 </div> 
                 
-                 <div class="price-without-discount">
-                    $ <%= productSelection.price + ",000" %>
-                </div> 
-                <!-- <h3 class="bank-promotion-title">
-                    ¡Nuestra promociones bancarias!
-                </h3> -->
-                <!-- <ul class="bank-promotion-list">
-                    <li class="bank-promotion-list-item">
-                        6 cuotas sin interes de $<%= Math.round(discountPrice / 6) + ",000" %>
-                    </li>
-                    <li class="bank-promotion-list-item">
-                        9 cuotas sin interes de $<%= Math.round(discountPrice / 9) + ",000" %>
-                    </li>
-                    <li class="bank-promotion-list-item">
-                        12 cuotas sin interes de $<%= Math.round(discountPrice / 12) + ",000" %>
-                    </li>
-                    <li class="bank-promotion-icon-row">
-                        <i class="fa-brands fa-cc-visa bank-promotion-icon"></i>
-                        <i class="fa-brands fa-cc-mastercard bank-promotion-icon"></i>
-                        <i class="fa-brands fa-cc-amex bank-promotion-icon"></i>
-                    </li>
-                </ul> -->
                 <a class="payment-method-link" href="" type="submit">
                     Ver todos los medios de pago
                 </a>
-                <!-- <div class="shipping-method-section">
-                    <p class="shipping-method-title">
-                        <i class="fa-solid fa-truck-fast shipping-method-icon-1"></i>
-                        Envio a Capital Federal desde <strong>$<%= Math.round(discountPrice * 0.75) %></strong>
-                    </p>
-                    <p class="shipping-method-title">
-                        <i class="fa-solid fa-store shipping-method-icon-2"></i>
-                        Retiro <strong>GRATIS</strong> por sucursal
-                    </p>
-                </div> -->
+                
                 <button class="buy-button" type="submit">Add to cart</button>
             </article>
         </section>
@@ -96,64 +62,7 @@
     <footer>
 
     </footer>
-        <!-- <nav class="parte-arriba">
-            <ul class="segundo">
-                <li><img src="/images/Logo.png" class="Logo"></li>
-                <li><i class="fas fa-times-circle"></i></li>
-            </ul>
-         </nav>
-         <nav class="parte-arriba2">
-            <ul class="segundo2">
-                <li><img src="/images/Logo.png" class="Logo"></li>
-                <form class="busqueda" action="" method="post" target="_blank" >
-                      <input class="busquedamodelos" type="search" name="busquedamodelos" list="listamodelos">
-                      <input type="submit" value="Buscar">
-                  </form>
-                  
-                  <datalist id="listamodelos">
-                  
-                    <option value="PC">
-                  
-                    <option value="Notebook">
-                  
-                    <option value="Accesorios">
-                  
-                    <option value="Más">
-                  
-                  </datalist>
-                <li class="orden">
-                    <a class="navigation-bar-button" href="" type="submit">
-                        <i class="fa-solid fa-house navigation-bar-icon"></i>
-                    </a>
-                    <a class="navigation-bar-button" href="" type="submit">
-                        <i class="fa-solid fa-heart navigation-bar-icon"></i>
-                    </a>
-                    <a class="navigation-bar-button" href="" type="submit">            
-                        <i class="fa-solid fa-cart-shopping navigation-bar-icon"></i>
-                    </a>
-                    <a class="navigation-bar-button" href="" type="submit">
-                        <i class="fa-solid fa-user navigation-bar-icon"></i>
-                    </a>
-                </li>
-            </ul>
-         </nav> -->  
-    <!-- <div class="conteiner">
-    <img src="../images/PrimerComponente.png" alt="Imagen1" class="imagen">
-    <div><h2>Precio: $27.000</h2></div>
-    <div><h1>Motherboard Asus</h1></div>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore adipisci quis beatae porro architecto tenetur suscipit deserunt, dolorem recusandae corrupti eaque. Deserunt, harum reiciendis. Praesentium vero perferendis exercitationem repellat distinctio.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore adipisci quis beatae porro architecto tenetur suscipit deserunt, dolorem recusandae corrupti eaque. Deserunt, harum reiciendis. Praesentium vero perferendis exercitationem repellat distinctio.</p>
-    </div>
-    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore adipisci quis beatae porro architecto tenetur suscipit deserunt, dolorem recusandae corrupti eaque. Deserunt, harum reiciendis. Praesentium vero perferendis exercitationem repellat distinctio.</h2>
-    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, libero. Nihil, asperiores iure? Non voluptates sunt vero eligendi? Modi reprehenderit omnis libero fugiat a cum ratione, tempora necessitatibus consectetur labore.</h2>
-    <h2 class="soloMobile">Comprar</h2>
-    <div class="iconosCompras">
-        <i class="fas fa-cart-plus"></i>
-        <i class="fas fa-bookmark"></i>
-    </div> -->
-
-   <!-- Footer  -->
-    <!-- <%- include('../partials/footer.ejs') %> -->
+        
 
     <%- include('../partials/footerdos.ejs') %>
     <%- include('../partials/footer.ejs') %>

@@ -3,7 +3,7 @@ const methodOverride =  require('method-override');
 const path = require('path');
 const session = require('express-session');
 const cookie = require('cookie-parser')
-
+require('dotenv').config();
 //middlewares de aplicacion
 const usuarioRegistrado =  require('./middlewares/session');
 const onlyUsersMiddleware =  require('./middlewares/onlyUsersMiddleware');

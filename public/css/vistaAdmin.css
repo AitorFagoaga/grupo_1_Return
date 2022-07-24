@@ -44,12 +44,10 @@
 }
 
 
-
-
 .conteiner-agregado{
     margin: auto;
-    width: 400px;
-    height: 400px;
+    width: 50%;
+    height: 50%;
     background-color: aliceblue;
     border: solid 1px red;
     border-radius: 10px;
@@ -57,7 +55,7 @@
 .text-area{
     display: flex;
     margin: auto;
-    width: 90%;
+    width: 80%;
     height: 30%;
 }
 .titulo{
@@ -72,8 +70,8 @@
 .imagen-agregado{
     display: flex;
     margin: auto;
-    width: 100%;
-    height: 140px;
+    width: 50%;
+    height: 50%;
     align-items: center;
     background-color: rgb(240, 240, 240);
     border: solid 1px red;
