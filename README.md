@@ -4,16 +4,12 @@
 Somos una empresa dedicada a la venta de productos electrónicos. Porque sabemos que los grandes pensadores del futuro necesitan de un equipamiento acorde que los acompañen en su camino de innovación y revolución tecnológica, brindamos una amplia gama de equipos que cuenta con la última tecnología.
 
 ## Acerca De 🤷
-A diferencia de la mayoria de las empresas que se dedican a este rubro, entendemos que hoy en dia existe una amplia variedad de equipamiento y no siempre sabemos elegir cual es el mas adecuado para nuestras necesidades. Por eso, en 'RETURN' tenemos una politica de hasta 30 dias de devolucion sobre cualquier tipo de compra. De esta manera, buscamos ayudar y acompañar a nuestros clientes por el vertiginoso camino de la electrónica y la tecnología.
+A diferencia de la mayoria de las empresas que se dedican a este rubro, entendemos que hoy en dia existe una amplia variedad de equipamiento y no siempre sabemos elegir cual es el mas adecuado para nuestras necesidades. Buscamos ayudar y acompañar a nuestros clientes por el vertiginoso camino de la electrónica y la tecnología.
 
 ## Integrantes 🤜🤛
-* **Aitor Fagoaga**: Estudiante de Finanzas. Tengo gran entusiamos por los deportes, y también por la tecnología.  
-
-* **Alexandra Daza**: Profesional en Gestion Cultural y Comunicación.  Apasionada por los animales, el arte y la tecnología.  
-
 * **Bruno Morales**: Estudiante de Ingenieria en Informática. Gran predisposicion para con el desarrollo de ideas innovadoras y revolucionarias.  
 
-* **Bruno Secchiari**: Software Developer. Su lenguage de programacion por exelencia al dia de hoy es Python, pero tiene la intención de incluir HTML, CSS y JavaScript en ese mismo podio.
+* **Aitor Fagoaga**: Estudiante de Finanzas. Tengo gran entusiamos por los deportes, y también por la tecnología.  
 
 ## Paginas de Referencia 🎨
 
