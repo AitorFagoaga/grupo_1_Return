@@ -33,21 +33,19 @@ const usersController = {
                 })
             }
             const comparePassword = bcryptjs.compareSync(req.body.password, usuario.password)
-
+                
             if (comparePassword){
 
                     //borro password del usuario por seguridad
 
-                    req.session.userLogged = usuario;
-        
+                   req.session.userLogged = usuario;
                     if(req.body.recordar){
         
                        res.cookie('coockieEmail', req.body.email, { maxAge: (1000 * 60) * 5});
-                        
+                       
                     }
         
                     return res.redirect('./profile')
-
             }
             else {
                 return res.render ('./users/login', {
@@ -84,16 +82,32 @@ const usersController = {
        };
 
       
-       let existingUser = userModel.findByField("email", req.body.email);
-       if (existingUser){
-           return res.render ('./users/register', {
-               errors: {
-                   email: {
-                       msg: "Este mail esta en uso"
-                   }
-               }, oldData: req.body
-           })
-       };
+        db.Users.findOne({
+            where: {
+                email : req.body.email
+            }
+            })
+            .then((usuario) => {
+                if (usuario){
+                    return res.render ('./users/register', {
+                        errors: {
+                            email: {
+                                msg: "Este mail esta en uso"
+                            }
+                        }, oldData: req.body
+                    })
+                };
+        })
+       //let existingUser = db.User.findOne("email", req.body.email);
+    //    if (existingUser){
+    //        return res.render ('./users/register', {
+    //            errors: {
+    //                email: {
+    //                    msg: "Este mail esta en uso"
+    //                }
+    //            }, oldData: req.body
+    //        })
+    //    };
        
        userModel.create(newUsers);
        return res.redirect('./profile');
