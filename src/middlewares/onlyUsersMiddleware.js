@@ -1,24 +1,30 @@
-const User = require('../models/User');
+const User = require("../models/User");
+const db = require("../database/models");
 
-function onlyUsers (req,res,next){
+function onlyUsers(req, res, next) {
+  let emailInCookie = req.cookies.coockieEmail;
 
-    let emailInCookie = req.cookies.coockieEmail;
-    let userfromcookie = User.findByField('email', emailInCookie);
-    
-    if(emailInCookie){
-        req.session.userLogged = userfromcookie;
-    }else{
-        res.locals.isLogged = false;
-    }
+  //let userfromcookie = User.findByField("email", emailInCookie);
 
-     if (req.session.userLogged){
+  let usuario = db.Users.findOne({
+    where: { email: emailInCookie },
+  }).then((usuarios) => {
+    console.log(usuarios);
+    return usuarios;
+  });
 
-         res.locals.logged = true;
+  if (emailInCookie) {
+    //para hacer como estaba antes sería poner donde esta usuario, poner userfromcookie y descomentar userfromcookie
+    req.session.userLogged = usuario;
+  } else {
+    res.locals.isLogged = false;
+  }
 
-     }
+  if (req.session.userLogged) {
+    res.locals.logged = true;
+  }
 
+  next();
+}
 
-     next()
-};
-
- module.exports = onlyUsers;
+module.exports = onlyUsers;

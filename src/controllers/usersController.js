@@ -33,7 +33,6 @@ const usersController = {
         //borro password del usuario por seguridad
 
         req.session.userLogged = usuario;
-        console.log(usuario.email);
 
         if (req.body.recordar) {
           res.cookie("coockieEmail", req.body.email, { maxAge: 1000 * 60 * 5 });

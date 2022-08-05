@@ -5,9 +5,6 @@ const archivoRuta = path.join(__dirname, "../data/users.json");
 const db = require("../database/models");
 
 const User = {
-  getData: function () {
-    return JSON.parse(fs.readFileSync(archivoRuta, "utf-8"));
-  },
   //encontrar a todos los usuarios
   findAllUsers: function () {
     db.Users.findAll().then(function (user) {
@@ -22,20 +19,13 @@ const User = {
   },
 
   findByField: function (field, value) {
-    let allUsers = this.getData();
-
-    let userFound = allUsers.find((oneUser) => oneUser[field] === value);
-
-    return userFound;
-    //const email = field;
-
-    // db.Users.findOne({
-    //     where: field == value
-    // })
-    // .then((resultado) => {
-    //    // console.log(resultado)
-    //     return resultado
-    // })
+    const email = field;
+    db.Users.findOne({
+      where: field == value,
+    }).then((resultado) => {
+      // console.log(resultado)
+      return resultado;
+    });
   },
 
   create: function (userData) {
