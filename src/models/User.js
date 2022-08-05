@@ -23,7 +23,9 @@ const User = {
 
   findByField: function (field, value) {
     let allUsers = this.getData();
+
     let userFound = allUsers.find((oneUser) => oneUser[field] === value);
+
     return userFound;
     //const email = field;
 

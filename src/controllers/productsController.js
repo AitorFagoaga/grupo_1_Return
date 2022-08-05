@@ -1,82 +1,71 @@
-const db = require("../database/models")
+const db = require("../database/models");
 
 const productsController = {
+  productCartEmpty: (req, res) => {
+    res.render("./products/productCartEmpty");
+  },
 
-    productCartEmpty: (req, res) => {
-        res.render('./products/productCartEmpty');
-    },
+  productCartFull: (req, res) => {
+    res.render("./products/productCartFull");
+  },
 
-    productCartFull: (req, res) => {
-        res.render('./products/productCartFull');
-    },
+  productDetail: (req, res) => {
+    db.Products.findByPk(req.params.id).then(function (product) {
+      res.render("./products/productDetail", { product: product });
+    });
+  },
 
-    productDetail: (req, res) => {
+  vistaAdministrador: (req, res) => {
+    res.render("./products/vistaAdministrador");
+  },
 
-        db.Products.findByPk(req.params.id)
-        .then(function(product){
-            res.render('./products/productDetail', {product:product})
-        })
-    },
+  vistaAgregarProducto: (req, res) => {
+    res.render("./products/agregarProducto");
+  },
+  agregarProducto: (req, res) => {
+    db.Products.create({
+      name: req.body.name,
+      price: req.body.price,
+      description: req.body.description,
+      image: req.file.filename,
+    });
+    res.redirect("/products/productList");
+  },
 
-    vistaAdministrador: (req, res) => {
-        res.render('./products/vistaAdministrador')
-    },
+  productList: (req, res) => {
+    db.Products.findAll().then(function (product) {
+      res.render("./products/productList", { product: product });
+    });
+  },
+  delete: (req, res) => {
+    db.Products.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    res.redirect("/products/productList");
+  },
+  edit: (req, res) => {
+    db.Products.findByPk(req.params.id).then(function (product) {
+      res.render("./products/editProducts", { product: product });
+    });
+  },
+  editUpdate: (req, res) => {
+    db.Products.update(
+      {
+        name: req.body.name,
+        price: req.body.price,
+        description: req.body.description,
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
+    );
 
-    vistaAgregarProducto: (req, res) => {
-        res.render('./products/agregarProducto')
-    },
-    agregarProducto: (req, res) => {
-
-        db.Products.create({
-            name: req.body.name,
-            price: req.body.price,
-            description: req.body.description,
-            image : req.file.filename,
-        })
-        res.redirect('/products/productList');
-
-    },
-
-    productList: (req, res) => {
-
-        db.Products.findAll()
-        .then(function(product){
-            res.render('./products/productList', {product:product})
-        })
-
-    },
-    delete: (req,res) => {
-
-        db.Products.destroy({
-            where:{
-                id: req.params.id
-            }
-        })
-        res.redirect('/products/productList')
-	},
-    edit: (req,res) => {
-
-        db.Products.findByPk(req.params.id)
-        .then(function(product){
-            res.render('./products/editProducts', {product:product})
-        })
-
-    },
-    editUpdate: (req,res) =>{
-
-        db.Products.update({
-            name: req.body.name,
-            price: req.body.price,
-            description: req.body.description,
-        },{
-            where: {
-                id :req.params.id
-            }
-        })
-
-        return res.redirect('/products/productList')
-    }
-
-}
+    return res.redirect("/products/productList");
+  },
+};
 
 module.exports = productsController;
