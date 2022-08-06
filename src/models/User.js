@@ -18,16 +18,6 @@ const User = {
     });
   },
 
-  findByField: function (field, value) {
-    const email = field;
-    db.Users.findOne({
-      where: field == value,
-    }).then((resultado) => {
-      // console.log(resultado)
-      return resultado;
-    });
-  },
-
   create: function (userData) {
     let newUser = db.Users.create({
       name: userData.name,

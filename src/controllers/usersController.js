@@ -35,7 +35,7 @@ const usersController = {
         req.session.userLogged = usuario;
 
         if (req.body.recordar) {
-          res.cookie("coockieEmail", req.body.email, { maxAge: 1000 * 60 * 5 });
+          res.cookie("coockieEmail", usuario.id, { maxAge: 1000 * 60 * 5 });
         }
 
         return res.redirect("./profile");
@@ -62,27 +62,18 @@ const usersController = {
       });
     }
     let newUsers = {
-      // ...req.body = todo lo que trajo el body del request
       ...req.body,
       password: bcryptjs.hashSync(req.body.password, 10),
       image: req.file.filename,
     };
-
-    let existingUser = userModel.findByField("email", req.body.email);
-    if (existingUser) {
-      return res.render("./users/register", {
-        errors: {
-          email: {
-            msg: "Este mail esta en uso",
-          },
-        },
-        oldData: req.body,
-      });
-    }
+    db.Users.create(newUsers).then((user) => {
+      return res.render("./users");
+    });
     userModel.create(newUsers);
 
     return res.redirect("./profile");
   },
+
   profile: (req, res) => {
     return res.render("./users/profile", {
       user: req.session.userLogged,

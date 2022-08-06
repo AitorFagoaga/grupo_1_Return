@@ -11,7 +11,6 @@ function userRegister(req, res, next) {
   let usuario = db.Users.findOne({
     where: { email: emailInCookie },
   }).then((usuarios) => {
-    console.log(usuarios);
     return usuarios;
   });
 
