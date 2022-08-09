@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link href="/css/vistaAdmin.css" rel="stylesheet">
     <link href="/css/index.css" rel="stylesheet" />
@@ -13,35 +13,37 @@
     <title>VistaAdministrador</title>
     <link rel="shortcut icon" href="/images/Logo.png">
 </head>
+
 <body>
     <!-- header -->
     <%- include('../partials/header.ejs') %>
-    
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
+
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
     </br>
     <form action="/products/productList" method="POST" enctype="multipart/form-data">
         <div class="conteiner-agregado">
-        </br>
+            </br>
             <input type="text" placeholder="Nombre del producto" class="titulo" name="name" required></input>
-        </br>
-    <input type="text" placeholder="Precio" class="titulo" name="price" required></input>
-    </br>
-        </br>
-        <div class="imagen-agregado" name="imagen-agregado"> 
-        </br>
-                 <i class="fas fa-download"></i>
-        </div>
-        <div><input type="file" name="image" class="titulo"required></div>
-    </br>
-            <textarea name="description" id="descripcion" cols="30" rows="10" class="text-area" placeholder="Descripcion completa." required></textarea>
-        </br>
+            </br>
+            <input type="text" placeholder="Precio" class="titulo" name="price" required></input>
+            </br>
+            </br>
+            <div class="imagen-agregado" name="imagen-agregado">
+                </br>
+                <i class="fas fa-download"></i>
+            </div>
+            <div><input type="file" name="image" class="titulo" required></div>
+            </br>
+            <textarea name="description" id="descripcion" cols="30" rows="10" class="text-area"
+                placeholder="Descripcion completa." required></textarea>
+            </br>
             <input type="submit" value="Agregar" class="wallpaper-button titulo">
-        </br>
+            </br>
         </div>
     </form>
     <!-- Footer  -->
@@ -49,4 +51,5 @@
 
 <%- include('../partials/footer.ejs') %>
 <%- include('../partials/footerdos.ejs') %>
+
 </html>

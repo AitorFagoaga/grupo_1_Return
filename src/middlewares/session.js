@@ -9,7 +9,7 @@ function userRegister(req, res, next) {
   // let usuario = userModel.findByField("email", emailInCookie.coockieEmail);
 
   let usuario = db.Users.findOne({
-    where: { email: emailInCookie },
+    where: { id: emailInCookie },
   }).then((usuarios) => {
     return usuarios;
   });

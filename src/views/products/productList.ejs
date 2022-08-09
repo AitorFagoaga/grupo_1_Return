@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Return</title>
     <link rel="shortcut icon" href="/images/Logo.png">
-    <meta name= "viewport" content= "width=device-wid th, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://kit.fontawesome.com/b846d156b8.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/productList.css">
-    <link rel="stylesheet" href="/css/productDetail.css"> 
+    <link rel="stylesheet" href="/css/productDetail.css">
     <link rel="stylesheet" href="/css/index.css">
-    
+
 </head>
+
 <body>
-    <br/>
-        <br/>
-        <br/>
-        <br/>
-       <!-- header   -->
+    <br />
+    <br />
+    <br />
+    <br />
+    <!-- header   -->
     <%- include('../partials/header.ejs') %>
     <!-- <header class="header">
         <nav class="menu-desktop">
@@ -49,61 +51,62 @@
             
         </nav>
     </header> -->
-        <br/>
-        <br/>
-        <ul class="category" name="category">
-            <a class="category-1" href="" name="category-1"><i class="fa-solid fa-tv category-icon"></i></a>
-            <a class="category-2" href="" name="category-2"><i class="fa-solid fa-headset category-icon"></i></a>
-            <a class="category-3" href="" name="category-3"><i class="fa-solid fa-gamepad category-icon"></i></a>
-            <a class="category-4" href="" name="category-4"><i class="fa-brands fa-playstation category-icon"></i></a>
-            <a class="category-5" href="" name="category-5"><i class="fa-brands fa-xbox category-icon"></i></a>
-            <a class="category-button" href="" name="category-button">All categories</a>
-        </ul>
+    <br />
+    <br />
+    <ul class="category" name="category">
+        <a class="category-1" href="" name="category-1"><i class="fa-solid fa-tv category-icon"></i></a>
+        <a class="category-2" href="" name="category-2"><i class="fa-solid fa-headset category-icon"></i></a>
+        <a class="category-3" href="" name="category-3"><i class="fa-solid fa-gamepad category-icon"></i></a>
+        <a class="category-4" href="" name="category-4"><i class="fa-brands fa-playstation category-icon"></i></a>
+        <a class="category-5" href="" name="category-5"><i class="fa-brands fa-xbox category-icon"></i></a>
+        <a class="category-button" href="" name="category-button">All categories</a>
+    </ul>
     </h4>
 
-    <br/>
-    <br/>
-    <br/>
-        <br/>  
+    <br />
+    <br />
+    <br />
+    <br />
 
-       <div>
-        <div><a href="./agregarProducto" > <input type="submit" value="Agregar Producto" class="botonAgregar"> </a></div>
-            <div><% product.forEach(productos => { %>
+    <div>
+        <div><a href="./agregarProducto"> <input type="submit" value="Agregar Producto" class="botonAgregar"> </a></div>
+        <div><% product.forEach(productos => { %>
             </br>
             <section class="new-product" name="new-product">
                 <article class="new-product" name="new-product">
-                       <img src="/images/productos/<%=productos.image%>" width="300px" >
-                    
-                            <div class="informacion">
-                                <span class="tipo-envio">Envio con normalidad </span>
-                                <!-- <span class="precio"> $550 </span> -->
-                                <div class="price-without-discount">
-                                    $ <%= productos.price %>
-                                </div> 
-                                <span class="precio-envio" >Envio Gratis </span>
-                                <span class="descripcion"><%= productos.name%></span>
-                                 <div>  <a class="link2" href="productDetail/<%= productos.id %>">Ver Producto</a></div>
-                                 <div class="calificacion">
+                    <img src="/images/productos/<%=productos.image%>" width="300px">
+
+                    <div class="informacion">
+                        <span class="tipo-envio">Envio con normalidad </span>
+                        <!-- <span class="precio"> $550 </span> -->
+                        <div class="price-without-discount">
+                            $ <%= productos.price %>
+                        </div>
+                        <span class="precio-envio">Envio Gratis </span>
+                        <span class="descripcion"><%= productos.name%></span>
+                        <div> <a class="link2" href="productDetail/<%=productos.id%>">Ver Producto</a></div>
+                        <div class="calificacion">
+                            <span> <i class="fa-solid fa-star"></i>
+                                <span> <i class="fa-solid fa-star"></i>
                                     <span> <i class="fa-solid fa-star"></i>
-                                    <span> <i class="fa-solid fa-star"></i>
-                                    <span> <i class="fa-solid fa-star"></i>
-                                   <span> <i class="fa-solid fa-star"></i>
-                                    <span> 949 </span>
-                                   </div>
-                             </div>
+                                        <span> <i class="fa-solid fa-star"></i>
+                                            <span> 949 </span>
+                        </div>
+                    </div>
                 </article>
             </section>
             </br>
-                <% }) %>
-            </div>
-
+            <% }) %>
         </div>
-            <!-- Footer  -->
-    
-          </section>
-          <%- include('../partials/footerdos.ejs') %>
-          <%- include('../partials/footer.ejs') %>
+
+    </div>
+    <!-- Footer  -->
+
+    </section>
+    <%- include('../partials/footerdos.ejs') %>
+    <%- include('../partials/footer.ejs') %>
     </main>
-    
+
 </body>
+
 </html>

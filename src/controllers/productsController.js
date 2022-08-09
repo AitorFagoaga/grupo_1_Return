@@ -28,14 +28,33 @@ const productsController = {
       price: req.body.price,
       description: req.body.description,
       image: req.file.filename,
+      user_id: req.session.userLogged.id,
     });
     res.redirect("/products/productList");
   },
-
   productList: (req, res) => {
-    db.Products.findAll().then(function (product) {
-      res.render("./products/productList", { product: product });
+    db.Products.findAll({
+      where: { user_id: req.session.userLogged.id },
+    }).then(function (product) {
+      res.render("./products/productList", {
+        product: product,
+      });
     });
+    console.log("aca el error");
+    console.log("aca el error");
+    console.log("aca el error");
+    console.log("aca el error");
+    console.log("aca el error");
+    console.log("aca el error");
+    console.log("aca el error");
+    console.log("aca el error");
+    console.log("aca el error");
+
+    //  db.Products.findAll().then(function (product) {
+    //   res.render("./products/productList", {
+    //    product: product,
+    // });
+    //});
   },
   delete: (req, res) => {
     db.Products.destroy({

@@ -5,7 +5,8 @@ const session = require("express-session");
 const cookie = require("cookie-parser");
 require("dotenv").config();
 //middlewares de aplicacion
-const onlyUsersMiddleware = require("./middlewares/onlyUsersMiddleware");
+//const onlyUsersMiddleware = require("./middlewares/onlyUsersMiddleware");
+const Session = require("./middlewares/session");
 
 const app = express();
 
@@ -19,7 +20,7 @@ app.use(
   })
 );
 
-app.use(onlyUsersMiddleware);
+app.use(Session);
 
 const mainRoutes = require("./routes/main");
 const productsRoutes = require("./routes/products");
