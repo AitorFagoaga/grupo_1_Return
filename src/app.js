@@ -19,7 +19,7 @@ app.use(
     saveUninitialized: false,
   })
 );
-
+//app.use(onlyUsersMiddleware)
 app.use(Session);
 
 const mainRoutes = require("./routes/main");

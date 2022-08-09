@@ -35,7 +35,7 @@ const usersController = {
         req.session.userLogged = usuario;
 
         if (req.body.recordar) {
-          res.cookie("coockieEmail", usuario.id, { maxAge: 1000 * 60 * 5 });
+          res.cookie("coockieEmail", usuario.email, { maxAge: 1000 * 60 * 5 });
         }
 
         return res.redirect("./profile");

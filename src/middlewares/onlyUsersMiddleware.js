@@ -12,7 +12,7 @@ function onlyUsers(req, res, next) {
       }).then((usuario) => {
         if (usuario) {
           req.session.userLogged = usuario;
-          req.locals.userLogged = usuario;
+          res.locals.userLogged = usuario;
         } else {
           return res.render("./");
         }
