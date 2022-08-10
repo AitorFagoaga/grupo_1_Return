@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="/css/vistaAdmin.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/index.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VistaAdministrador</title>
+    <link rel="shortcut icon" href="/images/Logo.png">
+</head>
+
+<body>
+    <!-- header -->
+    <%- include('../partials/header.ejs') %>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    <div class="botonesBorraryEditar">
+        <form action="/admin/useredit/<%=user.id%>?_method=DELETE" method="POST" enctype="multipart/form-data">
+            <input type="submit" value="Borrar Usuario" class="botonesBorraryEditar color-borrar"></input>
+        </form>
+    </div>
+
+
+
+    <div class="contenedorprincipal">
+
+
+        <form class="form-new" action="/admin/<%=user.id %>?_method=put" method="POST">
+            <div>
+                <label for="name">Nombre</label>
+                <input type="text" name="name" value="<%= user.name %>">
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="text" name="email" value="<%= user.email %>">
+            </div>
+
+            <select name="category" class="sinborde" required>
+                <option value="">Elegí una Categoria</option>
+                <%  
+                    let categories = ['Comprador', 'Vendedor'];
+                %>
+                <% for (const oneCategory of categories) { %>
+                <option value="<%= oneCategory %>"
+                    <%= locals.oldData && (oneCategory === oldData.category) ? 'selected' : null %>> <%= oneCategory %>
+                </option>
+                <% } %>
+            </select>
+    </div>
+    <div class="imagenajustar">
+        <img src="/images/users/<%=user.image%>" alt="profileImage" class="imagenajustar">
+    </div>
+
+    <div>
+        <button type="submit" class="wallpaper-button">Editar</button>
+    </div>
+    </form>
+
+    </br>
+    <!-- Footer  -->
+    <%- include('../partials/footer.ejs') %>
+    <%- include('../partials/footerdos.ejs') %>
+</body>
+
+</html>

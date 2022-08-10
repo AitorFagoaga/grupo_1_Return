@@ -40,15 +40,6 @@ const productsController = {
         product: product,
       });
     });
-    console.log("aca el error");
-    console.log("aca el error");
-    console.log("aca el error");
-    console.log("aca el error");
-    console.log("aca el error");
-    console.log("aca el error");
-    console.log("aca el error");
-    console.log("aca el error");
-    console.log("aca el error");
 
     //  db.Products.findAll().then(function (product) {
     //   res.render("./products/productList", {

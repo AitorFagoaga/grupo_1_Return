@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return</title>
+    <link rel="shortcut icon" href="/images/Logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/b846d156b8.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/productList.css">
+    <link rel="stylesheet" href="/css/productDetail.css">
+    <link rel="stylesheet" href="/css/index.css">
+
+</head>
+
+<body>
+    <br />
+    <br />
+    <br />
+    <br />
+    <!-- header   -->
+    <%- include('../partials/header.ejs') %>
+    <br />
+    <br />
+    <ul class="category" name="category">
+        <a class="category-1" href="" name="category-1"><i class="fa-solid fa-tv category-icon"></i></a>
+        <a class="category-2" href="" name="category-2"><i class="fa-solid fa-headset category-icon"></i></a>
+        <a class="category-3" href="" name="category-3"><i class="fa-solid fa-gamepad category-icon"></i></a>
+        <a class="category-4" href="" name="category-4"><i class="fa-brands fa-playstation category-icon"></i></a>
+        <a class="category-5" href="" name="category-5"><i class="fa-brands fa-xbox category-icon"></i></a>
+        <a class="category-button" href="" name="category-button">All categories</a>
+    </ul>
+    </h4>
+
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <div>
+
+        <div><% users.forEach(user => { %>
+            </br>
+            <section class="new-product" name="new-product">
+                <article class="new-product" name="new-product">
+                    <img src="/images/users/<%=user.image%>" width="300px">
+
+                    <div class="informacion">
+                        <div>
+                            <div class="buttonsDeleateAndUpdate">
+                                <div class="botonesBorraryEditar">
+
+                                </div>
+                                <div class="botonesBorraryEditar">
+                                    <a href="/admin/useredit/<%=user.id %>">
+                                        <input type="submit" value="Editar" class="botonesBorraryEditar color-editar">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="descripcion"><%= user.name%></span>
+                    </div>
+                </article>
+            </section>
+            </br>
+            <% }) %>
+        </div>
+
+    </div>
+    <!-- Footer  -->
+
+    </section>
+    <%- include('../partials/footerdos.ejs') %>
+    <%- include('../partials/footer.ejs') %>
+    </main>
+
+</body>
+
+</html>
