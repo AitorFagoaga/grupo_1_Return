@@ -3,8 +3,7 @@ const db = require("../database/models");
 function userRegister(req, res, next) {
 
   let emailInCookie = req.cookies.coockieEmail;
-  console.log(emailInCookie);
-  console.log("empieza")
+  
 
   // let usuario = userModel.findByField("email", emailInCookie.coockieEmail);
 
