@@ -1,27 +1,25 @@
-const User = require("../models/User");
 const db = require("../database/models");
 
-function onlyUsers(req, res, next) {
+function onlyUsersMiddleware(req, res, next) {
   if (req.session.userLogged) {
-    req.locals.userLogged = req.session.userLogged;
+    req.session.userLogged = req.coockies.emailInCookie;
   } else {
-    let emailInCookie = req.cookies.coockieEmail;
-    if (emailInCookie) {
+    if (req.cookies.coockieEmail != undefined) {
       db.Users.findOne({
-        where: { email: emailInCookie },
+        where: { email: coockieEmail },
       }).then((usuario) => {
         if (usuario) {
           req.session.userLogged = usuario;
-          res.locals.userLogged = usuario;
+          res.locals.isLogged = true;
         } else {
-          return res.render("./");
+          return res.render("./users/login");
         }
       });
     } else {
-      return res.render("./");
+      return res.render("./users/login");
     }
   }
   next();
 }
 
-module.exports = onlyUsers;
+module.exports = onlyUsersMiddleware;

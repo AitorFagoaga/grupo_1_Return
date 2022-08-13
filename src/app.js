@@ -7,6 +7,7 @@ require("dotenv").config();
 //middlewares de aplicacion
 //const onlyUsersMiddleware = require("./middlewares/onlyUsersMiddleware");
 const Session = require("./middlewares/session");
+//const recordameMiddleware = require("./middlewares/recordameMiddleware");
 
 const app = express();
 
@@ -19,7 +20,7 @@ app.use(
     saveUninitialized: false,
   })
 );
-//app.use(onlyUsersMiddleware)
+
 app.use(Session);
 
 const mainRoutes = require("./routes/main");
@@ -41,6 +42,8 @@ app.use("/products", productsRoutes);
 app.use("/users", usersRoutes);
 //ruta administrador
 app.use("/admin", adminRoutes);
+
+//app.use(onlyUsersMiddleware);
 
 app.listen(3000 || process.env.PORT, () =>
   console.log("El servidor se ha iniciado correctamente.")
