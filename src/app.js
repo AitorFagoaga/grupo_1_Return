@@ -7,7 +7,7 @@ require("dotenv").config();
 //middlewares de aplicacion
 //const onlyUsersMiddleware = require("./middlewares/onlyUsersMiddleware");
 const Session = require("./middlewares/session");
-//const recordameMiddleware = require("./middlewares/recordameMiddleware");
+//const adminMiddleware = require("./middlewares/adminMiddleware");
 
 const app = express();
 
@@ -22,6 +22,7 @@ app.use(
 );
 
 app.use(Session);
+//app.use(adminMiddleware);
 
 const mainRoutes = require("./routes/main");
 const productsRoutes = require("./routes/products");

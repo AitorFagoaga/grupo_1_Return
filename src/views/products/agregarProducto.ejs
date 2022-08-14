@@ -25,27 +25,33 @@
     </br>
     </br>
     </br>
-    <form action="/products/productList" method="POST" enctype="multipart/form-data">
+    <form clase="form" action="/products/productList" method="POST" enctype="multipart/form-data">
         <div class="conteiner-agregado">
             </br>
-            <input type="text" placeholder="Nombre del producto" class="titulo" name="name" required></input>
+            <input type="text" placeholder="Nombre del producto" class="titulo" name="name" id="name"></input>
             </br>
-            <input type="text" placeholder="Precio" class="titulo" name="git log" required></input>
+            <input type="text" placeholder="Precio" class="titulo" name="price" id="price"></input>
             </br>
             </br>
-            <div class="imagen-agregado" name="imagen-agregado">
+            <div class="imagen-agregado" name="imagen-agregado" id="imagen-agregado">
                 </br>
                 <i class="fas fa-download"></i>
             </div>
-            <div><input type="file" name="image" class="titulo" required></div>
+            <div><input type="file" name="image" class="titulo"></div>
             </br>
             <textarea name="description" id="descripcion" cols="30" rows="10" class="text-area"
-                placeholder="Descripcion completa." required></textarea>
+                placeholder="Descripcion completa." id="description"></textarea>
             </br>
             <input type="submit" value="Agregar" class="wallpaper-button titulo">
             </br>
         </div>
     </form>
+    <div>
+        <ul class="errors">
+
+        </ul>
+    </div>
+    <script src="/js/productsValidation.js"></script>
     <!-- Footer  -->
 </body>
 
