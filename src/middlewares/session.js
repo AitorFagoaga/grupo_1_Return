@@ -1,43 +1,25 @@
 const db = require("../database/models");
 
 function userRegister(req, res, next) {
+  res.locals.isLogged = false;
+
   let emailInCookie = req.cookies.coockieEmail;
 
-  // let usuario = userModel.findByField("email", emailInCookie.coockieEmail);
-
-  // let usuario = db.Users.findOne({
-  //   where: {
-  //       email: emailInCookie
-  //     }
-  //    }).then((usuarios) => {
-  //   return usuarios;
-  // });
-
-  // if (usuario) {
-  //   req.session.usuarioLogeado = usuario;
-  // }
-  if (req.session && req.session.userLogged) {
+  if (req.session.userLogged || emailInCookie) {
     res.locals.isLogged = true;
-    // res.locals.usuarioLogeado = req.session.usuarioLogeado;
-  } else {
-    res.locals.isLogged = false;
-  }
+    res.locals.userLogged = req.session.userLogged;
 
-  if (emailInCookie) {
-    db.Users.findOne({
-      where: {
-        email: emailInCookie,
-      },
-    }).then((usuario) => {
-      if (usuario) {
-        req.session.usuarioLogeado = usuario;
-      }
-    });
-  }
-
-  if (req.session.usuarioLogeado) {
-    res.locals.isLogged = true;
-    res.locals.usuarioLogeado = req.session.usuarioLogeado;
+    if (emailInCookie) {
+      db.Users.findOne({
+        where: {
+          email: emailInCookie,
+        },
+      }).then((usuario) => {
+        req.session.userLogged = usuario;
+        res.locals.isLogged = true;
+        res.locals.userLogged = req.session.userLogged;
+      });
+    }
   }
 
   next();

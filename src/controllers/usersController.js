@@ -2,8 +2,6 @@ const { validationResult } = require("express-validator");
 const userModel = require("../models/User");
 const bcryptjs = require("bcryptjs");
 const db = require("../database/models");
-const session = require("express-session");
-const cookie = require("cookie-parser");
 
 const usersController = {
   login: (req, res) => {
@@ -24,6 +22,7 @@ const usersController = {
           },
         });
       }
+
       const comparePassword = bcryptjs.compareSync(
         req.body.password,
         usuario.password
@@ -75,6 +74,7 @@ const usersController = {
   },
 
   profile: (req, res) => {
+    console.log(req.cookies.coockieEmail);
     return res.render("./users/profile", {
       user: req.session.userLogged,
     });

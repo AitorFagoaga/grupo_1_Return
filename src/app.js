@@ -11,8 +11,6 @@ const Session = require("./middlewares/session");
 
 const app = express();
 
-app.use(cookie());
-
 app.use(
   session({
     secret: "Secreto",
@@ -20,6 +18,8 @@ app.use(
     saveUninitialized: false,
   })
 );
+
+app.use(cookie());
 
 app.use(Session);
 //app.use(adminMiddleware);
@@ -43,8 +43,6 @@ app.use("/products", productsRoutes);
 app.use("/users", usersRoutes);
 //ruta administrador
 app.use("/admin", adminRoutes);
-
-//app.use(onlyUsersMiddleware);
 
 app.listen(3000 || process.env.PORT, () =>
   console.log("El servidor se ha iniciado correctamente.")
