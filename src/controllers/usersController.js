@@ -74,7 +74,6 @@ const usersController = {
   },
 
   profile: (req, res) => {
-    console.log(req.cookies.coockieEmail);
     return res.render("./users/profile", {
       user: req.session.userLogged,
     });

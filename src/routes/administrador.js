@@ -1,12 +1,13 @@
 const express = require("express");
 const router = express.Router();
 const administradorController = require("../controllers/administradorController");
+const adminMiddleware = require("../middlewares/adminMiddleware");
 
-router.get("/", administradorController.index);
+router.get("/", adminMiddleware, administradorController.index);
 
-router.get("/useredit/:id", administradorController.editvista);
-router.delete("/useredit/:id", administradorController.delete);
+router.get("/useredit/:id", adminMiddleware, administradorController.editvista);
+router.delete("/useredit/:id", adminMiddleware, administradorController.delete);
 
-router.put("/:id/", administradorController.edit);
+router.put("/:id/", adminMiddleware, administradorController.edit);
 
 module.exports = router;

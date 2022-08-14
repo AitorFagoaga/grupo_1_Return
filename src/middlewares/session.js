@@ -16,12 +16,9 @@ function userRegister(req, res, next) {
         },
       }).then((usuario) => {
         req.session.userLogged = usuario;
-        res.locals.isLogged = true;
-        res.locals.userLogged = req.session.userLogged;
       });
     }
   }
-
   next();
 }
 
