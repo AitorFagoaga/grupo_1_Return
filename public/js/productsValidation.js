@@ -1,7 +1,7 @@
 window.addEventListener("load", function (){
     
-    let form = document.querySelector('.form');
-    //form.titulo.focus();
+    let form = document.querySelector('form');
+    form.titulo.focus();
     form.addEventListener('submit', (e) => {
         
         let errors = [];
