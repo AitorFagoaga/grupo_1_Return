@@ -1,7 +1,7 @@
 window.addEventListener("load", function (){
     
-    let form = document.querySelector('form');
-    form.titulo.focus();
+    let form = document.querySelector('.form');
+    form.name.focus();
     form.addEventListener('submit', (e) => {
         
         let errors = [];
@@ -18,12 +18,12 @@ window.addEventListener("load", function (){
         } else {
             form.price.focus();
         };
-        if (price.value < 0) {
+        if (price.value > 0) {
             errors.push('El precio no puede ser 0');
         } else {
             form.description.focus();
         };
-        if (description == "") {
+        if (description.value == '') {
             errors.push('El producto debe tener una descripcion');
         }
         
