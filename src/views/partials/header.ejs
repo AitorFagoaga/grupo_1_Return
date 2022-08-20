@@ -26,7 +26,7 @@
                 Mis productos
                 <!-- <i class="fa-solid fa-chevron-down right-column-dropdown-menu"></i> -->
             </a>
-            <% if(locals.userLogged.email == "pepe@hotmail.com") {%>
+            <% if(locals.userLogged && locals.userLogged.email == "pepe@hotmail.com") {%>
             <a class="top-navigation-bar-button" href="/admin">
                 <i>Admin</i>
             </a>

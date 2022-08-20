@@ -1,131 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/register.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
-    
-
-    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
     <title>Registrate</title>
     <link rel="shortcut icon" href="/images/Logo.png">
 </head>
+
 <body>
-        <!-- <header>
+    <!-- <header>
             <img alt="" class="logo" src="/images/Background.png">
    
 </header> -->
-<%- include('../partials/header.ejs') %>
-</head>
-<body>
-    
-    <form action="/users/register" method="POST" class="form-register" enctype="multipart/form-data">
-        <h1 class =" form-titulo"> Registrate </h1>
+    <%- include('../partials/header.ejs') %>
+    </head>
 
-        <div class="input-contenedor">
-           <i class="fa-solid fa-user icon"></i>
-           <input type="text" 
-                name ="name" 
-                class="sinborde" 
-                value="<%= locals.oldData ? oldData.name : null %>" 
-                placeholder="Nombre Completo" 
-                maxlength="15"
-            />
-           <% if (locals.errors && errors.name){ %>
+    <body>
+
+        <form action="/users/register" method="POST" class="form-register" enctype="multipart/form-data">
+            <h1 class=" form-titulo"> Registrate </h1>
+
+            <div class="input-contenedor">
+                <i class="fa-solid fa-user icon"></i>
+                <input type="text" name="name" class="sinborde" value="<%= locals.oldData ? oldData.name : null %>"
+                    placeholder="Nombre Completo" maxlength="15" />
+                <% if (locals.errors && errors.name){ %>
                 <div class="error-msg">
                     <%= errors.name.msg %>
                 </div>
-            <% } %>
-        </div>
-        <div class="input-contenedor">
-            <!-- <i class="fa-solid fa-at icon"></i> -->
-            <input type="file" 
-                name="image" 
-                class="sinborde" 
-                value="<%= locals.oldData ? oldData.email : null %>" 
-                placeholder="Correo Electronico" 
-                maxlength="20"
-            />
-            <% if (locals.errors && errors.image){ %>
+                <% } %>
+            </div>
+            <div class="input-contenedor">
+                <!-- <i class="fa-solid fa-at icon"></i> -->
+                <input type="file" name="image" class="sinborde" value="<%= locals.oldData ? oldData.email : null %>"
+                    placeholder="Correo Electronico" maxlength="20" />
+                <% if (locals.errors && errors.image){ %>
                 <div class="error-msg">
                     <%= errors.image.msg %>
                 </div>
-            <% } %>
-         </div>
-         
-        <div class="input-contenedor">
-            <label class="categoria"><b>Categoria:</b></label>
-            <select 
-                name="category" 
-                class="sinborde"
-            >
-                <option value="">Elegí una Categoria</option>
-                <%  
+                <% } %>
+            </div>
+
+            <div class="input-contenedor">
+                <label class="categoria"><b>Categoria:</b></label>
+                <select name="category" class="sinborde">
+                    <option value="">Elegí una Categoria</option>
+                    <%  
                     let categories = ['Comprador', 'Vendedor'];
                 %>
-                <% for (const oneCategory of categories) { %>
-                    <option 
-                        value="<%= oneCategory %>"
-                        <%= locals.oldData && (oneCategory === oldData.category) ? 'selected' : null %> 
-                    > <%= oneCategory %> </option>
-                <% } %>
-            </select>
-            <% if (locals.errors && errors.category) { %>
+                    <% for (const oneCategory of categories) { %>
+                    <option value="<%= oneCategory %>"
+                        <%= locals.oldData && (oneCategory === oldData.category) ? 'selected' : null %>>
+                        <%= oneCategory %> </option>
+                    <% } %>
+                </select>
+                <% if (locals.errors && errors.category) { %>
                 <div class="text-danger">
                     <%= errors.category.msg %>
                 </div>
-            <% } %>
-        </div>
-        
-        <div class="input-contenedor">
-            <i class="fa-solid fa-at icon"></i>
-            <input type="text" 
-                name="email" 
-                class="sinborde" 
-                value="<%= locals.oldData ? oldData.email : null %>" 
-                placeholder="Correo Electronico" 
-                maxlength="20"
-            />
-            <% if (locals.errors && errors.email){ %>
+                <% } %>
+            </div>
+
+            <div class="input-contenedor">
+                <i class="fa-solid fa-at icon"></i>
+                <input type="text" name="email" class="sinborde" value="<%= locals.oldData ? oldData.email : null %>"
+                    placeholder="Correo Electronico" maxlength="20" />
+                <% if (locals.errors && errors.email){ %>
                 <div class="error-msg">
                     <%= errors.email.msg %>
                 </div>
-            <% } %>
-         </div>
+                <% } %>
+            </div>
 
-        <div class="input-contenedor">
-            <i class="fa-solid fa-lock icon"></i>
-            <input type="password" 
-                name= "password" 
-                class="sinborde" 
-                value="<%= locals.oldData ? oldData.password : null %>"  
-                placeholder="Crea Contraseña" 
-                maxlength="8" 
-            />
-            <% if (locals.errors && errors.password){ %>
+            <div class="input-contenedor">
+                <i class="fa-solid fa-lock icon"></i>
+                <input type="password" name="password" class="sinborde"
+                    value="<%= locals.oldData ? oldData.password : null %>" placeholder="Crea Contraseña"
+                    maxlength="8" />
+                <% if (locals.errors && errors.password){ %>
                 <div class="error-msg">
                     <%= errors.password.msg %>
                 </div>
-            <% } %>
-         </div>
-         
-        
-         <label><input type="checkbox" class="checkbox">Aceptas nuestras condiciones de uso y política de privacidad</label></br>
-         <div>¿Ya tienes cuenta? <a class="link1" href="login">Inicia sesion</a></div>
-         <div><input type="submit" value="Continuar" class="button"></div>
-         
-        
-        </div>
-    
-    </form>
-    <!-- Footer  -->
-    <%- include('../partials/footer.ejs') %>
-</body>
+                <% } %>
+            </div>
+
+
+            <label><input type="checkbox" class="checkbox">Aceptas nuestras condiciones de uso y política de
+                privacidad</label></br>
+            <div>¿Ya tienes cuenta? <a class="link1" href="login">Inicia sesion</a></div>
+            <div><input type="submit" value="Continuar" class="button"></div>
+
+
+            </div>
+
+        </form>
+        <!-- Footer  -->
+        <%- include('../partials/footer.ejs') %>
+    </body>
 
 </html>
-

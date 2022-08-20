@@ -25,7 +25,7 @@
     </br>
     </br>
     </br>
-    <form clase="form" action="/products/productList" method="POST" enctype="multipart/form-data">
+    <form clase="form" action="/products/productList" method="POST" enctype="multipart/form-data" id="form">
         <div class="conteiner-agregado">
             </br>
             <input type="text" placeholder="Nombre del producto" class="titulo" name="name" id="name"></input>
@@ -47,13 +47,14 @@
         </div>
     </form>
     <div>
-        <ul class="errors">
+        <ul class="errors" id="errors">
 
         </ul>
     </div>
-    <script src="/js/productsValidation.js"></script>
+
     <!-- Footer  -->
 </body>
+<script src="/js/productsValidation.js"></script>
 
 <%- include('../partials/footer.ejs') %>
 <%- include('../partials/footerdos.ejs') %>
