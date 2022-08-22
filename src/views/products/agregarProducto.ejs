@@ -37,7 +37,13 @@
                 </br>
                 <i class="fas fa-download"></i>
             </div>
-            <div><input type="file" name="image" class="titulo"></div>
+            <div><input type="file" name="image" class="titulo">
+                <% if (locals.errors && errors.image){ %>
+                    <div class="error-msg">
+                        <%= errors.image.msg %>
+                    </div>
+                    <% } %>
+            </div>
             </br>
             <textarea name="description" id="descripcion" cols="30" rows="10" class="text-area"
                 placeholder="Descripcion completa." id="description"></textarea>

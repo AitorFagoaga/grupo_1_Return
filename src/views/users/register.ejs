@@ -28,7 +28,7 @@
 
             <div class="input-contenedor">
                 <i class="fa-solid fa-user icon"></i>
-                <input type="text" name="name" class="sinborde" value="<%= locals.oldData ? oldData.name : null %>"
+                <input type="text" name="name" class="sinborde name" value="<%= locals.oldData ? oldData.name : null %>"
                     placeholder="Nombre Completo" maxlength="15" />
                 <% if (locals.errors && errors.name){ %>
                 <div class="error-msg">
@@ -49,7 +49,7 @@
 
             <div class="input-contenedor">
                 <label class="categoria"><b>Categoria:</b></label>
-                <select name="category" class="sinborde">
+                <select name="category" class="sinborde category">
                     <option value="">Elegí una Categoria</option>
                     <%  
                     let categories = ['Comprador', 'Vendedor'];
@@ -100,6 +100,12 @@
             </div>
 
         </form>
+        <div>
+            <ul class="errors" id="errors">
+    
+            </ul>
+        </div>
+        <script src="/js/usersValidation.js"></script>
         <!-- Footer  -->
         <%- include('../partials/footer.ejs') %>
     </body>
