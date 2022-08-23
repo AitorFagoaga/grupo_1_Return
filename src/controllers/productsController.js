@@ -1,4 +1,5 @@
 const db = require("../database/models");
+const { Op } = require("sequelize");
 
 const productsController = {
   productCartEmpty: (req, res) => {
@@ -75,6 +76,15 @@ const productsController = {
     );
 
     return res.redirect("/products/productList");
+  },
+  busquedaProductos: (req, res) => {
+    db.Products.findAll({
+      where: { name: { [Op.like]: "%" + req.body.search } },
+    }).then((movies) => {
+      return console.log(req.params.search);
+    });
+    console.log(`?search=${req.body.search}`);
+    return res.render("./products/busquedaProductos");
   },
 };
 

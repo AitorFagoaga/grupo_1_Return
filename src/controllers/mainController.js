@@ -1,25 +1,9 @@
-const fs = require("fs");
-const path = require("path");
-
-const productsFilePath = path.join(
-  __dirname,
-  "../data/products.json"
-);
-const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+const db = require("../database/models");
 
 const mainController = {
   index: (req, res) => {
-    const productsOnSale = products.filter((product) => {
-      return product.category == "On Sale";
-    });
-
-    const productsTrending = products.filter((product) => {
-      return product.category == "Trending";
-    });
-
-    res.render("./index", {
-      productsOnSale: productsOnSale,
-      productsTrending: productsTrending,
+    db.Products.findAll().then(function (product) {
+      return res.render("./index", { product: product });
     });
   },
 };

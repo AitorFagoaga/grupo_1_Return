@@ -21,6 +21,7 @@ router.get("/productCartFull", productsController.productCartFull);
 router.get("/productDetail/:id", productsController.productDetail);
 router.get("/productList", productsController.productList);
 router.get("/vistaAdministrador", productsController.vistaAdministrador);
+router.get("/busquedaProductos", productsController.busquedaProductos);
 
 // Modificar image con el nombre del input
 router.get("/agregarProducto", productsController.vistaAgregarProducto);

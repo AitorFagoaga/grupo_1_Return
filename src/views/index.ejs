@@ -19,42 +19,29 @@
 
   <main>
     <div class="wallpaper">
-      <img alt="" class="wallpaper-background" src="/images/Banner 1.jpg" />
-      <a class="wallpaper-button" href="/products/productList">New products</a>
-      <a class="wallpaper-option-1" href=""></a>
-      <a class="wallpaper-option-2" href=""></a>
-      <a class="wallpaper-option-3" href=""></a>
+      <img alt="" class="wallpaper-background" src="/images/fondo.jpg" />
+
     </div>
-    <h4 class="headline-1">Popular categories</h4>
+    <h4 class="headline-1">Categorías Populares</h4>
     <ul class="category" name="category">
       <a class="category-1" href=""><i class="fa-solid fa-tv category-icon"></i></a>
       <a class="category-2" href=""><i class="fa-solid fa-headset category-icon"></i></a>
       <a class="category-3" href=""><i class="fa-solid fa-gamepad category-icon"></i></a>
       <a class="category-4" href=""><i class="fa-brands fa-playstation category-icon"></i></a>
       <a class="category-5" href=""><i class="fa-brands fa-xbox category-icon"></i></a>
-      <a class="category-button" href="">All categories</a>
+      <a class="category-button" href="">Todas las Categorias</a>
     </ul>
-    <h4 class="headline-2">New arrivals</h4>
+    <h4 class="headline-2">Nuevos Productos</h4>
     <section class="new-product">
-      <% productsOnSale.forEach(product => { %>
-      <a class="new-product-detail" href="/products/productDetail/<%= product.id %>" type="submit">
-        <div class="new-product-discount"><%= product.discount %>%</div>
+      <% product.forEach(product => { %>
+      <a class="new-product-detail" href="/products/productDetail/<%= product.id %>">
         <img alt="" class="new-product-image" src="/images/productos/<%= product.image %>" />
         <div class="new-product-name"><%= product.name %></div>
         <div class="new-product-price">$ <%= product.price %></div>
       </a>
       <% }) %>
     </section>
-    <h4 class="headline-3">Trending</h4>
-    <section class="trending-product">
-      <% productsTrending.forEach(product => { %>
-      <a class="trending-product-detail" href="/products/productDetail/<%= product.id %>" type="submit">
-        <img alt="" class="trending-product-image" src="/images/productos/<%= product.image %>" />
-        <div class="trending-product-name"><%= product.name %></div>
-        <div class="trending-product-price">$ <%= product.price %></div>
-      </a>
-      <% }) %>
-    </section>
+
   </main>
   <!-- Footer  -->
 
