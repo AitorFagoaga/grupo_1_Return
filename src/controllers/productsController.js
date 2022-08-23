@@ -31,6 +31,13 @@ const productsController = {
       image: req.file.filename,
       user_id: req.session.userLogged.id,
     });
+    const resultValidation = validationResult(req);
+    if (resultValidation.errors.length > 0) {
+      return res.render("./products/agregarProducto", {
+        errors: resultValidation.mapped(),
+        oldData: req.body,
+      });
+    }
     res.redirect("/products/productList");
   },
   productList: (req, res) => {

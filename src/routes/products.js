@@ -3,6 +3,7 @@ const router = express.Router();
 const productsController = require("../controllers/productsController");
 const multer = require("multer");
 const path = require("path");
+const { body } = require("express-validator");
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -16,6 +17,20 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
+const validation = body("image").custom((value, { req }) => {
+  let image = req.file;
+  let fileExtention = path.extname(image.originalname);
+  let extensions = [".jpg", ".png"];
+  if (!image) {
+    throw new Error("Debes colocar una foto");
+  } else {
+    if (!extensions.includes(fileExtention)) {
+      throw new Error("Debes colocar una imagen con .jpg o .png");
+    }
+  }
+  return true;
+})
+
 router.get("/productCartEmpty", productsController.productCartEmpty);
 router.get("/productCartFull", productsController.productCartFull);
 router.get("/productDetail/:id", productsController.productDetail);
@@ -28,6 +43,7 @@ router.get("/agregarProducto", productsController.vistaAgregarProducto);
 router.post(
   "/productList",
   upload.single("image"),
+  validation,
   productsController.agregarProducto
 );
 
