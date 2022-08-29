@@ -4,6 +4,7 @@ const productsController = require("../controllers/productsController");
 const multer = require("multer");
 const path = require("path");
 const { body } = require("express-validator");
+const profileAuthMiddleware = require("../middlewares/profileAuthMiddleware");
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -29,17 +30,22 @@ const validation = body("image").custom((value, { req }) => {
     }
   }
   return true;
-})
+});
 
 router.get("/productCartEmpty", productsController.productCartEmpty);
 router.get("/productCartFull", productsController.productCartFull);
 router.get("/productDetail/:id", productsController.productDetail);
 router.get("/productList", productsController.productList);
 router.get("/vistaAdministrador", productsController.vistaAdministrador);
+
 router.get("/busquedaProductos", productsController.busquedaProductos);
 
 // Modificar image con el nombre del input
-router.get("/agregarProducto", productsController.vistaAgregarProducto);
+router.get(
+  "/agregarProducto",
+  profileAuthMiddleware,
+  productsController.vistaAgregarProducto
+);
 router.post(
   "/productList",
   upload.single("image"),

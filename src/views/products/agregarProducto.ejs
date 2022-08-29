@@ -25,11 +25,7 @@
     </br>
     </br>
     </br>
-<<<<<<< HEAD
     <form clase="form" action="/products/productList" method="POST" enctype="multipart/form-data" id="form">
-=======
-    <form class="form" action="/products/productList" method="POST" enctype="multipart/form-data" id="form">
->>>>>>> 595b969c7135d19bd9e0b3291af838e5667d706a
         <div class="conteiner-agregado">
             </br>
             <input type="text" placeholder="Nombre del producto" class="titulo" name="name" id="name"></input>
@@ -43,10 +39,10 @@
             </div>
             <div><input type="file" name="image" class="titulo">
                 <% if (locals.errors && errors.image){ %>
-                    <div class="error-msg">
-                        <%= errors.image.msg %>
-                    </div>
-                    <% } %>
+                <div class="error-msg">
+                    <%= errors.image.msg %>
+                </div>
+                <% } %>
             </div>
             </br>
             <textarea name="description" id="descripcion" cols="30" rows="10" class="text-area"

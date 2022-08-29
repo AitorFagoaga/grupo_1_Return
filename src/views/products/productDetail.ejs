@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <link rel="stylesheet" href="/css/index.css">
-
     <link rel="stylesheet" href="/css/productDetailUpdated.css">
-    <link rel="stylesheet" href="/css/productDetail.css"> 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/css/productDetail.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Oxygen&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,31 +14,33 @@
     <title>Product Detail</title>
     <link rel="shortcut icon" href="/images/Logo.png">
 </head>
+
 <body>
-        <!-- Header  -->
+    <!-- Header  -->
     <%- include('../partials/header.ejs') %>
-        <!-- /Header  -->
+    <!-- /Header  -->
     <main>
 
         <section class="webpage">
-            
+
             <article class="webpage-left-column">
-                <img src="/images/productos/<%=product.image%>" width="300px" >
+                <img src="/images/productos/<%=product.image%>" width="300px">
             </article>
-            
+
             <article class="webpage-right-column">
-            <div class="buttonsDeleateAndUpdate">
-                <div class="botonesBorraryEditar">
-                    <form action="/products/productDetail/<%= product.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
-                        <input type="submit" value="Borrar" class="botonesBorraryEditar color-borrar"></input> 
-                    </form>
+                <div class="buttonsDeleateAndUpdate">
+                    <div class="botonesBorraryEditar">
+                        <form action="/products/productDetail/<%= product.id %>?_method=DELETE" method="POST"
+                            enctype="multipart/form-data">
+                            <input type="submit" value="Borrar" class="botonesBorraryEditar color-borrar"></input>
+                        </form>
+                    </div>
+                    <div class="botonesBorraryEditar">
+                        <a href="/products/editProducts/<%= product.id %>">
+                            <input type="submit" value="Editar" class="botonesBorraryEditar color-editar">
+                        </a>
+                    </div>
                 </div>
-                <div class="botonesBorraryEditar">
-                    <a href="/products/editProducts/<%= product.id %>"> 
-                        <input type="submit" value="Editar" class="botonesBorraryEditar color-editar"> 
-                    </a>
-                </div>
-            </div>
                 <i class="fa-brands fa-apple product-brand-icon"></i>
 
                 <h3 class="product-name">
@@ -49,12 +51,12 @@
                 </p>
                 <div class="price-with-discount">
                     $ <%= product.price %>
-                </div> 
-                
+                </div>
+
                 <a class="payment-method-link" href="" type="submit">
                     Ver todos los medios de pago
                 </a>
-                
+
                 <button class="buy-button" type="submit">Add to cart</button>
             </article>
         </section>
@@ -62,9 +64,10 @@
     <footer>
 
     </footer>
-        
+
 
     <%- include('../partials/footerdos.ejs') %>
     <%- include('../partials/footer.ejs') %>
 </body>
+
 </html>

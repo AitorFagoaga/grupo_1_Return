@@ -21,6 +21,32 @@
     </br>
     </br>
     </br>
+    <div><% products.forEach(product => { %>
+        </br>
+        <section class="new-product" name="new-product">
+            <article class="new-product" name="new-product">
+                <img src="/images/productos/<%=product.image%>" width="300px">
+
+                <div class="informacion">
+                    <span class="tipo-envio">Envio con normalidad </span>
+                    <!-- <span class="precio"> $550 </span> -->
+                    <div class="price-without-discount">
+                        $ <%= product.price %>
+                    </div>
+                    <span class="precio-envio"><%=product.name%></span>
+                    <div> <a class="link2" href="productDetail/<%=product.id%>">Ver Producto</a></div>
+                    <div class="calificacion">
+                        <span> <i class="fa-solid fa-star"></i>
+                            <span> <i class="fa-solid fa-star"></i>
+                                <span> <i class="fa-solid fa-star"></i>
+                                    <span> <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+            </article>
+        </section>
+        </br>
+        <% }) %>
+    </div>
     </br>
     </br>
     </br>

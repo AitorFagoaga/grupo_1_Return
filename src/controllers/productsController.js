@@ -86,12 +86,10 @@ const productsController = {
   },
   busquedaProductos: (req, res) => {
     db.Products.findAll({
-      where: { name: { [Op.like]: "%" + req.body.search } },
-    }).then((movies) => {
-      return console.log(req.params.search);
+      where: { name: { [Op.like]: "%" + req.query.search + "%" } },
+    }).then((products) => {
+      return res.render("./products/busquedaProductos", { products: products });
     });
-    console.log(`?search=${req.body.search}`);
-    return res.render("./products/busquedaProductos");
   },
 };
 
