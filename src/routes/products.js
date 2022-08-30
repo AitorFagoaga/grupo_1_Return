@@ -18,7 +18,8 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-const validation = body("image").custom((value, { req }) => {
+const validation = [
+  body("image").custom((value, { req }) => {
   let image = req.file;
   let fileExtention = path.extname(image.originalname);
   let extensions = [".jpg", ".png"];
@@ -30,7 +31,8 @@ const validation = body("image").custom((value, { req }) => {
     }
   }
   return true;
-});
+})
+]
 
 router.get("/productCartEmpty", productsController.productCartEmpty);
 router.get("/productCartFull", productsController.productCartFull);

@@ -1,9 +1,0 @@
-[200~$ git config --global user.name "John Smith" git config --global user.email "eparis@atlas
-git config --global user.name "Bruno" git config --global user.email "br1_moralesotmail.com"
-git --version
-git status
-git clone [200~https://github.com/AitorFagoaga/grupo_1_Return.git~
-git clone [200~https://github.com/AitorFagoaga/grupo_1_Return.git~
-git clone https://github.com/AitorFagoaga/grupo_1_Return.git
-git config --global user.email "br1_moralesotmail.com"
-git config --global user.name "bruno"

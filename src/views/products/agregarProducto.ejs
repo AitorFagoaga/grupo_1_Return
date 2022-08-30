@@ -40,7 +40,7 @@
                 
             </div>
             <div>
-                <input type="file" name="image" class="titulo" value="<%= locals.oldData ? oldData.image : null %>"required>
+                <input type="file" name="image" class="titulo" value="<%= locals.oldData ? oldData.image : null %>">
                 <% if (locals.errors && errors.image){ %>
                 <div class="error-msg">
                     <%= errors.image.msg %>

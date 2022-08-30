@@ -2,9 +2,7 @@ module.exports = (sequelize, dataTypes) => {
   //el alias recomendado agregarlo en plural.
   let alias = "Users";
   let cols = {
-    image: {
-      type: dataTypes.STRING,
-    },
+    
     category: {
       type: dataTypes.STRING,
     },
@@ -22,6 +20,9 @@ module.exports = (sequelize, dataTypes) => {
     name: {
       type: dataTypes.STRING,
     },
+    image: {
+      type: dataTypes.STRING,
+    }
   };
   let config = {
     //el nombre de la tabla se llama "users".
