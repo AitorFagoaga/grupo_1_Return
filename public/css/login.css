@@ -10,6 +10,9 @@ body {
     
        
 }
+ul{
+    list-style: none;
+}
 header {
    
     font-family:"Mulish";

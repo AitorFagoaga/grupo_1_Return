@@ -21,12 +21,13 @@
     </br>
     </br>
     </br>
-    </br>
-    </br>
-    </br>
-    </br>
+    <div class="centrado">
     <form clase="form" action="/products/productList" method="POST" enctype="multipart/form-data" id="form">
-        <div class="conteiner-agregado">
+
+    <div class="centrado1">
+        <ul class="errors" id="errors">
+        </ul>
+    </div>
             </br>
             <input type="text" placeholder="Nombre del producto" class="titulo" name="name" id="name"></input>
             </br>
@@ -36,8 +37,10 @@
             <div class="imagen-agregado" name="imagen-agregado" id="imagen-agregado">
                 </br>
                 <i class="fas fa-download"></i>
+                
             </div>
-            <div><input type="file" name="image" class="titulo">
+            <div>
+                <input type="file" name="image" class="titulo" value="<%= locals.oldData ? oldData.image : null %>"required>
                 <% if (locals.errors && errors.image){ %>
                 <div class="error-msg">
                     <%= errors.image.msg %>
@@ -46,24 +49,22 @@
             </div>
             </br>
             <textarea name="description" id="descripcion" cols="30" rows="10" class="text-area"
-                placeholder="Descripcion completa." id="description"></textarea>
+                placeholder="  Descripcion completa." id="description"></textarea>
             </br>
             <input type="submit" value="Agregar" class="wallpaper-button titulo">
             </br>
-        </div>
+        </br>
     </form>
-    <div>
-        <ul class="errors" id="errors">
+</div>
+</br>
+</br>
+</br>
+</br>
 
-        </ul>
-    </div>
-
-    <!-- Footer  -->
-</body>
 <script src="/js/productsValidation.js"></script>
 
-
 <%- include('../partials/footer.ejs') %>
-<%- include('../partials/footerdos.ejs') %>
+
+</body>
 
 </html>

@@ -24,28 +24,21 @@
     </br>
     </br>
     </br>
-    <div class="botonesBorraryEditar">
-        <form action="/admin/useredit/<%=user.id%>?_method=DELETE" method="POST" enctype="multipart/form-data">
-            <input type="submit" value="Borrar Usuario" class="botonesBorraryEditar color-borrar"></input>
-        </form>
-    </div>
 
-
-
-    <div class="contenedorprincipal">
-
-
+    <div class="conteiner-principal22">
         <form class="form-new" action="/admin/<%=user.id %>?_method=put" method="POST">
             <div>
+            </br>
                 <label for="name">Nombre</label>
                 <input type="text" name="name" value="<%= user.name %>">
             </div>
+        </br>
             <div>
                 <label for="email">Email</label>
                 <input type="text" name="email" value="<%= user.email %>">
             </div>
-
-            <select name="category" class="sinborde" required>
+        </br>
+            <select name="category" class="sinborde " required>
                 <option value="">Elegí una Categoria</option>
                 <%  
                     let categories = ['Comprador', 'Vendedor'];
@@ -57,14 +50,25 @@
                 <% } %>
             </select>
     </div>
+</br>
+</br>
+</br>
     <div class="imagenajustar">
+    </br>
         <img src="/images/users/<%=user.image%>" alt="profileImage" class="imagenajustar">
     </div>
-
+</br>
+</br>
     <div>
-        <button type="submit" class="wallpaper-button">Editar</button>
+        <button type="submit" class="wallpaper-button">Guardar edición</button>
     </div>
+</br>
+</br>
     </form>
+        <form action="/admin/useredit/<%=user.id%>?_method=DELETE" method="POST" enctype="multipart/form-data">
+            <input type="submit" value="Borrar Usuario" class="wallpaper-button "></input>
+        </form>
+</br>
 
     </br>
     <!-- Footer  -->

@@ -24,6 +24,7 @@ window.onload = function () {
     if (errors.length > 0) {
       let losErrores = document.querySelector("#errors");
       losErrores.innerHTML = "";
+      losErrores.style.color = "red";
       for (let i = 0; i < errors.length; i++) {
         losErrores.innerHTML += `<li>${errors[i]}</li>`;
       }

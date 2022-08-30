@@ -25,6 +25,10 @@
 
         <form action="/users/register" method="POST" class="form-register" enctype="multipart/form-data">
             <h1 class=" form-titulo"> Registrate </h1>
+            <div>
+                <ul class="errors" id="errors">
+                </ul>
+            </div>
 
             <div class="input-contenedor">
                 <i class="fa-solid fa-user icon"></i>
@@ -38,7 +42,7 @@
             </div>
             <div class="input-contenedor">
                 <!-- <i class="fa-solid fa-at icon"></i> -->
-                <input type="file" name="image" class="sinborde" value="<%= locals.oldData ? oldData.email : null %>"
+                <input type="file" name="image" class="sinborde image" value="<%= locals.oldData ? oldData.email : null %>"
                     placeholder="Correo Electronico" maxlength="20" />
                 <% if (locals.errors && errors.image){ %>
                 <div class="error-msg">
@@ -69,7 +73,7 @@
 
             <div class="input-contenedor">
                 <i class="fa-solid fa-at icon"></i>
-                <input type="text" name="email" class="sinborde" value="<%= locals.oldData ? oldData.email : null %>"
+                <input type="text" name="email" class="sinborde email" value="<%= locals.oldData ? oldData.email : null %>"
                     placeholder="Correo Electronico" maxlength="20" />
                 <% if (locals.errors && errors.email){ %>
                 <div class="error-msg">
@@ -95,16 +99,9 @@
                 privacidad</label></br>
             <div>¿Ya tienes cuenta? <a class="link1" href="login">Inicia sesion</a></div>
             <div><input type="submit" value="Continuar" class="button"></div>
-
-
             </div>
 
         </form>
-        <div>
-            <ul class="errors" id="errors">
-
-            </ul>
-        </div>
         <script src="/js/usersValidation.js"></script>
         <!-- Footer  -->
         <%- include('../partials/footer.ejs') %>

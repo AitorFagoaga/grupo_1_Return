@@ -1,5 +1,6 @@
 const db = require("../database/models");
 const { Op } = require("sequelize");
+const { validationResult } = require("express-validator");
 
 const productsController = {
   productCartEmpty: (req, res) => {
@@ -38,6 +39,8 @@ const productsController = {
         oldData: req.body,
       });
     }
+
+
     res.redirect("/products/productList");
   },
   productList: (req, res) => {
