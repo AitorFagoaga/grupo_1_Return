@@ -25,13 +25,15 @@ const productsController = {
     res.render("./products/agregarProducto");
   },
   agregarProducto: (req, res) => {
+
     db.Products.create({
       name: req.body.name,
       price: req.body.price,
-      description: req.body.description,
       image: req.file.filename,
+      description: req.body.description,
       user_id: req.session.userLogged.id,
     });
+
     const resultValidation = validationResult(req);
     if (resultValidation.errors.length > 0) {
       return res.render("./products/agregarProducto", {
@@ -39,7 +41,6 @@ const productsController = {
         oldData: req.body,
       });
     }
-
 
     res.redirect("/products/productList");
   },

@@ -2,6 +2,7 @@ module.exports = (sequelize, dataTypes) => {
   //el alias recomendado agregarlo en plural.
   let alias = "Users";
   let cols = {
+
     
     category: {
       type: dataTypes.STRING,
@@ -12,13 +13,13 @@ module.exports = (sequelize, dataTypes) => {
     password: {
       type: dataTypes.STRING,
     },
+    name: {
+      type: dataTypes.STRING,
+    },
     id: {
       type: dataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
-    },
-    name: {
-      type: dataTypes.STRING,
     },
     image: {
       type: dataTypes.STRING,

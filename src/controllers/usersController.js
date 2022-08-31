@@ -68,7 +68,7 @@ const usersController = {
     db.Users.create(newUsers).then((user) => {
       return res.render("./users");
     });
-    userModel.create(newUsers);
+
 
     return res.redirect("./profile");
   },

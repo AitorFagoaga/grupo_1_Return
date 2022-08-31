@@ -33,7 +33,7 @@
             <div class="input-contenedor">
                 <i class="fa-solid fa-user icon"></i>
                 <input type="text" name="name" class="sinborde name" value="<%= locals.oldData ? oldData.name : null %>"
-                    placeholder="Nombre Completo" maxlength="15" />
+                    placeholder="Nombre Completo" maxlength="30" />
                 <% if (locals.errors && errors.name){ %>
                 <div class="error-msg">
                     <%= errors.name.msg %>
@@ -74,7 +74,7 @@
             <div class="input-contenedor">
                 <i class="fa-solid fa-at icon"></i>
                 <input type="text" name="email" class="sinborde email" value="<%= locals.oldData ? oldData.email : null %>"
-                    placeholder="Correo Electronico" maxlength="20" />
+                    placeholder="Correo Electronico" maxlength="40" />
                 <% if (locals.errors && errors.email){ %>
                 <div class="error-msg">
                     <%= errors.email.msg %>
@@ -86,7 +86,7 @@
                 <i class="fa-solid fa-lock icon"></i>
                 <input type="password" name="password" class="sinborde"
                     value="<%= locals.oldData ? oldData.password : null %>" placeholder="Crea Contraseña"
-                    maxlength="8" />
+                    maxlength="30" />
                 <% if (locals.errors && errors.password){ %>
                 <div class="error-msg">
                     <%= errors.password.msg %>

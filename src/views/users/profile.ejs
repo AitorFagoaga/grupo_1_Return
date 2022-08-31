@@ -26,36 +26,40 @@
       <br>
       <br>
       <br>
-      <div class="contenedor-perfil">\
+      <div class="contenedor-perfil">
         <div class="perfil">
-            
-            <label> <%= user.name %></label>
-            <hr>
+          <img src="/images/users/<%= user.image %>" class="iman" >
+          <hr>
+            <h3> <%= user.name %></h3>
+            <h4>
+              <br>
+              <hr>
+              Texto de descripcion
+            </h4>
+            <small>
+              Texto de descripcion
+            </small>
             <br>
-            <img src="/images/users/<%= user.image %>"  >
-
+            <small>
+              Texto de descripcion
+            </small>
+            <br>
+            <small>
+              Texto de descripcion
+            </small>
         </div>
+
         <div class="seccion">
             <div class="perfil-seccion">
-            
-                <h3>Bienvenido <%= user.name %></h3>
-                <br>
-                <img src="/images/users/<%= user.image %>"  >
-    
+                <h4>Configuraciones</h4>
             </div>
             <br>
             <div class="perfil-seccion">
-                
-                <h3>Bienvenido <%= user.name %></h3>
-                <br>
-                <img src="/images/users/<%= user.image %>"  >
-    
+              <h4>Todos mis productos</h4>
             </div>
         </div>
-
-            <a class="wallpaper-button" href="./logout">Salir de mi cuenta.</a>  
         </div>
-      </div>
+        <a class="wallpaper-button" href="./logout">Salir de mi cuenta.</a>  
   </main>
   <!-- Footer  -->
 
