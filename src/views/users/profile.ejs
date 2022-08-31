@@ -1,58 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="stylesheet" href="/css/index.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
-    
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <title>UsuarioRegistrado</title>
-    <link rel="shortcut icon" href="/images/Logo.png">
-    
-        <%- include('../partials/header.ejs') %>
-
+  <link href="/css/index.css" rel="stylesheet" />
+  <link href="/css/profile.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="shortcut icon" href="/images/Logo.png">
 </head>
+
 <body>
+  <!-- Header -->
+  <%- include('../partials/header.ejs') %>
+  <!-- /Header -->
+
+  <main>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="contenedor-perfil">\
+        <div class="perfil">
+            
+            <label> <%= user.name %></label>
+            <hr>
+            <br>
+            <img src="/images/users/<%= user.image %>"  >
+
+        </div>
+        <div class="seccion">
+            <div class="perfil-seccion">
+            
+                <h3>Bienvenido <%= user.name %></h3>
+                <br>
+                <img src="/images/users/<%= user.image %>"  >
     
+            </div>
+            <br>
+            <div class="perfil-seccion">
+                
+                <h3>Bienvenido <%= user.name %></h3>
+                <br>
+                <img src="/images/users/<%= user.image %>"  >
     
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
-    <div class="contenedorPerfil">
-    
-    <h2>Bienvenido <%= user.name %></h2>
-    <img src="/images/users/<%= user.image %>" class="contenedorPerfil" >
+            </div>
+        </div>
 
-    </div>
+            <a class="wallpaper-button" href="./logout">Salir de mi cuenta.</a>  
+        </div>
+      </div>
+  </main>
+  <!-- Footer  -->
 
-    <a class="wallpaper-button" href="./logout">Salir de mi cuenta.</a>  
-
-    </div>
-    </br>
-    </br>
-    </br>
-    </br>
-
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
-
-    <!-- Footer  -->
-    <%- include('../partials/footer.ejs') %>
-    <%- include('../partials/footerdos.ejs') %>
+  <%- include('../partials/footerdos.ejs') %>
+  <%- include('../partials/footer.ejs') %>
+  <!-- /Footer  -->
 </body>
 
 </html>
