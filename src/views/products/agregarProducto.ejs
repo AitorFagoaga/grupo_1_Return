@@ -31,25 +31,30 @@
             </br>
             <input type="text" placeholder="Nombre del producto" class="titulo" name="name" id="name"></input>
             </br>
+            <br>
             <input type="text" placeholder="Precio" class="titulo" name="price" id="price"></input>
             </br>
             </br>
-            <div class="imagen-agregado" name="imagen-agregado" id="imagen-agregado">
+            <!-- <div class="imagen-agregado" name="imagen-agregado" id="imagen-agregado">
                 </br>
                 <i class="fas fa-download"></i>
                 
-            </div>
-            <div>
-                <input type="file" name="image" class="titulo" value="<%= locals.oldData ? oldData.image : null %>">
+            </div> -->
+            <div class="titulo-file">
+                <label class="label-file">
+                    <input type="file" name="image" id="file" value="<%= locals.oldData ? oldData.image : null %>">
+                    <i class="fas fa-download"></i>  Agrega una imagen
+                </label>
                 <% if (locals.errors && errors.image){ %>
                 <div class="error-msg">
                     <%= errors.image.msg %>
                 </div>
                 <% } %>
+
             </div>
             </br>
             <textarea name="description" id="descripcion" cols="30" rows="10" class="text-area"
-                placeholder="  Descripcion completa." id="description"></textarea>
+                placeholder=" Descripcion " id="description"></textarea>
             </br>
             <input type="submit" value="Agregar" class="wallpaper-button titulo">
             </br>
