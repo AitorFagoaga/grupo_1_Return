@@ -24,10 +24,7 @@
     <div class="centrado">
     <form clase="form" action="/products/productList" method="POST" enctype="multipart/form-data" id="form">
 
-    <div class="centrado1">
-        <ul class="errors" id="errors">
-        </ul>
-    </div>
+   
             </br>
             <input type="text" placeholder="Nombre del producto" class="titulo" name="name" id="name"></input>
             </br>
@@ -59,14 +56,19 @@
             <input type="submit" value="Agregar" class="wallpaper-button titulo">
             </br>
         </br>
+        <div>
+            <ul class="errors" id="errors">
+            </ul>
+        </div>
     </form>
 </div>
+
+<script src="/js/productsValidation.js"></script>
 </br>
 </br>
 </br>
 </br>
 
-<script src="/js/productsValidation.js"></script>
 
 <%- include('../partials/footer.ejs') %>
 
