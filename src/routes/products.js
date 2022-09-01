@@ -37,7 +37,7 @@ const validation = [
 router.get("/productCartEmpty", productsController.productCartEmpty);
 router.get("/productCartFull", productsController.productCartFull);
 router.get("/productDetail/:id", productsController.productDetail);
-router.get("/detalleProducto/:id", productsController.productDetail);
+router.get("/detalleProducto/:id", productsController.detalleProducto);
 router.get("/productList", productsController.productList);
 router.get("/vistaAdministrador", productsController.vistaAdministrador);
 
