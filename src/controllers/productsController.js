@@ -13,6 +13,11 @@ const productsController = {
 
   productDetail: (req, res) => {
     db.Products.findByPk(req.params.id).then(function (product) {
+      res.render("./products/productDetail", { product: product });
+    });
+  },
+  detalleProducto: (req, res) => {
+    db.Products.findByPk(req.params.id).then(function (product) {
       res.render("./products/detalleProducto", { product: product });
     });
   },
