@@ -3,7 +3,7 @@
 * {
   box-sizing: border-box;
 }
-.image{
+.image {
   width: auto;
   height: auto;
 }
@@ -36,11 +36,21 @@
 }
 
 @keyframes cambio {
-  0% {margin-left: 0;}
-  20% {margin-left: 0%;}
-  40% {margin-left: -200%;}
-  75% {margin-left: -300%;}
-  100% {margin-left: -100%;}
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 0%;
+  }
+  40% {
+    margin-left: -200%;
+  }
+  75% {
+    margin-left: -300%;
+  }
+  100% {
+    margin-left: -100%;
+  }
 }
 
 /* Etiqueta (A-Z) */
@@ -48,16 +58,40 @@ html {
   height: 100%;
 }
 body {
-  background: linear-gradient(
-    180deg,
-    rgba(11, 19, 43, 1) 0%,
-    rgba(58, 80, 107, 1) 50%,
-    rgba(111, 255, 233, 1) 100%
-  );
-  /* background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%); */
   font-family: "Mulish";
   margin-bottom: 50px;
   padding: 20px;
+}
+.body {
+  background-color: #393939;
+}
+
+.card-bosstrap {
+  width: 16rem;
+  transition: all 300ms;
+}
+.card-bosstrap:hover {
+  transform: scale(1.1);
+}
+
+.img-bosstrap {
+  height: 20vh;
+  width: 20vw;
+  object-fit: contain;
+}
+.ver-detalle {
+  border: none;
+  color: white;
+  font-size: 15px;
+  background: #3a506b;
+  border-radius: 8px;
+  padding: 9px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.ver-detalle:hover {
+  color: #ffffff;
+  background: #293a50;
 }
 
 /* Clase (A-Z) */
