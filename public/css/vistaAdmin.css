@@ -55,10 +55,11 @@ ul {
   align-items: center;
   width: 300px;
   height: 80px;
-  border: solid 1px red;
+  border: solid 1px rgb(102, 101, 101);
   border-radius: 10px;
 }
 .centrado {
+  border: 1px solid rgb(197, 197, 197);
   margin: auto;
   text-align: center;
 }
@@ -75,7 +76,7 @@ ul {
   width: 50%;
   height: 50%;
   background-color: aliceblue;
-  border: solid 1px red;
+  border: solid 1px rgb(95, 91, 91);
   border-radius: 10px;
 }
 .text-area {
@@ -83,8 +84,10 @@ ul {
   margin: auto;
   width: 40vh;
   height: 30%;
-  border: none;
   border-radius: 10px;
+}
+.area{
+  margin-top: 50px;
 }
 .titulo {
   /* display: flex;
@@ -173,12 +176,7 @@ ul {
 /* Etiqueta (A-Z) */
 
 body {
-  background: linear-gradient(
-    180deg,
-    rgba(11, 19, 43, 1) 0%,
-    rgba(58, 80, 107, 1) 50%,
-    rgba(111, 255, 233, 1) 100%
-  );
+  background-color: #fff;
   font-family: "Mulish";
   margin-bottom: 195px;
   padding: 25px;
@@ -427,8 +425,8 @@ body {
   border-radius: 8px;
   padding: 9px;
   cursor: pointer;
-  width: 60%;
-  margin: 20px;
+  width: 100%;
+  height: 100%;
   font-family: "Mulish";
 }
 .wallpaper-button:hover {
@@ -686,11 +684,11 @@ body {
 
   .wallpaper-button {
     border-radius: 15px;
-    font-size: 12px;
+    font-size: 15px;
     left: 50px;
     position: absolute;
     top: 230px;
-    width: 17.5%;
+    width: 30%;
     z-index: 2;
   }
 }
