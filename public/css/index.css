@@ -305,7 +305,7 @@ body {
 .search-bar {
   align-items: center;
   background: #ffffff;
-  border: none;
+  border: 1px solid olivedrab;
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
   height: 32.5px;
