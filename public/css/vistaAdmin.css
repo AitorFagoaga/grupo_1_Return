@@ -51,10 +51,12 @@ ul {
 }
 
 .contenedorprincipal {
+  display: grid;
+  background-color: darkgray;
   margin: auto;
   align-items: center;
   width: 300px;
-  height: 80px;
+  height: 300px;
   border: solid 1px rgb(102, 101, 101);
   border-radius: 10px;
 }
@@ -88,6 +90,9 @@ ul {
 }
 .area{
   margin-top: 50px;
+}
+.letra{
+  color: #1c2541;
 }
 .titulo {
   /* display: flex;

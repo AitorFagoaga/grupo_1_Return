@@ -6,6 +6,7 @@ const path = require("path");
 const { body } = require("express-validator");
 const profileAuthMiddleware = require("../middlewares/profileAuthMiddleware");
 
+
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, path.join(__dirname, "../../public/images/productos"));
@@ -36,7 +37,7 @@ const validation = [
 
 router.get("/productCartEmpty", productsController.productCartEmpty);
 router.get("/productCartFull", productsController.productCartFull);
-router.get("/productDetail/:id", productsController.productDetail);
+router.get("/productDetail/:id",  profileAuthMiddleware, productsController.productDetail);
 router.get("/detalleProducto/:id", productsController.detalleProducto);
 router.get("/productList", productsController.productList);
 router.get("/vistaAdministrador", productsController.vistaAdministrador);

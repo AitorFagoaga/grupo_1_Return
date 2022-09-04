@@ -63,7 +63,7 @@ body {
   padding: 20px;
 }
 .body {
-  background-color: #393939;
+  background-color: rgb(11 19 43);
 }
 
 .carusel-bosstrap {
@@ -214,7 +214,7 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: flex-end;
+  align-items: center;
   gap: 20px;
   justify-content: center;
 }

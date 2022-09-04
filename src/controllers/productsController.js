@@ -12,7 +12,9 @@ const productsController = {
   },
 
   productDetail: (req, res) => {
-    db.Products.findByPk(req.params.id).then(function (product) {
+
+    db.Products.findByPk(
+      req.params.id).then(function (product) {
       res.render("./products/productDetail", { product: product });
     });
   },
@@ -31,14 +33,6 @@ const productsController = {
   },
   agregarProducto: (req, res) => {
 
-    db.Products.create({
-      name: req.body.name,
-      price: req.body.price,
-      image: req.file.filename,
-      description: req.body.description,
-      user_id: req.session.userLogged.id,
-    });
-
     const resultValidation = validationResult(req);
     if (resultValidation.errors.length > 0) {
       return res.render("./products/agregarProducto", {
@@ -46,6 +40,13 @@ const productsController = {
         oldData: req.body,
       });
     }
+    db.Products.create({
+      name: req.body.name,
+      price: req.body.price,
+      image: req.file.filename,
+      description: req.body.description,
+      user_id: req.session.userLogged.id,
+    });
 
     res.redirect("/products/productList");
   },
