@@ -36,7 +36,6 @@ const validation = [
 ]
 
 router.get("/productCartEmpty", productsController.productCartEmpty);
-router.get("/productCartFull", productsController.productCartFull);
 router.get("/productDetail/:id",  profileAuthMiddleware, productsController.productDetail);
 router.get("/detalleProducto/:id", productsController.detalleProducto);
 router.get("/productList", productsController.productList);
