@@ -3,8 +3,10 @@ const { Op } = require("sequelize");
 const { validationResult } = require("express-validator");
 
 const productsController = {
+
   productCartEmpty: (req, res) => {
-    res.render("./products/productCartEmpty");
+    
+    return res.render("./products/productCartEmpty");
   },
 
   productDetail: (req, res) => {

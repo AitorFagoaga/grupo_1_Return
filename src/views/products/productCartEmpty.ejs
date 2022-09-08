@@ -19,8 +19,7 @@
    
     <main class="mt-5 pt-4">
         <div class="container wow fadeIn animated">
-            <h2 class="mt-5 mb-3 h2 text-center"> Pedido Nro <%= order.id %>
-            </h2>
+            <h2 class="mt-5 mb-3 h2 text-center"> Productos en mi carrito</h2>
             <div class="card my-5">
                 <div class="card-body">
                     <table class="table table-responsive-md mb-0">
@@ -41,60 +40,62 @@
                                 <th class="text-center">
                                     <strong>Subtotal</strong>
                                 </th>
-                               
+                                <th style="width: 50px;"></th>
                             </tr>
                         </thead>
                         <tbody class="cartRows">
-                            <% for( let i=0; i < order.orderItems.length; i++ ) { %>
-                                <tr>
-                                    <th scope="row">
-                                        <%= i + 1 %>
-                                    </th>
-                                    <td>
-                                        <%= order.orderItems[i].name %>
-                                    </td>
-                                    <td>$ <%= order.orderItems[i].price%>
-                                    </td>
-                                    <td class="text-center">
-                                        <%= order.orderItems[i].quantity%>
-                                    </td>
-                                    <td class="text-center">$
-                                        <%= order.orderItems[i].price * order.orderItems[i].quantity%>
-                                    </td>
-                                </tr>
-                                <% } %>
                         </tbody>
                     </table>
                     <div class="card-footer text-right">
-                        <h2>Total: <span class="totalAmount">$ <%= order.total %> </span></h2>
+                        <h2>Total: <span class="totalAmount">$ 0</span></h2>
                     </div>
                 </div>
             </div>
             <div class="card">
                 <div class="card-header text-center">
-                    Detalles de la compra
+                    Terminar la compra
                 </div>
                 <form class="card-body" id="checkoutCart">
                     <div class="row">
-                        <div class=" col-md-6">
-                            <p class="mb-0"><strong>Tipo Envio:</strong>
-                                <%= order.shippingMethod %>
-                            </p>
+                        <div class=" col-md-6 mb-4">
+                            <label for="country">Tipo Envio</label>
+                            <select class="custom-select d-block w-100" id="shippingMethod" name=" shippingMethod"
+                                required="">
+                                <option value="">Elegir...</option>
+                                <option value="Cadete">Cadete</option>
+                                <option value="Correo">Correo Argentino</option>
+                                <option value="Andreani">Andreani</option>
+                                <option value="DHL">DHL</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Elija un tipo de envio.
+                            </div>
+
                         </div>
-                        <div class=" col-md-6">
-                            <p class="mb-0"><strong>Pago:</strong>
-                                <%= order.paymentMethod %>
-                            </p>
+                        <div class=" col-md-6 mb-4">
+                            <label for="country">Pago</label>
+                            <select class="custom-select d-block w-100" id="paymentMethod" name="paymentMethod"
+                                required="">
+                                <option value="">Elegir...</option>
+                                <option value="Efectivo">Efectivo</option>
+                                <option value="Débito">Tarjeta Débito</option>
+                                <option value="Crédito">Tarjeta Crédito</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Elija un tipo de envio.
+                            </div>
+
                         </div>
                     </div>
-                </div>
-                <div class="card-footer">
-                    <a href="/profile" class="btn btn-primary btn-block">Volver a mis pedidos</a>
-                </div>
+                    <button class="btn btn-primary btn-lg btn-block waves-effect waves-light"
+                        type="submit">Comprar</button>
+                </form>
             </div>
         </div>
     </main>
     
+  <script src="/js/cart.js"></script>
+  <script src="/js/scripts.js"></script>
     <%- include('../partials/footerdos.ejs') %>
     <%- include('../partials/footer.ejs') %>
 </body>
