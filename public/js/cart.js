@@ -11,11 +11,11 @@ function removeItem(index) {
     }
 
     let cartNumber = document.querySelector(".cart-number");
-    //cartNumber.innerText = productsEnElCarrito();
+    cartNumber.innerText = productsEnElCarrito();
   
-    // document.querySelector(".totalAmount").innerText = `$ ${calcularTotal(
-    //   products
-    // )}`;
+    document.querySelector(".totalAmount").innerText = `$ ${calcularTotal(
+      products
+    )}`;
   
     // toastr.success("Se borro el item del carrito");
 }
@@ -70,11 +70,11 @@ function removeItem(index) {
             localStorage.setItem("carrito", JSON.stringify(carrito));
           }
         })
-        // .then(() => {
-        //   document.querySelector(".totalAmount").innerText = `$ ${calcularTotal(
-        //     products
-        //   )}`;
-        // });
+        .then(() => {
+          document.querySelector(".totalAmount").innerText = `$ ${calcularTotal(
+            products
+          )}`;
+        });
     });
   } else {
     setCarritoVacio();
@@ -102,7 +102,7 @@ function removeItem(index) {
         if (res.ok) {
           //borro el carrito
           vaciarCarrito();
-          location.href = `/order/${res.order.id}?creado=true`;
+          location.href = `/users/profile`;
         } else {
           toastr.error("No se pudo realizar la compra, intente mas tarde");
         }

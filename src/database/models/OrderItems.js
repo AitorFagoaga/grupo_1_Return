@@ -31,7 +31,7 @@ module.exports = (sequelize, dataTypes) => {
   
     OrderItem.associate = (models) => {
       OrderItem.belongsTo(models.Order, {
-        as: "order",
+        as: "orders",
       });
   
       OrderItem.belongsTo(models.Products, {

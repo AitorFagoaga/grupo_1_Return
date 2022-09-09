@@ -37,7 +37,7 @@ module.exports = (sequelize, dataTypes) => {
         foreignKey: "userId",
       });
       Order.OrderItems = Order.hasMany(models.OrderItem, {
-        as: "orderItems",
+        as: "OrderItems",
       });
     };
   

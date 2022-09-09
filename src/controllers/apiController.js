@@ -5,9 +5,9 @@ module.exports = {
     let product = await db.Products.findByPk(req.params.id);
     return res.json(product);
   },
-  checkout: async function (req, res) {
+  checkout: (req, res) => {
     // return res.send({ ...req.body, userId: req.session.userLogged.id });
-    let order = await db.Order.create(
+    let order = db.Order.create(
       { ...req.body, userId: req.session.userLogged.id },
       {
         include: db.Order.OrderItems,
@@ -15,5 +15,5 @@ module.exports = {
     );
     res.json({ ok: true, status: 200, order: order });
   },
-  
+
 };
