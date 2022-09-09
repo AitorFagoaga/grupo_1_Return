@@ -52,7 +52,18 @@
     margin-left: -100%;
   }
 }
-
+/* profile */
+.btn-carrito {
+  width: 2000px;
+  border: none;
+  color: white;
+  font-size: 15px;
+  background: #3a506b;
+  border-radius: 8px;
+  padding: 9px;
+  cursor: pointer;
+  text-decoration: none;
+}
 /* Etiqueta (A-Z) */
 html {
   height: 100%;

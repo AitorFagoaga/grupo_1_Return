@@ -50,7 +50,16 @@ h3 {
   text-align: center;
   box-shadow: 0px 10px 10px -6px black;
 }
-
+.btn-carrito {
+  border: none;
+  color: white;
+  font-size: 15px;
+  background: #3a506b;
+  border-radius: 8px;
+  padding: 9px;
+  cursor: pointer;
+  text-decoration: none;
+}
 .wallpaper-button {
   align-items: center;
   background: linear-gradient(

@@ -8,7 +8,7 @@ const usersController = {
     return res.render("./users/login");
   },
   processLogin: (req, res) => {
-    db.Users.findOne({
+    db.User.findOne({
       where: {
         email: req.body.email,
       },
@@ -65,10 +65,10 @@ const usersController = {
       password: bcryptjs.hashSync(req.body.password, 10),
       image: req.file.filename,
     };
-    db.Users.create(newUsers).then((user) => {
+    db.User.create(newUsers).then((user) => {
       return res.render("./users");
     });
-
+    
 
     return res.redirect("./profile");
   },

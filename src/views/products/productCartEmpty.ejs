@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Return</title>
     <link rel="shortcut icon" href="/images/Logo.png">
-    <meta name= "viewport" content= "width=device-wid th, initial-scale=1">
+    <meta name= "viewport" content= "width=device-width, initial-scale=1">
     <script src="https://kit.fontawesome.com/b846d156b8.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/index.css">
@@ -15,49 +15,87 @@
 <body>
        <!-- header   -->
     <%- include('../partials/header.ejs') %>
-    <!-- <header class="header">
-        <nav class="menu-desktop">
-            <div class="containe-logo-search-bar-profile-cart">
-                <div class="logo"><img src="/images/Logo.png" alt="Logo"></div>
-                <div class="products container-search-bar">
-                    <select name="all-products" id="all-products">
-                        <option value="all-products">All products</option>
-                        <option value="headphones">Headphones</option>
-                        <option value="computers">Computers</option>
-                        <option value="phones">Phones</option>
-                    </select>
-                    <div class="search-bar">
-                        <form action="" method="get">
-                            <input type="text" placeholder="Search..." class="search"/>
-                            <button type="submit" class="search-button"><i class="fa-solid fa-magnifying-glass search-icon"></i></button>
-                        </form>
+        
+   
+    <main class="mt-5 pt-4">
+        <div class="container wow fadeIn animated">
+            <h2 class="mt-5 mb-3 h2 text-center"> Productos en mi carrito</h2>
+            <div class="card my-5">
+                <div class="card-body">
+                    <table class="table table-responsive-md mb-0">
+                        <thead>
+                            <tr>
+                                <th style="width: 50px;">
+                                    <strong>#</strong>
+                                </th>
+                                <th class="th-lg">
+                                    <strong>Producto</strong>
+                                </th>
+                                <th class="th-lg ">
+                                    <strong>Precio</strong>
+                                </th>
+                                <th class="text-center">
+                                    <strong>Cantidad</strong>
+                                </th>
+                                <th class="text-center">
+                                    <strong>Subtotal</strong>
+                                </th>
+                                <th style="width: 50px;"></th>
+                            </tr>
+                        </thead>
+                        <tbody class="cartRows">
+                        </tbody>
+                    </table>
+                    <div class="card-footer text-right">
+                        <h2>Total: <span class="totalAmount">$ 0</span></h2>
                     </div>
-                </div>  
-                <div class="logos-cart-profile">
-                    <ul type="none" class="botones-desktop">
-                        <li><a href="login.html" class="profile-nav-desktop" value="profile"><i class="fa-solid fa-circle-user"></i></a></li>
-                        <li><a href="cart.html" class="cart-nav-desktop" value="cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                    </ul> 
                 </div>
             </div>
-            
-        </nav>
-    </header> -->
-    
-    <main>
-        <h2 class="cart-empty">Tu carrito esta vacío</h2>
-        <section>
-            <div class="arrow">
-                <i class="fa-solid fa-arrow-down"></i>
+            <div class="card">
+                <div class="card-header text-center">
+                    Terminar la compra
+                </div>
+                <form class="card-body" id="checkoutCart">
+                    <div class="row">
+                        <div class=" col-md-6 mb-4">
+                            <label for="country">Tipo Envio</label>
+                            <select class="custom-select d-block w-100" id="shippingMethod" name=" shippingMethod"
+                                required="">
+                                <option value="">Elegir...</option>
+                                <option value="Cadete">Cadete</option>
+                                <option value="Correo">Correo Argentino</option>
+                                <option value="Andreani">Andreani</option>
+                                <option value="DHL">DHL</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Elija un tipo de envio.
+                            </div>
+
+                        </div>
+                        <div class=" col-md-6 mb-4">
+                            <label for="country">Pago</label>
+                            <select class="custom-select d-block w-100" id="paymentMethod" name="paymentMethod"
+                                required="">
+                                <option value="">Elegir...</option>
+                                <option value="Efectivo">Efectivo</option>
+                                <option value="Débito">Tarjeta Débito</option>
+                                <option value="Crédito">Tarjeta Crédito</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Elija un tipo de envio.
+                            </div>
+
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-lg btn-block waves-effect waves-light"
+                        type="submit">Comprar</button>
+                </form>
             </div>
-            <div class="container-button"><a href="/">
-                <button class="button">Buscar productos
-                <i class="fa-solid fa-circle-plus plus"></i>
-                </button></a>
-            </div>
-        </section>
+        </div>
     </main>
     
+  <script src="/js/cart.js"></script>
+  <script src="/js/scripts.js"></script>
     <%- include('../partials/footerdos.ejs') %>
     <%- include('../partials/footer.ejs') %>
 </body>

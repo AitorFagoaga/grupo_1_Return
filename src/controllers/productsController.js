@@ -3,16 +3,13 @@ const { Op } = require("sequelize");
 const { validationResult } = require("express-validator");
 
 const productsController = {
-  productCartEmpty: (req, res) => {
-    res.render("./products/productCartEmpty");
-  },
 
-  productCartFull: (req, res) => {
-    res.render("./products/productCartFull");
+  productCartEmpty: (req, res) => {
+    
+    return res.render("./products/productCartEmpty");
   },
 
   productDetail: (req, res) => {
-
     db.Products.findByPk(
       req.params.id).then(function (product) {
       res.render("./products/productDetail", { product: product });
@@ -55,7 +52,7 @@ const productsController = {
       where: { user_id: req.session.userLogged.id },
     }).then(function (product) {
       res.render("./products/productList", {
-        product: product,
+        product: product
       });
     });
 
