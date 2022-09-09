@@ -27,35 +27,9 @@
     <br />
     
 
-    <div>
+    <div class="react-admin">
 
-        <div><% users.forEach(user => { %>
-            </br>
-            <section class="new-product" name="new-product">
-                <article class="new-product" name="new-product">
-                    <img src="/images/users/<%=user.image%>" width="300px">
-
-                    <div class="informacion">
-                        <div>
-                            <div class="buttonsDeleateAndUpdate">
-                                <div class="botonesBorraryEditar">
-
-                                </div>
-                                <div class="botonesBorraryEditar">
-                                    <a href="/admin/useredit/<%=user.id %>">
-                                        <input type="submit" value="Editar" class="botonesBorraryEditar color-editar">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <span class="descripcion"><%= user.name%></span>
-                    </div>
-                </article>
-            </section>
-            </br>
-            <% }) %>
-        </div>
-
+       
     </div>
     <!-- Footer  -->
 
@@ -64,6 +38,8 @@
     <%- include('../partials/footer.ejs') %>
     </main>
 
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script> 
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script> 
+    <script src="/js/reactAdmin.js"></script>
 </body>
-
 </html>
