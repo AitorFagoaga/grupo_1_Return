@@ -60,7 +60,7 @@ h1 {
   color: #fcfcfc;
 }
 .form-login {
-  height: 450px;
+  height: 500px;
   max-width: 420px;
   background: #ffff;
   border-radius: 1vh;
@@ -99,7 +99,7 @@ h1 {
 .placeholder {
   text-align: center;
 }
-.input-contenedor {
+/* .input-contenedor {
   margin-bottom: 20px;
   border: 1px solid #002855;
   margin-right: 30px;
@@ -107,7 +107,7 @@ h1 {
   text-align: center;
   height: 40px;
   max-width: 380px;
-}
+} */
 .icon {
   color: #002855;
   size: 50px;
