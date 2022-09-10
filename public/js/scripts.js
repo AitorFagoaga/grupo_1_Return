@@ -22,7 +22,7 @@ function productosEnElCarrito() {
   
     /* Selecciono todos los productos de la página */
     let productos = document.querySelectorAll(".agregar_carrito");
-    let cartNumber = document.querySelector(".cart-number");
+    const cartNumber = document.querySelector(".cart-number");
     cartNumber.innerText = productosEnElCarrito();
 
     /* Creo un event listener por cada boton */

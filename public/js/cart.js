@@ -18,7 +18,7 @@ function removeItem(index) {
     )}`;
   
     // toastr.success("Se borro el item del carrito");
-}
+  }
   function setCarritoVacio() {
     cartRows.innerHTML = `
     <tr>     
@@ -80,7 +80,7 @@ function removeItem(index) {
     setCarritoVacio();
   }
   
-  let formCheckout = document.querySelector("#checkoutCart");
+  const formCheckout = document.querySelector("#checkoutCart");
   
   formCheckout.onsubmit = (e) => {
     e.preventDefault();
