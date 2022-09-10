@@ -74,8 +74,10 @@ const usersController = {
   },
 
   profile: (req, res) => {
-    return res.render("./users/profile", {
-      user: req.session.userLogged,
+    db.Products.findAll({
+      where: { user_id: req.session.userLogged.id },
+    }).then(function (product) {
+      return res.render("./users/profile", {product: product , user: req.session.userLogged});
     });
   },
   logout: (req, res) => {

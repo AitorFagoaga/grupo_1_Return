@@ -49,20 +49,55 @@
               Texto de descripcion
             </small>
         </div>
+  
+<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Ver mis Productos</button>
 
-        <div class="seccion">
-            <div class="perfil-seccion">
-                <h4>Todos mis productos</h4>
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Todos mis</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <% product.forEach(product => { %>
+      <br>
+      <div class="card card-bosstrap">
+          <div class="card-body">
+              <h5 class="card-title title-bosstrap"><%= product.name %></h5>
+            <div>
+              <img alt="" class="card-img-top img-bosstrap" src="/images/productos/<%= product.image %>" />
             </div>
+          <a class="ver-detalle" href="/products/productDetail/<%= product.id %>" type="submit">Ver detalle</a>
+            <hr>
+            <p class="card-text" color="green">$ <%= product.price %></p>
+          </div>
+      </div>
+      <% }) %>
+  </div>
+</div>
+
             <br>
-            <div class="perfil-seccion">
+
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Productos en mi carrito</button>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasRightLabel">Todo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+
+              <div class="offcanvas-body">
               <h4>Contenido de mi carrito</h4>
+              <br>
               <table>
                 <tbody class="cartRows">
                 </tbody>
               </table>
+              <br>
+              <br>
               <a href="/products/productCartEmpty" class="btn-carrito">Mi carrito</a>
             </div>
+
+            <hr>
         </div>
         </div>
         <a class="wallpaper-button" href="./logout">Salir de mi cuenta.</a>  

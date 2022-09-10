@@ -3,8 +3,20 @@
   padding: 0px;
   box-sizing: border-box;
 }
+
 body {
+  background: linear-gradient(
+    180deg,
+    rgb(246, 247, 252) 0%,
+    rgb(188, 189, 190) 50%,
+    rgb(127, 138, 136) 100%
+  );
   font-family: "Mulish";
+}
+.offcanvas-body {
+    width: max-content;
+}
+hr{
 }
 .contenedor-perfil {
   display: inline-block;
@@ -16,6 +28,7 @@ h3 {
   text-align-last: start;
   margin-left: 10%;
 }
+
 .seccion {
   display: inline-block;
   margin: auto;
@@ -27,6 +40,8 @@ h3 {
   border-color: blanchedalmond;
 }
 
+
+
 .perfil {
   text-align-last: center;
   background: #ffff;
@@ -37,7 +52,8 @@ h3 {
   box-shadow: 0px 10px 10px -6px black;
 }
 
-.perfil-seccion {
+.perfil-seccion{
+
   text-align-last: center;
   height: 35vh;
   width: 390px;

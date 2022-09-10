@@ -72,14 +72,18 @@ body {
   font-family: "Mulish";
   margin-bottom: 50px;
   padding: 20px;
+  background: linear-gradient(
+    180deg,
+    rgb(246, 247, 252) 0%,
+    rgb(188, 189, 190) 50%,
+    rgb(127, 138, 136) 100%
+  );
 }
 .body {
   background-color: rgb(11 19 43);
 }
 
 .carusel-bosstrap {
-  height: 82vh;
-  width: 82vw;
   object-fit: contain;
 }
 .card-bosstrap {
@@ -419,7 +423,7 @@ body {
   .bottom-navigation-bar {
     display: none;
   }
-
+  
   .category-1,
   .category-2,
   .category-3,

@@ -5,7 +5,6 @@ const { validationResult } = require("express-validator");
 const productsController = {
 
   productCartEmpty: (req, res) => {
-    
     return res.render("./products/productCartEmpty");
   },
 
