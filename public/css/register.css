@@ -1,158 +1,208 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
 body {
-    background: linear-gradient(180deg, rgba(11, 19, 43, 1) 0%, rgba(58, 80, 107, 1) 50%, rgba(111, 255, 233, 1) 100%);
-    font-family: "Mulish";
-    margin-bottom: 40%;
-
+  background: linear-gradient(
+    180deg,
+    rgb(246, 247, 252) 0%,
+    rgb(188, 189, 190) 50%,
+    rgb(127, 138, 136) 100%
+  );
+  font-family: "Mulish";
+  margin-bottom: 40%;
 }
 header {
-    font-family: "Mulish";
-   
+  font-family: "Mulish";
 }
 img {
-        border-radius: 5px;
-        height: 100px;
-        margin-bottom: 15px;
-        width: 100px;
-
+  border-radius: 5px;
+  height: 100px;
+  margin-bottom: 15px;
+  width: 100px;
 }
 .cornerheader {
-    color: rgb(244, 244, 244) ;
-    text-align:center;
-    font-family: "Mulish";
-    float: right;
-    position: relative;
-    bottom:100px    
+  color: rgb(244, 244, 244);
+  text-align: center;
+  font-family: "Mulish";
+  float: right;
+  position: relative;
+  bottom: 100px;
 }
-.link1{
-    color: #002855;
-    text-decoration:none;
-    font-weight: bold;
-    width: 100%;
-    max-width: 150px;
-    margin: auto;
-    text-align: center;
-    
+.link1 {
+  color: #002855;
+  text-decoration: none;
+  font-weight: bold;
+  width: 100%;
+  max-width: 150px;
+  margin: auto;
+  text-align: center;
 }
 .link1:hover {
-    color:#5BC0BE 
+  color: #5bc0be;
 }
- 
-h1{
-    text-align:center;
-    color:#fcfcfc;
 
+h1 {
+  text-align: center;
+  color: #fcfcfc;
+}
+ul {
+  list-style: none;
 }
 .form-register {
-    height: 480px;
-    max-width: 600px;
-    background-color: #fcfcfc;
-    border-radius: 7px;
-    margin: auto;
-    position: relative;
-    top: 20px;
-    text-align: center;
-    
-   
+  height: 680px;
+  max-width: 500px;
+  background: #ffff;
+  border-radius: 1vh;
+  margin: auto;
+  position: relative;
+  top: 20px;
+  font-family: "Mulish";
+  text-align: center;
+  box-shadow: 0px 10px 10px -6px black;
 }
 .form-titulo {
-    color:#002855;
-    margin: auto;
-    margin-bottom: 25px;
+  color: #002855;
+  margin: auto;
+  margin-bottom: 25px;
 }
 
 .sinborde {
-    border: 0;
+  background-color: #e9e9e9;
+  border: solid 1px #3a506b;
+  width: 30vh;
+  height: 4vh;
+  border-radius: 1vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+.sinborde-category {
+  background-color: #e9e9e9;
+  border: solid 1px #3a506b;
+  width: 25vh;
+  height: 4vh;
+  border-radius: 1vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+.sinborde-image {
+  background-color: #e9e9e9;
+  border: solid 1px #3a506b;
+  width: 30vh;
+  height: 4vh;
+  border-radius: 1vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+.agrega-imagen {
+  position: relative;
+  background-color: #e9e9e9;
+  border: solid 1px #3a506b;
+  width: 25vh;
+  height: 4vh;
+  border-radius: 2vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2vh;
+  cursor: pointer;
+}
+.agrega-imagen input#file {
+  display: none;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+.div-register {
+  display: inline-block;
 }
 .input-contenedor {
-        margin-bottom:20px;
-        border: 1px solid #002855;
-        margin-right: 30px;
-        color:red;
-        margin-left: 30px;
-        text-align: center;
-        height: 40px;
-        max-width: 680px
-
+  margin-bottom: 3vh;
+  margin-left: auto;
+  margin-right: auto;
 }
-.categoria{
-    color:black;
+.categoria {
+  color: black;
 }
 .icon {
-    color:#002855;
-    size: 50px;
+  color: #002855;
+  size: 50px;
 }
 
-.checkbox{
-    text-align: center;
-    margin-left: 20px;
-    margin-right: 20px;
+.checkbox {
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .button {
-    border:none;
-    color:white;
-    font-size: 20px;
-    font-family: "Mulish";
-    background: linear-gradient(180deg, rgba(11, 19, 43, 1) 0%, rgba(58, 80, 107, 1) 100%);
-    border-radius: 4px;
-    padding: 9px;
-    cursor:pointer;
-    width: 90%;
-    margin:20px;
-  
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-family: "Mulish";
+  background: linear-gradient(
+    180deg,
+    rgba(11, 19, 43, 1) 0%,
+    rgba(58, 80, 107, 1) 100%
+  );
+  border-radius: 4px;
+  padding: 9px;
+  cursor: pointer;
+  width: 90%;
+  margin: 20px;
 }
 .button:hover {
-    background-color: #5BC0BE
+  background-color: #5bc0be;
 }
-p{
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 5%;
+p {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 5%;
 }
 .link {
-    text-decoration:none;
-    color:#1a2537;
-    font-weight: bold;
+  text-decoration: none;
+  color: #1a2537;
+  font-weight: bold;
 }
 .link:hover {
-    color:#5BC0BE 
+  color: #5bc0be;
 }
 
-@media(win-width:768px)
-{.header {
-    background-color:#1a2537;
+@media (win-width: 768px) {
+  .header {
+    background-color: #1a2537;
     height: 100px;
-    width:100%;
+    width: 100%;
     padding: 10px;
-}
-.link-header {
+  }
+  .link-header {
     color: white;
-    text-decoration:none;
+    text-decoration: none;
     font-weight: 600;
     margin-top: 17px;
-}
-.link-header:hover {
+  }
+  .link-header:hover {
     color: cadetblue;
-}
-.formulario {
-        background: rgba(253, 251, 251);
-        margin-top:150px;
-        margin-left:100px;
-        margin-right:100px;
-        border-radius: 7%;
-}
+  }
+  .formulario {
+    background: rgba(253, 251, 251);
+    margin-top: 150px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 7%;
+  }
 
-.input-contenedor {
-    margin-bottom:20px;
+  .input-contenedor {
+    margin-bottom: 20px;
     border: 1px solid #002855;
     margin-right: 30px;
-    color:red;
+    color: red;
     margin-left: 30px;
     text-align: center;
     height: 40px;
     max-width: 680px;
-}
+  }
 }

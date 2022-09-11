@@ -8,6 +8,7 @@ window.onload = function () {
     let name = document.querySelector("#name");
     let price = document.querySelector("#price");
     let description = document.querySelector("#descripcion");
+    let image = document.querySelector("#file");
 
     if (name.value == "") {
       errors.push("El nombre no puede estar vacio");
@@ -18,12 +19,16 @@ window.onload = function () {
     if (description.value == "") {
       errors.push("El producto debe tener una descripcion");
     }
+    if (image.value == "") {
+      errors.push("Debes colocar una foto");
+    }
 
     console.log(errors);
 
     if (errors.length > 0) {
       let losErrores = document.querySelector("#errors");
       losErrores.innerHTML = "";
+      losErrores.style.color = "red";
       for (let i = 0; i < errors.length; i++) {
         losErrores.innerHTML += `<li>${errors[i]}</li>`;
       }

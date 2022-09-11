@@ -7,11 +7,19 @@
 html{
     height: 100%;
 }
+.text-center{
+    color: rgb(29, 29, 29);
+}
 
 body{
     background: linear-gradient(180deg, rgba(11, 19, 43, 1) 0%, rgba(58, 80, 107, 1) 50%, rgba(111, 255, 233, 1) 100%);
     font-family: "Mulish";
-    color: white;
+    background: linear-gradient(
+    180deg,
+    rgb(246, 247, 252) 0%,
+    rgb(188, 189, 190) 50%,
+    rgb(220, 221, 221) 100%
+  );
 }
 
 .navigation-bar {
@@ -90,13 +98,6 @@ body{
 @media (min-width: 769px) {
     .navigation-bar{
         display: none;
-    }
-    .logo {
-        display: flex;
-        height: 100px;
-        width: 100px;
-        border-radius: 5px;
-        margin-left: 2vh;
     }
     .menu-desktop{
         display: block;

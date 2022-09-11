@@ -13,7 +13,6 @@
     <link rel="shortcut icon" href="/images/Logo.png">
 </head>
 
-<body>
     <!-- <header>
             <img alt="" class="logo" src="/images/Background.png">
    
@@ -23,90 +22,97 @@
 
     <body>
 
+        <br>
+        <br>
+        <br>
+        <br>
         <form action="/users/register" method="POST" class="form-register" enctype="multipart/form-data">
+            <br>
             <h1 class=" form-titulo"> Registrate </h1>
-
-            <div class="input-contenedor">
-                <i class="fa-solid fa-user icon"></i>
-                <input type="text" name="name" class="sinborde name" value="<%= locals.oldData ? oldData.name : null %>"
-                    placeholder="Nombre Completo" maxlength="15" />
-                <% if (locals.errors && errors.name){ %>
-                <div class="error-msg">
-                    <%= errors.name.msg %>
-                </div>
-                <% } %>
+            <div>
+                <ul class="errors" id="errors">
+                </ul>
             </div>
-            <div class="input-contenedor">
-                <!-- <i class="fa-solid fa-at icon"></i> -->
-                <input type="file" name="image" class="sinborde" value="<%= locals.oldData ? oldData.email : null %>"
-                    placeholder="Correo Electronico" maxlength="20" />
-                <% if (locals.errors && errors.image){ %>
-                <div class="error-msg">
-                    <%= errors.image.msg %>
-                </div>
-                <% } %>
-            </div>
-
-            <div class="input-contenedor">
-                <label class="categoria"><b>Categoria:</b></label>
-                <select name="category" class="sinborde category">
-                    <option value="">Elegí una Categoria</option>
-                    <%  
-                    let categories = ['Comprador', 'Vendedor'];
-                %>
-                    <% for (const oneCategory of categories) { %>
-                    <option value="<%= oneCategory %>"
-                        <%= locals.oldData && (oneCategory === oldData.category) ? 'selected' : null %>>
-                        <%= oneCategory %> </option>
+            <div class="div-register">
+                <div class="input-contenedor">
+                    <i class="fa-solid fa-user icon"></i>
+                    <input type="text" name="name" class="sinborde name" value="<%= locals.oldData ? oldData.name : null %>"
+                        placeholder="Nombre Completo" maxlength="30" />
+                    <% if (locals.errors && errors.name){ %>
+                    <div class="error-msg">
+                        <%= errors.name.msg %>
+                    </div>
                     <% } %>
-                </select>
-                <% if (locals.errors && errors.category) { %>
-                <div class="text-danger">
-                    <%= errors.category.msg %>
                 </div>
-                <% } %>
-            </div>
-
-            <div class="input-contenedor">
-                <i class="fa-solid fa-at icon"></i>
-                <input type="text" name="email" class="sinborde" value="<%= locals.oldData ? oldData.email : null %>"
-                    placeholder="Correo Electronico" maxlength="20" />
-                <% if (locals.errors && errors.email){ %>
-                <div class="error-msg">
-                    <%= errors.email.msg %>
+                <div class="agrega-imagen">
+                    <!-- <i class="fa-solid fa-at icon"></i> -->
+                    <label>
+                        <input type="file" name="image" id="file" class="sinborde-image image" value="<%= locals.oldData ? oldData.email : null %>"
+                        placeholder="Correo Electronico" maxlength="20" />
+                        <i class="fas fa-download"></i>  Agrega una imagen
+                    <% if (locals.errors && errors.image){ %>
+                    <div class="error-msg">
+                        <%= errors.image.msg %>
+                    </div>
+                    <% } %>
+                    </label>
+                    
                 </div>
-                <% } %>
-            </div>
 
-            <div class="input-contenedor">
-                <i class="fa-solid fa-lock icon"></i>
-                <input type="password" name="password" class="sinborde"
-                    value="<%= locals.oldData ? oldData.password : null %>" placeholder="Crea Contraseña"
-                    maxlength="8" />
-                <% if (locals.errors && errors.password){ %>
-                <div class="error-msg">
-                    <%= errors.password.msg %>
+                <div class="input-contenedor">
+                    <label class="categoria"><b>Categoria:</b></label>
+                    <select name="category" class="sinborde-category category">
+                        <option value="">Elegí una Categoria</option>
+                        <%  
+                        let categories = ['Comprador', 'Vendedor'];
+                    %>
+                        <% for (const oneCategory of categories) { %>
+                        <option value="<%= oneCategory %>"
+                            <%= locals.oldData && (oneCategory === oldData.category) ? 'selected' : null %>>
+                            <%= oneCategory %> </option>
+                        <% } %>
+                    </select>
+                    <% if (locals.errors && errors.category) { %>
+                    <div class="text-danger">
+                        <%= errors.category.msg %>
+                    </div>
+                    <% } %>
                 </div>
-                <% } %>
-            </div>
 
+                <div class="input-contenedor">
+                    <i class="fa-solid fa-at icon"></i>
+                    <input type="text" name="email" class="sinborde email" value="<%= locals.oldData ? oldData.email : null %>"
+                        placeholder="Correo Electronico" maxlength="40" />
+                    <% if (locals.errors && errors.email){ %>
+                    <div class="error-msg">
+                        <%= errors.email.msg %>
+                    </div>
+                    <% } %>
+                </div>
+
+                <div class="input-contenedor">
+                    <i class="fa-solid fa-lock icon"></i>
+                    <input type="password" name="password" class="sinborde"
+                        value="<%= locals.oldData ? oldData.password : null %>" placeholder="Crea Contraseña"
+                        maxlength="30" />
+                    <% if (locals.errors && errors.password){ %>
+                    <div class="error-msg">
+                        <%= errors.password.msg %>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
 
             <label><input type="checkbox" class="checkbox">Aceptas nuestras condiciones de uso y política de
                 privacidad</label></br>
             <div>¿Ya tienes cuenta? <a class="link1" href="login">Inicia sesion</a></div>
             <div><input type="submit" value="Continuar" class="button"></div>
-
-
             </div>
 
         </form>
-        <div>
-            <ul class="errors" id="errors">
-
-            </ul>
-        </div>
         <script src="/js/usersValidation.js"></script>
         <!-- Footer  -->
+        <%- include('../partials/footerdos.ejs') %>
         <%- include('../partials/footer.ejs') %>
     </body>
 

@@ -21,6 +21,7 @@
     </br>
     </br>
     </br>
+<<<<<<< HEAD
     </br>
     </br>
     </br>
@@ -29,41 +30,63 @@
         <div class="conteiner-agregado">
             </br>
             <input type="text" placeholder="Nombre del producto" class="titulo" name="name" id="name"></input>
+=======
+    <div class="centrado">
+    <form clase="form" action="/products/productList" method="POST" enctype="multipart/form-data" id="form">
+
+        <div>
+            <ul class="errors" id="errors">
+            </ul>
+        </div>
+>>>>>>> 3989914394fb9c4fa08b16c6c5b5367d39342c48
             </br>
-            <input type="text" placeholder="Precio" class="titulo" name="price" id="price"></input>
+            <input type="text" placeholder="Nombre del producto" class="titulo" name="name" id="name">  <br></input>
             </br>
+            <br>
+            <input type="text" placeholder="Precio" class="titulo" name="price" id="price"> <br>
+        <br></input>
             </br>
-            <div class="imagen-agregado" name="imagen-agregado" id="imagen-agregado">
+            <!-- <div class="imagen-agregado" name="imagen-agregado" id="imagen-agregado">
                 </br>
                 <i class="fas fa-download"></i>
-            </div>
-            <div><input type="file" name="image" class="titulo">
+                
+            </div> -->
+            <div class="titulo-file">
+                <br>
+                <label class="label-file">
+                    <input type="file" name="image" id="file" value="<%= locals.oldData ? oldData.image : null %>">
+                    <i class="fas fa-download"></i>  Agrega una imagen
+                </label> <br> 
+                <br>
                 <% if (locals.errors && errors.image){ %>
                 <div class="error-msg">
                     <%= errors.image.msg %>
                 </div>
                 <% } %>
+                
             </div>
             </br>
+            <div class="area">
             <textarea name="description" id="descripcion" cols="30" rows="10" class="text-area"
-                placeholder="Descripcion completa." id="description"></textarea>
+                placeholder=" Descripcion " id="description"></textarea>
+            </div>
             </br>
+            <br>
             <input type="submit" value="Agregar" class="wallpaper-button titulo">
             </br>
-        </div>
+        </br>
     </form>
-    <div>
-        <ul class="errors" id="errors">
+</div>
 
-        </ul>
-    </div>
-
-    <!-- Footer  -->
-</body>
 <script src="/js/productsValidation.js"></script>
+</br>
+</br>
+</br>
+</br>
 
-
-<%- include('../partials/footer.ejs') %>
 <%- include('../partials/footerdos.ejs') %>
+<%- include('../partials/footer.ejs') %>
+
+</body>
 
 </html>

@@ -8,7 +8,7 @@ const usersController = {
     return res.render("./users/login");
   },
   processLogin: (req, res) => {
-    db.Users.findOne({
+    db.User.findOne({
       where: {
         email: req.body.email,
       },
@@ -65,17 +65,25 @@ const usersController = {
       password: bcryptjs.hashSync(req.body.password, 10),
       image: req.file.filename,
     };
-    db.Users.create(newUsers).then((user) => {
+    db.User.create(newUsers).then((user) => {
       return res.render("./users");
     });
-    userModel.create(newUsers);
+    
 
     return res.redirect("./profile");
   },
 
-  profile: (req, res) => {
-    return res.render("./users/profile", {
-      user: req.session.userLogged,
+   profile: async function (req, res) {
+    
+    let orders = await db.Order.findAll({
+      where: { userId: req.session.userLogged.id },
+    });
+
+
+    db.Products.findAll({
+      where: { user_id: req.session.userLogged.id },
+    }).then(function (product) {
+      return res.render("./users/profile", {product: product , user: req.session.userLogged, orders : orders});
     });
   },
   logout: (req, res) => {

@@ -5,9 +5,10 @@ window.onload = function () {
     e.preventDefault();
 
     let errors = [];
-
+    
     let name = document.querySelector(".name");
     let category = document.querySelector(".category");
+    let image = document.querySelector(".image");
 
     if (name.value == "") {
       errors.push("El nombre no puede estar vacio");
@@ -15,9 +16,13 @@ window.onload = function () {
     if (category.value == "") {
       errors.push("Debes de elegir una categoria");
     }
+    if (image.value == "") {
+      errors.push("Debes de elegir una imagen");
+    }
 
     if (errors.length > 0) {
       let losErrores = document.querySelector(".errors");
+      losErrores.style.color = "red";
       losErrores.innerHTML = "";
       for (let i = 0; i < errors.length; i++) {
         losErrores.innerHTML += `<li>${errors[i]}</li>`;

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/productDetail.css">
+    <link rel="stylesheet" href="/css/productDetailUpdated.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Oxygen&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+    <link rel="shortcut icon" href="/images/Logo.png">
+</head>
+
+<body>
+    <!-- Header  -->
+    <%- include('../partials/header.ejs') %>
+    <!-- /Header  -->
+   
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="contenidoprinci">
+
+    <div class="carde mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="/images/productos/<%=product.image%>"  class="fa-image" alt="...">
+          </div>
+            
+          <div class="col-md-8">
+            
+            <div class="card-body">
+              <h5 class="card-title"><%= product.name %></h5>
+              <p class="card-text"><%= product.description %></p>
+              <p class="card-text"><small class="text-muted"><div class="price-with-discount">
+                $ <%= product.price %>
+            </div></small></p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row g-0">
+            <div class="price-with-discount">
+                $ <%= product.price %>
+            </div>
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-8">
+                
+              <button class="btn btn-primary agregar_carrito"  data-id="<%= product.id %>">Añadir al carito</button>
+            
+            <hr>
+              <div class="card-body">
+                <h5 class="card-title">Maneras de pagar</h5>
+                <p class="card-text">Pagá de la mejor manera, con las opciones de pago de 3, 6 y 12 cuotas!</p>
+                <p class="card-text"><small class="text-muted">Simula tus cuotas abajo.</small></p>
+              </div>
+            </div>
+          </div>
+      </div>
+      
+
+      
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Calcular en 3 cuotas!
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Paga en 3 cuotas de : $ <%= (product.price/3).toFixed(2) %>.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                Calcular en 6 cuotas!
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Paga en 6 cuotas de : $ <%= (product.price/6).toFixed(2) %>.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                Calcular en 12 cuotas!
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Paga en 12 cuotas de : $ <%= (product.price/12).toFixed(2) %>.</div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <hr>
+</body>
+
+<%- include('../partials/footerdos.ejs') %>
+<%- include('../partials/footer.ejs') %>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script src="/js/cart.js"></script>
+    <script src="/js/scripts.js"></script>
+
+</html>

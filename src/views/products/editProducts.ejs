@@ -26,20 +26,24 @@
 
     <form class="form-new" action="/products/<%= product.id %>?_method=put" method="POST" >
         <div>
-            <label for="name">Nombre</label>
+            <label for="name" class="letra">Nombre</label>
             <input type="text" name="name"  value="<%= product.name %>">
         </div>
+    </br>
+</br>
         <div>
-            <label for="price">Precio</label>
+            <label for="price" class="letra">Precio</label>
             <input type="text" name="price"  value="<%= product.price %>">
         </div>
-        
-
+    </br>
+    </br>
         <div>
-            <label for="descripcion">Descripcion</label>
+            <label for="descripcion" class="letra">Descripcion</label>
             <input type="text" name="description"  value="<%= product.description %>">
         </div>
     </div>
+</br>
+</br>
         <div class="imagenajustar">
           <img src="/images/productos/<%=product.image%>" alt="profileImage" class="imagenajustar">  
         </div>
@@ -47,6 +51,8 @@
         <!-- <div>
             <input type="file" name="imagen">
         </div> -->
+        <br>
+        <br>
         <div>
             <button type="submit" class="wallpaper-button">Editar</button>
         </div>
@@ -57,7 +63,7 @@
     
     </br>
     <!-- Footer  -->
-    <%- include('../partials/footer.ejs') %>
     <%- include('../partials/footerdos.ejs') %>
+    <%- include('../partials/footer.ejs') %>
 </body>
 </html>

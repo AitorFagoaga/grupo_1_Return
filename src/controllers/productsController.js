@@ -1,18 +1,22 @@
 const db = require("../database/models");
 const { Op } = require("sequelize");
+const { validationResult } = require("express-validator");
 
 const productsController = {
-  productCartEmpty: (req, res) => {
-    res.render("./products/productCartEmpty");
-  },
 
-  productCartFull: (req, res) => {
-    res.render("./products/productCartFull");
+  productCartEmpty: (req, res) => {
+    return res.render("./products/productCartEmpty");
   },
 
   productDetail: (req, res) => {
-    db.Products.findByPk(req.params.id).then(function (product) {
+    db.Products.findByPk(
+      req.params.id).then(function (product) {
       res.render("./products/productDetail", { product: product });
+    });
+  },
+  detalleProducto: (req, res) => {
+    db.Products.findByPk(req.params.id).then(function (product) {
+      res.render("./products/detalleProducto", { product: product });
     });
   },
 
@@ -24,13 +28,7 @@ const productsController = {
     res.render("./products/agregarProducto");
   },
   agregarProducto: (req, res) => {
-    db.Products.create({
-      name: req.body.name,
-      price: req.body.price,
-      description: req.body.description,
-      image: req.file.filename,
-      user_id: req.session.userLogged.id,
-    });
+
     const resultValidation = validationResult(req);
     if (resultValidation.errors.length > 0) {
       return res.render("./products/agregarProducto", {
@@ -38,6 +36,14 @@ const productsController = {
         oldData: req.body,
       });
     }
+    db.Products.create({
+      name: req.body.name,
+      price: req.body.price,
+      image: req.file.filename,
+      description: req.body.description,
+      user_id: req.session.userLogged.id,
+    });
+
     res.redirect("/products/productList");
   },
   productList: (req, res) => {
@@ -45,7 +51,7 @@ const productsController = {
       where: { user_id: req.session.userLogged.id },
     }).then(function (product) {
       res.render("./products/productList", {
-        product: product,
+        product: product
       });
     });
 

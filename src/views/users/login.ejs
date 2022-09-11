@@ -6,8 +6,6 @@
     <link rel="stylesheet" href="/css/login.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
-
-    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,35 +19,37 @@
 
     <%- include('../partials/header.ejs') %>
     </head>
-
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <body>
 
         <form action="./login" method="post" class="form-login">
-            <h1 class=" form-titulo"> Inicia Sesion </h1>
-
-
-            <div class="input-contenedor">
-                <i class="fa-solid fa-user icon"></i>
-                <input type="text" name="email" class="sinborde" placeholder="Correo Electronico" maxlength="30"
-                    required>
-
-                <% if (locals.errors && errors.email) { %>
-                <div class="error-msg">
-                    <%= errors.email.msg %>
-                </div>
-                <% } %>
-
-
-            </div>
-
-            <div class="input-contenedor">
-                <i class="fa-solid fa-lock icon"></i>
-                <input type="password" name="password" class="sinborde" placeholder="Contraseña" maxlength="30"
-                    required />
-
-            </div>
-
+            <br>
+            <h1 class="form-titulo"> Inicia Sesion </h1>
             <div>
+                <ul class="errors" id="errors">
+                </ul>
+            </div>
+            <div class="div-login">  
+                <div class="email">
+                    <i class="fa-solid fa-user icon"></i>
+                    <input type="text" name="email" class="sinborde email" placeholder="Correo Electronico" maxlength="30">
+                    <% if (locals.errors && errors.email) { %>
+                    <div class="error-msg">
+                        <%= errors.email.msg %>
+                    </div>
+                    <% } %>
+                </div>
+                    <i class="fa-solid fa-lock icon"></i>
+                    <input type="password" name="password" class="sinborde pass" placeholder="Contraseña" maxlength="30"/>
+                </div>
+            
+            <div>
+                <br>
                 <label><input type="checkbox" class="checkbox" name="recordar">Recuerdame</label>
                 </br>
                 <br>
@@ -59,13 +59,11 @@
                 <div> ¿No tienes cuenta? <a class="link2" href="register">Registrate</a></div>
                 <br>
                 <div><input type="submit" value="Continuar" class="button"></div>
-                <!-- <div>  <a href="./usersLogin">Ver Producto</a></div> -->
-
-
             </div>
-
         </form>
-        <!-- Footer  -->
+        <script src="/js/loginValidation.js"></script>
+        
+        <%- include('../partials/footerdos.ejs') %>
         <%- include('../partials/footer.ejs') %>
     </body>
 

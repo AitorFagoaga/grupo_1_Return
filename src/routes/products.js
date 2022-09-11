@@ -6,6 +6,7 @@ const path = require("path");
 const { body } = require("express-validator");
 const profileAuthMiddleware = require("../middlewares/profileAuthMiddleware");
 
+
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, path.join(__dirname, "../../public/images/productos"));
@@ -18,7 +19,8 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-const validation = body("image").custom((value, { req }) => {
+const validation = [
+  body("image").custom((value, { req }) => {
   let image = req.file;
   let fileExtention = path.extname(image.originalname);
   let extensions = [".jpg", ".png"];
@@ -30,11 +32,12 @@ const validation = body("image").custom((value, { req }) => {
     }
   }
   return true;
-});
+})
+]
 
 router.get("/productCartEmpty", productsController.productCartEmpty);
-router.get("/productCartFull", productsController.productCartFull);
-router.get("/productDetail/:id", productsController.productDetail);
+router.get("/productDetail/:id",  profileAuthMiddleware, productsController.productDetail);
+router.get("/detalleProducto/:id", productsController.detalleProducto);
 router.get("/productList", productsController.productList);
 router.get("/vistaAdministrador", productsController.vistaAdministrador);
 

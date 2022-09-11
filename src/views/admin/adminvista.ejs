@@ -25,21 +25,8 @@
     <%- include('../partials/header.ejs') %>
     <br />
     <br />
-    <ul class="category" name="category">
-        <a class="category-1" href="" name="category-1"><i class="fa-solid fa-tv category-icon"></i></a>
-        <a class="category-2" href="" name="category-2"><i class="fa-solid fa-headset category-icon"></i></a>
-        <a class="category-3" href="" name="category-3"><i class="fa-solid fa-gamepad category-icon"></i></a>
-        <a class="category-4" href="" name="category-4"><i class="fa-brands fa-playstation category-icon"></i></a>
-        <a class="category-5" href="" name="category-5"><i class="fa-brands fa-xbox category-icon"></i></a>
-        <a class="category-button" href="" name="category-button">All categories</a>
-    </ul>
-    </h4>
 
-    <br />
-    <br />
-    <br />
-    <br />
-
+    
     <div>
 
         <div><% users.forEach(user => { %>
@@ -47,12 +34,14 @@
             <section class="new-product" name="new-product">
                 <article class="new-product" name="new-product">
                     <img src="/images/users/<%=user.image%>" width="300px">
-
                     <div class="informacion">
                         <div>
+                            <div>
+                                <%= user.name %>
+                            </div>
+                            <hr>
                             <div class="buttonsDeleateAndUpdate">
                                 <div class="botonesBorraryEditar">
-
                                 </div>
                                 <div class="botonesBorraryEditar">
                                     <a href="/admin/useredit/<%=user.id %>">
@@ -61,7 +50,7 @@
                                 </div>
                             </div>
                         </div>
-                        <span class="descripcion"><%= user.name%></span>
+                        <span class="descripcion"><%= users.name%></span>
                     </div>
                 </article>
             </section>
@@ -70,6 +59,8 @@
         </div>
 
     </div>
+       
+    </div>
     <!-- Footer  -->
 
     </section>
@@ -77,6 +68,8 @@
     <%- include('../partials/footer.ejs') %>
     </main>
 
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script> 
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script> 
+    <script src="/js/reactAdmin.js"></script>
 </body>
-
 </html>
