@@ -66,24 +66,25 @@ const usersController = {
       image: req.file.filename,
     };
     db.User.create(newUsers).then((user) => {
-      return res.render("./users");
+      return res.redirect("./profile");
     });
-    
 
     return res.redirect("./profile");
   },
 
-   profile: async function (req, res) {
-    
+  profile: async function (req, res) {
     let orders = await db.Order.findAll({
       where: { userId: req.session.userLogged.id },
     });
 
-
     db.Products.findAll({
       where: { user_id: req.session.userLogged.id },
     }).then(function (product) {
-      return res.render("./users/profile", {product: product , user: req.session.userLogged, orders : orders});
+      return res.render("./users/profile", {
+        product: product,
+        user: req.session.userLogged,
+        orders: orders,
+      });
     });
   },
   logout: (req, res) => {

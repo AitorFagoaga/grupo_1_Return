@@ -1,9 +1,12 @@
 const db = require("../database/models");
 
 const administradorController = {
+  adminReact: (req, res) => {
+    return res.render("./admin/adminReact");
+  },
+
   index: (req, res) => {
-    db.User.findAll()
-    .then(users =>{
+    db.User.findAll().then((users) => {
       res.render("./admin/adminvista", { users: users });
     });
   },

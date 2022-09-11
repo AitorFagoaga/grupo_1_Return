@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return</title>
+    <link rel="shortcut icon" href="/images/Logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/b846d156b8.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/productList.css">
+    <link rel="stylesheet" href="/css/productDetail.css">
+    <link rel="stylesheet" href="/css/index.css">
+
+</head>
+
+<body>
+    <br />
+    <br />
+    <br />
+    <br />
+    <!-- header   -->
+    <%- include('../partials/header.ejs') %>
+    <br />
+    <br />
+
+    <div class="prueba-react">
+    </div>
+    <div class="prueba">
+    </div>
+
+    <!-- Footer  -->
+
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel" src="/js/components/App.js"></script>
+    <script type="text/babel" src="/js/components/Productos.js"></script>
+    <script type="text/babel">
+        ReactDOM.render(
+            <App />,
+            document.querySelector(".prueba-react"))
+    </script>
+
+
+    <%- include('../partials/footerdos.ejs') %>
+    <%- include('../partials/footer.ejs') %>
+
+
+</body>
+
+</html>

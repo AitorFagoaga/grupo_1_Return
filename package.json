@@ -12,9 +12,7 @@
     "method-override": "^3.0.0",
     "multer": "^1.4.5-lts.1",
     "mysql2": "^2.3.3",
-    "sequelize": "^6.21.4",
-    "sweetalert": "^2.1.2",
-    "sweetalert2": "^11.4.32"
+    "sequelize": "^6.21.4"
   },
   "name": "return",
   "description": "Somos una empresa dedicada a la venta de productos electrónicos. Porque sabemos que los grandes pensadores del futuro necesitan de un equipamiento acorde que los acompañen en su camino de innovación y revolución tecnológica, brindamos una amplia gama de equipos que cuenta con la última tecnología.",

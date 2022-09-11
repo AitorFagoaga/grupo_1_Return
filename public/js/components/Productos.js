@@ -1,20 +1,19 @@
-class App extends React.Component {
+class Productos extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      usuarios: "",
+      productos: "",
     };
   }
 
   postSubscribe() {
-    let cartRows = document.querySelector(".cartRows");
-    let cantidad = document.querySelector(".Cantidad");
+    let cantidad = document.querySelector(".Productos");
 
-    let er = fetch(`/api/listaUsuarios`)
+    let er = fetch(`/api/listaProductos`)
       .then((res) => res.json())
       .then((product) => {
         this.setState = {
-          usuarios: product.length,
+          productos: product.length,
         };
         return (cantidad.innerText = product.length);
       });
@@ -24,9 +23,9 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Usuarios</h1>
+        <h1>Productos</h1>
         <button onClick={() => this.postSubscribe()}>
-          Calcular cantidad de Usuarios
+          Calcular cantidad de Productos
         </button>
         <table className="table table-responsive-md mb-0">
           <thead>
@@ -38,11 +37,9 @@ class App extends React.Component {
           </thead>
           <tbody className="cartRows">
             <tr>
-              <th className="Cantidad">
+              <th></th>
+              <th className="Productos">
                 <strong>{this.state.usuarios}</strong>
-              </th>
-              <th>
-                <Productos />
               </th>
             </tr>
           </tbody>

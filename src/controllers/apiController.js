@@ -15,5 +15,41 @@ module.exports = {
     );
     res.json({ ok: true, status: 200, order: order });
   },
-
+  lista: (req, res) => {
+    db.User.findAll().then((personaje) => {
+      let array = [];
+      for (personajes in personaje) {
+        array.push(" Nombre : " + personaje[personajes].name);
+      }
+      res.json(array);
+    });
+  },
+  detalle: (req, res) => {
+    db.User.findByPk(req.params.id).then(function (usuario) {
+      res.json({
+        detalle: "A continuacion los detalles del Usuario ",
+        data: usuario,
+      });
+    });
+  },
+  listaProductos: (req, res) => {
+    db.Products.findAll().then((personaje) => {
+      let array = [];
+      for (personajes in personaje) {
+        array.push(
+          "id : " + personaje[personajes].id,
+          " Nombre : " + personaje[personajes].name
+        );
+      }
+      res.json(array);
+    });
+  },
+  detalleProductos: (req, res) => {
+    db.Products.findByPk(req.params.id).then(function (product) {
+      res.json({
+        detalle: "A continuacion los detalles del Producto ",
+        data: product,
+      });
+    });
+  },
 };
