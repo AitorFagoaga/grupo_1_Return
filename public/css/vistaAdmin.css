@@ -52,7 +52,7 @@ ul {
 
 .contenedorprincipal {
   display: grid;
-  background-color: darkgray;
+  background-color: rgb(255, 255, 255);
   margin: auto;
   align-items: center;
   width: 300px;

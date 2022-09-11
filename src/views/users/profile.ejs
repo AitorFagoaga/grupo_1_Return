@@ -24,10 +24,19 @@
       <br>
       <br>
       <br>
+
+
+      
       <br>
       <br>
       <br>
+
+
+
       <div class="contenedor-perfil">
+
+        
+        <a class="wallpaper-button" href="./logout">Salir de mi cuenta.</a>  
         <div class="perfil">
           <img src="/images/users/<%= user.image %>" class="iman" >
           <hr>
@@ -49,6 +58,7 @@
               Texto de descripcion
             </small>
         </div>
+        
   
 <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Ver mis Productos</button>
 
@@ -76,7 +86,7 @@
 </div>
 
             <br>
-
+<br>
             <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Productos en mi carrito</button>
 
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
@@ -84,8 +94,8 @@
                 <h5 class="offcanvas-title" id="offcanvasRightLabel">Todo</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
               </div>
-
-              <div class="offcanvas-body">
+              <div class="carj">
+              <div class="offcanvas-body" width="max-content">
               <h4>Contenido de mi carrito</h4>
               <br>
               <table>
@@ -97,10 +107,64 @@
               <a href="/products/productCartEmpty" class="btn-carrito">Mi carrito</a>
             </div>
 
+          </div>
             <hr>
         </div>
+
         </div>
-        <a class="wallpaper-button" href="./logout">Salir de mi cuenta.</a>  
+<br>
+<br>
+
+        <div class="card mb-5">
+          <div class="card-header">
+              Mis Pedidos
+          </div>
+          <div class="card-body">
+              <table class="table table-responsive-md mb-0">
+                  <thead>
+                      <tr>
+                          <th style="width: 50px;">
+                              <strong>#</strong>
+                          </th>
+                          <th class="th-lg">
+                              <strong>Envío</strong>
+                          </th>
+                          <th class="th-lg">
+                              <strong>Pago</strong>
+                          </th>
+                          <th>
+                              <strong>Total</strong>
+                          </th>
+                          <th style="width: 50px;"></th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <% orders.forEach((order,index)=> { %>
+                          <tr>
+                              <th scope="row">
+                                  <%= index + 1 %>
+                              </th>
+                              <td>
+                                  <%= order.shippingMethod %>
+                              </td>
+                              <td>
+                                  <%= order.paymentMethod %>
+                              </td>
+                              <td>$ <%= order.total %>
+                              </td>
+                          </tr>
+                          <% }); %>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+
+
+
+
+
+        <br>
+        <br>
   </main>
   <!-- Footer  -->
 

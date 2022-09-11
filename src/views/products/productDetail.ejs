@@ -68,7 +68,7 @@
             <div class="col-md-3">
             </div>
             <div class="col-md-8">
-                
+
             <a class="btn btn-primary" href="#">Añadir al carrito</a>
             <hr>
               <div class="card-body">
@@ -90,7 +90,7 @@
             </button>
           </h2>
           <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Paga en 3cuotas de : $ <%= product.price / 3 %></div>
+            <div class="accordion-body">Paga en 3 cuotas de : $ <%= (product.price/3).toFixed(2) %></div>
           </div>
         </div>
         <div class="accordion-item">
@@ -100,7 +100,7 @@
             </button>
           </h2>
           <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Paga en 6 cuotas de : $ <%= product.price / 6 %></div>
+            <div class="accordion-body">Paga en 6 cuotas de : $ <%= (product.price/6).toFixed(2) %></div>
           </div>
         </div>
         <div class="accordion-item">
@@ -110,7 +110,7 @@
             </button>
           </h2>
           <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Paga en 12 cuotas de : $ <%= product.price / 12 %></div>
+            <div class="accordion-body">Paga en 12 cuotas de : $ <%= (product.price/12).toFixed(12) %></div>
           </div>
         </div>
       </div>

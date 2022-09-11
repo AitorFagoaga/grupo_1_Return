@@ -73,11 +73,17 @@ const usersController = {
     return res.redirect("./profile");
   },
 
-  profile: (req, res) => {
+   profile: async function (req, res) {
+    
+    let orders = await db.Order.findAll({
+      where: { userId: req.session.userLogged.id },
+    });
+
+
     db.Products.findAll({
       where: { user_id: req.session.userLogged.id },
     }).then(function (product) {
-      return res.render("./users/profile", {product: product , user: req.session.userLogged});
+      return res.render("./users/profile", {product: product , user: req.session.userLogged, orders : orders});
     });
   },
   logout: (req, res) => {

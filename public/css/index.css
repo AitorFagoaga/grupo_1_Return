@@ -335,6 +335,9 @@ body {
 
 .search-menu {
   display: flex;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
 }
 
 .wallpaper {
@@ -552,7 +555,7 @@ body {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     height: 70px;
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 1;

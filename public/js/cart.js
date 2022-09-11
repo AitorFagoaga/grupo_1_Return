@@ -1,9 +1,12 @@
+
+
 function removeItem(index) {
     if (carrito.length > 1) {
       carrito.splice(index, 1);
       products.splice(index, 1);
       localStorage.setItem("carrito", JSON.stringify(carrito));
       document.getElementById(`row${index}`).remove();
+      location.reload();
     } else {
       localStorage.removeItem("carrito");
       products = [];
@@ -16,8 +19,7 @@ function removeItem(index) {
     document.querySelector(".totalAmount").innerText = `$ ${calcularTotal(
       products
     )}`;
-  
-    // toastr.success("Se borro el item del carrito");
+
   }
   function setCarritoVacio() {
     cartRows.innerHTML = `
