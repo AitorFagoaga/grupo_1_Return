@@ -447,6 +447,7 @@ body {
 }
 
 .search-menu {
+  margin-top: 20x;
   display: flex;
   z-index: 1;
   width: 100%;
