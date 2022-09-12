@@ -351,6 +351,7 @@ body {
   display: flex;
   z-index: 1;
   width: 100%;
+  position: absolute;
 }
 
 .wallpaper {
@@ -657,7 +658,7 @@ body {
   .search-bar {
     border-radius: 0;
     left: 26%;
-    position: absolute;
+    position: fixed;
     top: 20px;
     width: 38%;
   }
