@@ -3,133 +3,32 @@
 * {
   box-sizing: border-box;
 }
-
-/* PRUEBA */
 .img-index {
   background-color: rgb(12, 12, 82);
-}
-.burbuja {
-  border-radius: 50%;
-  background: #fff;
-  opacity: 0.3;
-  position: absolute;
-  bottom: -1000;
-  animation: burbujas 6s linear infinite;
   display: flex;
-  align-items: center;
   justify-content: center;
+  height: 20vh;
 }
-.cuadrado {
-  border: solid rgb(230, 136, 152) 7px;
-  height: 40px;
-  width: 40px;
-  margin: 0px auto;
-}
-.circulo {
-  border: solid red 8px;
-  border-radius: 50%;
-  height: 50px;
+.image {
   width: 50px;
-  margin: 0px auto;
+  height: 50px;
 }
-.triangulo {
-  height: 100px;
-  width: 100px;
-  background: #ffffff;
-  border-radius: 50%;
-  position: relative;
-}
-.triangulo:after {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  content: "\25b3";
-  color: green;
-  font-size: 60px;
-  line-height: 100px;
-  text-align: center;
-}
-.x {
-  height: 100px;
-  width: 100px;
-  background: #ffffff;
-  border-radius: 50%;
-  position: relative;
-}
-.x:after {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  content: "\2715";
-  font-size: 60px;
-  color: blue;
-  line-height: 100px;
-  text-align: center;
+.eslogan-index {
+  display: none;
+  color: #ffffff;
+  margin-left: 20%;
+  font-size: 20px;
+  font-family: "Goldman", cursive;
 }
 .joystick {
-  font-size: 50px;
+  display: none;
 }
-.celular {
-  content: "&#128241";
-}
-.burbuja:nth-child(1) {
-  width: 80px;
-  height: 80px;
-  left: 5%;
-  animation-duration: 6s;
-}
-.burbuja:nth-child(2) {
-  width: 100px;
-  height: 100px;
-  left: 25%;
-  animation-duration: 3s;
-}
-.burbuja:nth-child(3) {
-  width: 100px;
-  height: 100px;
-  left: 60%;
-  animation-duration: 8s;
-}
-.burbuja:nth-child(4) {
-  width: 100px;
-  height: 100px;
-  left: 80%;
-  animation-duration: 4s;
-}
-.burbuja:nth-child(5) {
-  width: 100px;
-  height: 100px;
-  left: 45%;
-  animation-duration: 7s;
-}
-@keyframes burbujas {
-  0% {
-    bottom: 0;
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.4;
-  }
-  100% {
-    bottom: 100vh;
-    opacity: 0;
-  }
-}
-/* Fin de prueba */
-.image {
-  width: auto;
-  height: auto;
-}
-
 .slider {
   width: 100%;
   margin: 0;
   overflow: hidden;
 }
+
 .slider ul {
   display: flex;
   padding: 0;
@@ -184,6 +83,7 @@
 /* Etiqueta (A-Z) */
 html {
   height: 100%;
+  width: 100%;
 }
 body {
   font-family: "Mulish";
@@ -535,7 +435,138 @@ body {
     margin-top: 85px;
     padding: 0;
   }
-
+  /* burbujas */
+  .img-index {
+    background-color: rgb(12, 12, 82);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+  }
+  .burbuja {
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.3;
+    position: absolute;
+    bottom: -1000;
+    animation: burbujas 6s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cuadrado {
+    border: solid rgb(230, 136, 152) 7px;
+    height: 40px;
+    width: 40px;
+    margin: 0px auto;
+  }
+  .circulo {
+    border: solid red 8px;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin: 0px auto;
+  }
+  .triangulo {
+    height: 100px;
+    width: 100px;
+    background: #ffffff;
+    border-radius: 50%;
+    position: relative;
+  }
+  .triangulo:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "\25b3";
+    color: green;
+    font-size: 60px;
+    line-height: 100px;
+    text-align: center;
+  }
+  .x {
+    height: 100px;
+    width: 100px;
+    background: #ffffff;
+    border-radius: 50%;
+    position: relative;
+  }
+  .x:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "\2715";
+    font-size: 60px;
+    color: blue;
+    line-height: 100px;
+    text-align: center;
+  }
+  .joystick {
+    display: block;
+    font-size: 50px;
+  }
+  .celular {
+    content: "&#128241";
+  }
+  .burbuja:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    animation-duration: 6s;
+  }
+  .burbuja:nth-child(2) {
+    width: 100px;
+    height: 100px;
+    left: 25%;
+    animation-duration: 3s;
+  }
+  .burbuja:nth-child(3) {
+    width: 100px;
+    height: 100px;
+    left: 60%;
+    animation-duration: 8s;
+  }
+  .burbuja:nth-child(4) {
+    width: 100px;
+    height: 100px;
+    left: 80%;
+    animation-duration: 4s;
+  }
+  .burbuja:nth-child(5) {
+    width: 100px;
+    height: 100px;
+    left: 45%;
+    animation-duration: 7s;
+  }
+  @keyframes burbujas {
+    0% {
+      bottom: 0;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.4;
+    }
+    100% {
+      bottom: 100vh;
+      opacity: 0;
+    }
+  }
+  /* Fin de burbujas */
+  .image {
+    width: auto;
+    height: auto;
+  }
+  .eslogan-index {
+    display: block;
+    color: #ffffff;
+    margin-left: 20%;
+    font-size: 2.5rem;
+    font-family: "Goldman", cursive;
+  }
   .bottom-navigation-bar {
     display: none;
   }
@@ -755,6 +786,16 @@ body {
 }
 
 @media (min-width: 992px) {
+  .image {
+    width: auto;
+    height: auto;
+  }
+  .eslogan-index {
+    color: #ffffff;
+    margin-left: 20%;
+    font-size: 2.5rem;
+    font-family: "Goldman", cursive;
+  }
   .headline-3 {
     margin-top: 10px;
   }

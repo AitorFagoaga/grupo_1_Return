@@ -13,10 +13,11 @@ body {
   );
   font-family: "Mulish";
 }
-.offcanvas-body {
-    width: max-content;
+.btn-producto-carrito {
+  margin-top: 2vh;
 }
-hr{
+.offcanvas-body {
+  width: max-content;
 }
 .contenedor-perfil {
   display: inline-block;
@@ -40,8 +41,6 @@ h3 {
   border-color: blanchedalmond;
 }
 
-
-
 .perfil {
   text-align-last: center;
   background: #ffff;
@@ -55,8 +54,7 @@ h3 {
   width: max-content;
 }
 
-.perfil-seccion{
-
+.perfil-seccion {
   text-align-last: center;
   height: 35vh;
   width: 390px;
@@ -69,6 +67,7 @@ h3 {
   text-align: center;
   box-shadow: 0px 10px 10px -6px black;
 }
+
 .btn-carrito {
   border: none;
   color: white;
@@ -81,11 +80,8 @@ h3 {
 }
 .wallpaper-button {
   align-items: center;
-  background: linear-gradient(
-    180deg,
-    rgba(58, 80, 107, 1) 0%,
-    rgba(11, 19, 43, 1) 100%
-  );
+
+  background-color: rgb(12, 12, 82);
   border-radius: 5px;
   bottom: 15%;
   color: #ffffff;
@@ -110,7 +106,7 @@ hr {
     display: flex;
     justify-content: center;
   }
-  
+
   .offcanvas.show {
     width: max-content;
   }
@@ -138,6 +134,16 @@ hr {
     font-family: "Mulish";
     text-align: center;
     box-shadow: 0px 10px 10px -6px black;
+  }
+  .btn-productos-profile {
+    display: inline-block;
+    margin-top: 10vh;
+  }
+  .btn-producto-carrito {
+    margin-top: 2vh;
+  }
+  .btn-primary {
+    height: 10vh;
   }
 }
 @media (min-width: 1131px) {

@@ -21,6 +21,9 @@ img {
   margin-bottom: 15px;
   width: 100px;
 }
+label {
+  margin-top: 0.8vh;
+}
 .cornerheader {
   color: rgb(244, 244, 244);
   text-align: center;
