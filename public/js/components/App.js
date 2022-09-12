@@ -6,34 +6,37 @@ class App extends React.Component {
     };
   }
 
-  postSubscribe() {
-    let cartRows = document.querySelector(".cartRows");
+  componentDidMount(){
+    
     let cantidad = document.querySelector(".Cantidad");
-
-    let er = fetch(`/api/listaUsuarios`)
+    fetch(`/api/listaUsuarios`)
       .then((res) => res.json())
-      .then((product) => {
+      .then((usuarios) => {
         this.setState = {
-          usuarios: product.length,
+          usuarios: usuarios.length,
         };
-        return (cantidad.innerText = product.length);
+        return (cantidad.innerText = usuarios.length);
       });
-    return er;
   }
 
+
+
+
   render() {
+
     return (
       <div>
         <h1>Usuarios</h1>
-        <button onClick={() => this.postSubscribe()}>
-          Calcular cantidad de Usuarios
-        </button>
         <table className="table table-responsive-md mb-0">
           <thead>
             <tr>
               <th>
                 <strong>Cantidad de Usuarios</strong>
+                <button onClick={() => this.componentDidMount()}>
+               Actualizar
+             </button>
               </th>
+              
             </tr>
           </thead>
           <tbody className="cartRows">
@@ -41,9 +44,11 @@ class App extends React.Component {
               <th className="Cantidad">
                 <strong>{this.state.usuarios}</strong>
               </th>
-              <th>
+            </tr>
+            <tr>
+                <th>
                 <Productos />
-              </th>
+                </th>
             </tr>
           </tbody>
         </table>

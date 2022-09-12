@@ -1,4 +1,5 @@
 class Productos extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -6,10 +7,10 @@ class Productos extends React.Component {
     };
   }
 
-  postSubscribe() {
-    let cantidad = document.querySelector(".Productos");
 
-    let er = fetch(`/api/listaProductos`)
+  componentDidMount(){
+    let cantidad = document.querySelector(".Productos");
+    fetch(`/api/listaProductos`)
       .then((res) => res.json())
       .then((product) => {
         this.setState = {
@@ -17,29 +18,35 @@ class Productos extends React.Component {
         };
         return (cantidad.innerText = product.length);
       });
-    return er;
   }
 
+
+
   render() {
+
     return (
       <div>
         <h1>Productos</h1>
-        <button onClick={() => this.postSubscribe()}>
-          Calcular cantidad de Productos
-        </button>
         <table className="table table-responsive-md mb-0">
           <thead>
             <tr>
               <th>
-                <strong>Cantidad de Usuarios</strong>
+                <strong>Cantidad de Productos</strong>
+                <button onClick={() => this.componentDidMount()}>
+                 Actualizar
+                 </button>
               </th>
             </tr>
           </thead>
           <tbody className="cartRows">
             <tr>
-              <th></th>
               <th className="Productos">
-                <strong>{this.state.usuarios}</strong>
+                <strong>{this.state.productos}</strong>
+              </th>
+            </tr>
+            <tr>
+              <th>
+                <strong>{this.state.productos}</strong>
               </th>
             </tr>
           </tbody>

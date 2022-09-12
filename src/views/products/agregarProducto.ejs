@@ -35,6 +35,25 @@
             <input type="text" placeholder="Precio" class="titulo" name="price" id="price"> <br>
             <br></input>
             </br>
+            <div class="input-contenedor">
+                <label class="categoria"><b>Categoria:</b></label>
+                <select name="category" class="sinborde-category category">
+                    <option value="">Elegí una Categoria</option>
+                    <%  
+                    let categories = ['Computacion', 'Consolas', 'Componentes', 'Celulares'];
+                %>
+                    <% for (const oneCategory of categories) { %>
+                    <option value="<%= oneCategory %>"
+                        <%= locals.oldData && (oneCategory === oldData.category) ? 'selected' : null %>>
+                        <%= oneCategory %> </option>
+                    <% } %>
+                </select>
+                <% if (locals.errors && errors.category) { %>
+                <div class="text-danger">
+                    <%= errors.category.msg %>
+                </div>
+                <% } %>
+            </div>
             <!-- <div class="imagen-agregado" name="imagen-agregado" id="imagen-agregado">
                 </br>
                 <i class="fas fa-download"></i>

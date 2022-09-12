@@ -41,6 +41,7 @@ const productsController = {
       price: req.body.price,
       image: req.file.filename,
       description: req.body.description,
+      category:req.body.category,
       user_id: req.session.userLogged.id,
     });
 
@@ -80,6 +81,7 @@ const productsController = {
         name: req.body.name,
         price: req.body.price,
         description: req.body.description,
+        category: req.body.category
       },
       {
         where: {
@@ -97,6 +99,40 @@ const productsController = {
       return res.render("./products/busquedaProductos", { products: products });
     });
   },
+
+  
+
+  consolas: (req, res) => {
+    db.Products.findAll(
+      {where: {category:"Consolas"}}
+    ).then((products) => {
+      return res.render("./products/consolas", { products: products });
+    });
+  },
+  celulares: (req, res) => {
+    db.Products.findAll(
+      {where: {category:"Celulares"}}
+    ).then((products) => {
+      return res.render("./products/celulares", { products: products });
+    });
+  },
+  computacion: (req, res) => {
+    db.Products.findAll(
+      {where: {category:"Computacion"}}
+    ).then((products) => {
+      return res.render("./products/computacion", { products: products });
+    });
+  },
+  componentes: (req, res) => {
+    db.Products.findAll(
+      {where: {category:"Componentes"}}
+    ).then((products) => {
+      return res.render("./products/componentes", { products: products });
+    });
+  },
+
+
+
 };
 
 module.exports = productsController;

@@ -22,6 +22,9 @@ module.exports = (sequelize, dataTypes) => {
     user_id: {
       type: dataTypes.INTEGER(11),
     },
+    category:{
+      type: dataTypes.STRING(100),
+    }
   };
   let config = {
     //el nombre de la tabla se llama "users".

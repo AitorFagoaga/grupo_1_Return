@@ -61,4 +61,13 @@ router.delete("/productDetail/:id", productsController.delete);
 router.get("/editProducts/:id", productsController.edit);
 router.put("/:id/", productsController.editUpdate);
 
+
+router.get("/consolas", productsController.consolas);
+router.get("/celulares", productsController.celulares);
+router.get("/componentes", productsController.componentes);
+router.get("/computacion", productsController.computacion);
+
+
+
+
 module.exports = router;

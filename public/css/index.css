@@ -191,7 +191,7 @@ body {
   padding: 20px;
   background: linear-gradient(
     180deg,
-    rgb(246, 247, 252) 0%,
+    rgb(127, 138, 136) 0%,
     rgb(188, 189, 190) 50%,
     rgb(127, 138, 136) 100%
   );
@@ -666,7 +666,8 @@ body {
     background: linear-gradient(
       180deg,
       rgba(11, 19, 43, 1) 0%,
-      rgba(58, 80, 107, 1) 100%
+      rgb(22, 1, 24) 50%,
+      rgb(12, 12, 82) 100%
     );
     /* background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%); */
     border-bottom-left-radius: 15px;

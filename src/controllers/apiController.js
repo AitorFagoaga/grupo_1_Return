@@ -37,8 +37,7 @@ module.exports = {
       let array = [];
       for (personajes in personaje) {
         array.push(
-          "id : " + personaje[personajes].id,
-          " Nombre : " + personaje[personajes].name
+          "id : " + personaje[personajes].id
         );
       }
       res.json(array);
