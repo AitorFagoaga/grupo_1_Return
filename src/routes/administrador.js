@@ -12,4 +12,5 @@ router.put("/:id/", adminMiddleware, administradorController.edit);
 
 router.get("/adminReact", adminMiddleware, administradorController.adminReact);
 
+
 module.exports = router;
