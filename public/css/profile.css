@@ -80,11 +80,8 @@ h3 {
 }
 .wallpaper-button {
   align-items: center;
-  background: linear-gradient(
-    180deg,
-    rgba(58, 80, 107, 1) 0%,
-    rgba(11, 19, 43, 1) 100%
-  );
+
+  background-color: rgb(12, 12, 82);
   border-radius: 5px;
   bottom: 15%;
   color: #ffffff;
