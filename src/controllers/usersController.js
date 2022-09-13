@@ -66,7 +66,7 @@ const usersController = {
       image: req.file.filename,
     };
     db.User.create(newUsers).then((user) => {
-      return res.redirect("./profile");
+       console.log(user)
     });
 
     return res.redirect("./profile");

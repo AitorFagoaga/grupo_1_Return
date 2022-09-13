@@ -160,7 +160,17 @@ body {
   padding: 5px;
   transition: transform 0.5s;
 }
-
+.bottom-navigation-bar-icon-plus {
+  color: #ffffff;
+  font-size: 20px;
+  margin-top: 10px;
+  padding: 5px;
+  transition: transform 0.5s;
+}
+.nav-menu {
+  display: inline-block;
+  justify-content: left;
+}
 .category {
   display: flex;
   justify-content: flex-start;
@@ -341,6 +351,9 @@ body {
   margin-left: 4%;
   width: 85%;
 }
+.burger-menu {
+  position: absolute;
+}
 
 .search-filter {
   display: none;
@@ -446,7 +459,7 @@ body {
   }
   .burbuja {
     border-radius: 50%;
-    background: #fff;
+    background-color: rgb(12, 12, 82);
     opacity: 0.3;
     position: absolute;
     bottom: -1000;
