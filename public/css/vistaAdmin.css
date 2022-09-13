@@ -89,14 +89,16 @@ ul {
 }
 
 .contenedorprincipal {
-  display: grid;
-  background-color: rgb(255, 255, 255);
+  height: 700px;
+  max-width: 500px;
+  background: #ffff;
+  border-radius: 1vh;
   margin: auto;
-  align-items: center;
-  width: 300px;
-  height: 300px;
-  border: solid 1px rgb(102, 101, 101);
-  border-radius: 10px;
+  position: relative;
+  top: 20px;
+  font-family: "Mulish";
+  text-align: center;
+  box-shadow: 10px 10px 10px -6px black;
 }
 .centrado {
   border: 1px solid rgb(197, 197, 197);
@@ -129,8 +131,41 @@ ul {
 .area {
   margin-top: 50px;
 }
+.edit-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
 .letra {
   color: #1c2541;
+}
+.name-edit {
+  background-color: #e9e9e9;
+  border: solid rgb(12, 12, 82) 1.5px;
+  width: 20vw;
+  height: 4vh;
+  border-radius: 1vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+.price-edit {
+  background-color: #e9e9e9;
+  border: solid rgb(12, 12, 82) 1.5px;
+  width: 20vw;
+  height: 4vh;
+  border-radius: 1vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+.description-edit {
+  background-color: #e9e9e9;
+  border: solid rgb(12, 12, 82) 1.5px;
+  width: 20vw;
+  height: 4vh;
+  border-radius: 1vh;
+  margin-left: auto;
+  margin-right: auto;
 }
 .titulo {
   /* display: flex;
@@ -473,7 +508,7 @@ body {
   font-family: "Mulish";
 }
 .wallpaper-button:hover {
-  background: #5bc0be;
+  background: #0d0446;
 }
 
 /* Pseudo Selectores (A-Z) */
@@ -490,7 +525,7 @@ body {
   transform: rotate(180deg) scale(0.1, 0.1);
 }
 
-.wallpaper-button::before {
+/* .wallpaper-button::before {
   background: linear-gradient(
     180deg,
     rgba(11, 19, 43, 1) 0%,
@@ -506,11 +541,11 @@ body {
   transition: opacity 0.25s;
   top: 0;
   z-index: -1;
-}
+} */
 
-.wallpaper-button:hover::before {
+/* .wallpaper-button:hover::before {
   opacity: 1;
-}
+} */
 
 /* Animaciones (A-Z) */
 

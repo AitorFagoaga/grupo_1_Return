@@ -29,7 +29,7 @@
         <br>
         <div class="contenidoprinci">
             
-<div class="buttonsDeleateAndUpdate">
+<!-- <div class="buttonsDeleateAndUpdate">
     <div class="botonesBorraryEditar">
         <form action="/products/productDetail/<%= product.id %>?_method=DELETE" method="POST"
             enctype="multipart/form-data">
@@ -41,7 +41,7 @@
             <input type="submit" value="Editar" class="botonesBorraryEditar color-editar">
         </a>
     </div>
-</div>
+</div> -->
 
     <div class="carde mb-3" style="max-width: 540px;">
         <div class="row g-0">
@@ -78,6 +78,19 @@
               </div>
             </div>
           </div>
+          <div class="buttonsDeleateAndUpdate">
+            <div class="botonesBorraryEditar">
+                <form action="/products/productDetail/<%= product.id %>?_method=DELETE" method="POST"
+                    enctype="multipart/form-data">
+                    <input type="submit" value="Borrar" class="botonesBorraryEditar color-borrar"></input>
+                </form>
+            </div>
+            <div class="botonesBorraryEditar">
+                <a href="/products/editProducts/<%= product.id %>">
+                    <input type="submit" value="Editar" class="botonesBorraryEditar color-editar">
+                </a>
+            </div>
+        </div>
       </div>
       
 
