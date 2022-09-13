@@ -1,7 +1,24 @@
 <footer>
     <div class="bottom-navigation-bar" name="bottom-navigation-bar">
+        
+        <!-- <label>
+            <i class="fa-solid fa-bars bottom-navigation-bar-icon-menu"></i>
+        </label>
+        <ul class="nav-menu-burger nav-menu">
+            <li><a href="">Vender</a></li>
+            <li><a href="">Mis productos</a></li>
+        </ul> -->
+        
         <a class="bottom-navigation-bar-button" href="/" type="submit">
             <i class="fa-solid fa-house bottom-navigation-bar-icon"></i>
+        </a>
+        <% if(locals.userLogged && locals.userLogged.email == "pepe@hotmail.com") {%>
+            <a class="top-navigation-bar-button" href="/admin">
+                <i>Admin</i>
+            </a>
+            <% } %>
+        <a href="/products/agregarProducto" class="bottom-navigation-bar-button">
+            <i class="fa-solid fa-circle-plus bottom-navigation-bar-icon-plus"></i>
         </a>
         <a class="bottom-navigation-bar-button" href="/products/productCartEmpty" type="submit">            
             <i class="fa-solid fa-cart-shopping bottom-navigation-bar-icon"></i>
