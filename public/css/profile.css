@@ -13,17 +13,23 @@ body {
   );
   font-family: "Mulish";
 }
-.btn-producto-carrito {
+/* .btn-producto-carrito {
   margin-top: 2vh;
-}
+} */
 .offcanvas-body {
   width: max-content;
 }
 .contenedor-perfil {
   display: inline-block;
-  justify-content: center;
+  margin-left: -10vw;
 }
 h3 {
+  color: gray;
+  justify-content: flex-start;
+  text-align-last: start;
+  margin-left: 10%;
+}
+.email-profile {
   color: gray;
   justify-content: flex-start;
   text-align-last: start;
@@ -100,7 +106,31 @@ hr {
   margin: auto;
   width: 80%;
 }
-
+.card-desktop {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+.card-phone {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+.desktop-card {
+  display: none;
+}
 @media (min-width: 700px) {
   .contenedor-perfil {
     display: flex;
@@ -136,14 +166,24 @@ hr {
     box-shadow: 0px 10px 10px -6px black;
   }
   .btn-productos-profile {
-    display: inline-block;
-    margin-top: 10vh;
+    display: flex;
+    margin-bottom: 5vh;
+  }
+  .btn-producto-misProductos {
+    margin-left: 2vh;
   }
   .btn-producto-carrito {
-    margin-top: 2vh;
+    margin-left: 2vh;
   }
   .btn-primary {
     height: 10vh;
+  }
+
+  .desktop-card {
+    display: none;
+  }
+  .card-phone {
+    display: block;
   }
 }
 @media (min-width: 1131px) {
@@ -179,6 +219,12 @@ hr {
     text-align: center;
     box-shadow: 0px 10px 10px -6px black;
   }
+  .desktop-card {
+    display: block;
+  }
+  .card-phone {
+    display: none;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -213,5 +259,8 @@ hr {
     font-family: "Mulish";
     text-align: center;
     box-shadow: 0px 10px 10px -6px black;
+  }
+  .desktop-card {
+    display: block;
   }
 }

@@ -32,21 +32,34 @@
       <br>
 
 
-
+    <div class="contendor-todo">
       <div class="contenedor-perfil">
 
         
         <a class="wallpaper-button" href="./logout">Salir de mi cuenta.</a>  
         <div class="perfil">
+          <br>
           <img src="/images/users/<%= user.image %>" class="iman" >
           <hr>
-            <h3> <%= user.name %></h3>
-            <h4>
-              <br>
-              <hr>
-              Texto de descripcion
+            <h3>
+               <i class="fa-solid fa-user"></i> 
+               <%= user.name %>
+              </h3>
+            <hr>
+            <h4 class="email-profile">
+              <i class="fa-solid fa-envelope"></i>
+              <%= user.email %>
             </h4>
-            <small>
+            <hr>
+            <div class="btn-productos-profile">
+              <div class="btn-producto-misProductos">
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Ver mis Productos</button>
+              </div>
+              <div class="btn-producto-carrito">
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Productos en mi carrito</button>
+                </div>
+              </div>
+            <!-- <small>
               Texto de descripcion
             </small>
             <br>
@@ -56,9 +69,52 @@
             <br>
             <small>
               Texto de descripcion
-            </small>
+            </small> -->
         </div>
-        
+        <div class="card-desktop mb-5 desktop-card">
+          <div class="card-header">
+              Mis Pedidos
+          </div>
+          <div class="card-body">
+              <table class="table table-responsive-md mb-0">
+                  <thead>
+                      <tr>
+                          <th style="width: 50px;">
+                              <strong>#</strong>
+                          </th>
+                          <th class="th-lg">
+                              <strong>Envío</strong>
+                          </th>
+                          <th class="th-lg">
+                              <strong>Pago</strong>
+                          </th>
+                          <th>
+                              <strong>Total</strong>
+                          </th>
+                          <th style="width: 50px;"></th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <% orders.forEach((order,index)=> { %>
+                          <tr>
+                              <th scope="row">
+                                  <%= index + 1 %>
+                              </th>
+                              <td>
+                                  <%= order.shippingMethod %>
+                              </td>
+                              <td>
+                                  <%= order.paymentMethod %>
+                              </td>
+                              <td>$ <%= order.total %>
+                              </td>
+                          </tr>
+                          <% }); %>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+      </div>
   
 
 <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
@@ -86,12 +142,12 @@
 
             <br>
             <br>
-            <div class="btn-productos-profile">
+            <!-- <div class="btn-productos-profile">
               <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Ver mis Productos</button>
               <div class="btn-producto-carrito">
                 <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Productos en mi carrito</button>
                 </div>
-              </div>
+              </div> -->
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
               <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasRightLabel">Todo</h5>
@@ -118,7 +174,7 @@
 <br>
 <br>
 
-        <div class="card mb-5">
+        <div class="card-phone mb-5">
           <div class="card-header">
               Mis Pedidos
           </div>
