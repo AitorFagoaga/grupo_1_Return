@@ -4,15 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background: linear-gradient(
-    180deg,
-    rgb(246, 247, 252) 0%,
-    rgb(188, 189, 190) 50%,
-    rgb(127, 138, 136) 100%
-  );
-  font-family: "Mulish";
-}
 /* .btn-producto-carrito {
   margin-top: 2vh;
 } */
@@ -100,7 +91,7 @@ h3 {
   padding: 18px 15px;
   position: relative;
   text-decoration: none;
-  z-index: 2;
+  z-index: -1;
 }
 hr {
   margin: auto;
