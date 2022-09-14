@@ -1,6 +1,8 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <link href="/css/vistaAdmin.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/index.css">
@@ -14,67 +16,66 @@
     <title>VistaAdministrador</title>
     <link rel="shortcut icon" href="/images/Logo.png">
 </head>
-
 <body>
     <!-- header -->
     <%- include('../partials/header.ejs') %>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+    <div class="contenedorprincipal-edit">
+        <br>
+        <div class="imagenajustar">
+            <img src="/images/users/<%=users.image%>" alt="profileImage" class="imagenajustar">  
+        </div>
+        <br>
+    <form class="form-new" action="/users/<%= users.id %>?_method=put" method="POST" >
+        <div class="edit-form">
+            <label for="name" class="letra">Nombre:</label>
+            <input type="text" name="name"  value=" <%= users.name %>" class="name-edit">
+        </div>
+    </br>
+</br>
+        <div class="edit-form">
+            <label for="email" class="letra">Email:</label>
+            <input type="text" name="price"  value=" <%= users.email %>" class="price-edit">
+        </div>
     </br>
     </br>
-    </br>
-    </br>
-    
-    </br>
-    </br>
-
-    <div class="conteiner-principal22">
-        <form class="form-new" action="/admin/<%=users.id %>?_method=put" method="POST">
-            <div>
-            </br>
-                <label for="name">Nombre</label>
-                <input type="text" name="name" value="<%= users.name %>">
-            </div>
-        </br>
-            <div>
-                <label for="email">Email</label>
-                <input type="text" name="email" value="<%= users.email %>">
-            </div>
-        </br>
-            <select name="category" class="sinborde " required>
-                <option value="">Elegí una Categoria</option>
-                <%  
-                    let categories = ['Comprador', 'Vendedor'];
-                %>
-                <% for (const oneCategory of categories) { %>
-                <option value="<%= oneCategory %>"
-                    <%= locals.oldData && (oneCategory === oldData.category) ? 'selected' : null %>> <%= oneCategory %>
-                </option>
-                <% } %>
-            </select>
+    <select name="category" class="sinborde-category " required>
+        <option value="">Elegí una Categoria</option>
+        <%  
+            let categories = ['Comprador', 'Vendedor'];
+        %>
+        <% for (const oneCategory of categories) { %>
+        <option value="<%= oneCategory %>"
+            <%= locals.oldData && (oneCategory === oldData.category) ? 'selected' : null %>> <%= oneCategory %>
+        </option>
+        <% } %>
+    </select>
+        <br>
     </div>
 </br>
 </br>
-</br>
-    <div class="imagenajustar">
-    </br>
-        <img src="/images/users/<%=users.image%>" alt="profileImage" class="imagenajustar">
-    </div>
-</br>
-</br>
-    <div>
-        <button type="submit" class="wallpaper-button">Guardar edición</button>
-    </div>
-</br>
-</br>
-    </form>
+        
+        <br>
+        <br>
+        <div>
+            <button type="submit" class="wallpaper-button">Editar <i class="fa-regular fa-pen-to-square"></i></button>
+        </div>
+        <br>
         <form action="/admin/useredit/<%=users.id%>?_method=DELETE" method="POST" enctype="multipart/form-data">
             <input type="submit" value="Borrar Usuario" class="wallpaper-button "></input>
         </form>
-</br>
+        
 
+    </form>
+    
     </br>
     <!-- Footer  -->
-    <%- include('../partials/footer.ejs') %>
     <%- include('../partials/footerdos.ejs') %>
+    <%- include('../partials/footer.ejs') %>
 </body>
-
 </html>

@@ -4,6 +4,7 @@ const administradorController = require("../controllers/administradorController"
 const adminMiddleware = require("../middlewares/adminMiddleware");
 
 router.get("/", adminMiddleware, administradorController.index);
+router.get("/vistaProducts", adminMiddleware, administradorController.product);
 
 router.get("/useredit/:id", adminMiddleware, administradorController.editvista);
 router.delete("/useredit/:id", adminMiddleware, administradorController.delete);

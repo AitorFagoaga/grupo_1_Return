@@ -31,26 +31,26 @@
 
         
             <main>
-              <a href="/admin/vistaProducts" class="admin-btn">Ver Productos</a>
-                <h1>Usuarios:</h1>
-                
+                <a href="/admin" class="admin-btn">Ver Usuarios</a>
+                <h1>Productos:</h1>
                 <section class="new-product">
-                     <br>
-                    <% users.forEach(user => { %>
-                    <div class="card card-bosstrap">
-                        <div class="card-body">
-                            <h5 class="card-title title-bosstrap"><%= user.name %></h5>
-                          <div>
-                            <img alt="" class="card-img-top img-bosstrap" src="/images/users/<%=user.image%>" />
-                          </div>
-                        <hr>
-                          <a class="btn btn-primary" href="/admin/useredit/<%=user.id %>">Editar</a>
+                    <% product.forEach(product => { %>
+                        <div class="card card-bosstrap">
+                            <div class="card-body">
+                                <h5 class="card-title title-bosstrap"><%= product.name.substring(0,30) %></h5>
+                              <div>
+                                <img alt="" class="card-img-top img-bosstrap" src="/images/productos/<%= product.image %>" />
+                              </div>
+                              <div>
+                                <p><%= product.description.substring(0,20) %>....</p>
+                              </div>
+                            <a class="ver-detalle" href="/products/productDetail/<%= product.id %>">Editar</a>
+                              <hr>
+                            </div>
                         </div>
-                    </div>
-                    <% }) %>
-              
+                        <% }) %>
+                
                     </section>
-                   
                 </main>
             </br>
 

@@ -7,6 +7,18 @@
 .icon-admin {
   margin-left: 4px;
 }
+.admin-btn {
+  width: 200px;
+  border: none;
+  color: white;
+  font-size: 15px;
+  background: rgb(12, 12, 82);
+  border-radius: 8px;
+  padding: 9px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: 47%;
+}
 .img-index {
   background-color: rgb(12, 12, 82);
   display: flex;

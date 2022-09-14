@@ -41,7 +41,17 @@
         </div>
     </br>
     </br>
-       
+    <select name="category" class="sinborde-category">
+        <option value="">Elegí una Categoria</option>
+        <%  
+            let categories = ['Comprador', 'Vendedor'];
+        %>
+        <% for (const oneCategory of categories) { %>
+        <option value="<%= oneCategory %>"
+            <%= locals.oldData && (oneCategory === oldData.category) ? 'selected' : null %>> <%= oneCategory %>
+        </option>
+        <% } %>
+    </select>
         <br>
     </div>
 </br>

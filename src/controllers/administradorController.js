@@ -10,6 +10,13 @@ const administradorController = {
       res.render("./admin/adminvista", { users: users });
     });
   },
+  
+  product:  (req, res) => {
+    db.Products.findAll(
+      {limit: 20}).then(function (product) {
+      return res.render("./admin/vistaProducts", { product: product });
+    });
+  },
   editvista: (req, res) => {
     db.User.findByPk(req.params.id).then(function (users) {
       res.render("./admin/useredit", { users: users });
