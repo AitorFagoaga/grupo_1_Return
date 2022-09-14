@@ -16,10 +16,10 @@ body {
 .btn-sidebars {
   border: none;
   color: white;
-  font-size: 15px;
+  font-size: 12px;
   background: #3a506b;
   border-radius: 8px;
-  padding: 9px;
+  padding: 5px;
   cursor: pointer;
   text-decoration: none;
 }
@@ -57,7 +57,10 @@ h3 {
   border-color: blanchedalmond;
   margin-right: 200px;
 }
-
+.icon-edit {
+  color: rgb(12, 12, 82);
+  font-size: 25px;
+}
 .perfil {
   text-align-last: center;
   background: #ffff;
@@ -107,11 +110,11 @@ h3 {
   height: 40px;
   justify-content: center;
   left: 10%;
-  max-width: 200px;
+  max-width: 150px;
   padding: 18px 15px;
   position: relative;
   text-decoration: none;
-  z-index: -1;
+  z-index: 2;
 }
 .icon-exit {
   margin-left: 10px;
@@ -120,16 +123,9 @@ hr {
   margin: auto;
   width: 80%;
 }
+
 .card-desktop {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: #fff;
-  background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
+  display: none;
 }
 .card-phone {
   position: relative;
@@ -145,12 +141,53 @@ hr {
 .desktop-card {
   display: none;
 }
-@media (min-width: 700px) {
+.btn-productos-profile {
+  display: inline-block;
+  /* margin-bottom: 5vh; */
+}
+.btn-producto-misProductos {
+  margin-bottom: 2vh;
+}
+.btn-producto-carrito {
+  margin-left: 2vh;
+  margin-bottom: 2vh;
+}
+@media (min-width: 768px) {
   .contenedor-perfil {
     display: flex;
     justify-content: center;
+    margin-top: 10vh;
   }
-
+  .card-desktop {
+    display: block;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    width: 35vw;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+  }
+  .icon-exit {
+    margin-left: 10px;
+  }
+  .icon-edit {
+    color: rgb(12, 12, 82);
+    font-size: 25px;
+  }
+  .btn-sidebars {
+    border: none;
+    color: white;
+    font-size: 12px;
+    background: #3a506b;
+    border-radius: 8px;
+    padding: 5px;
+    cursor: pointer;
+    text-decoration: none;
+  }
   .offcanvas.show {
     width: max-content;
   }
@@ -222,6 +259,7 @@ hr {
   .contenedor-perfil {
     display: flex;
     justify-content: center;
+    margin-top: 20vh;
   }
   .offcanvas.show {
     width: max-content;
@@ -256,6 +294,16 @@ hr {
   }
   .card-phone {
     display: none;
+  }
+  .btn-sidebars {
+    border: none;
+    color: white;
+    font-size: 15px;
+    background: #3a506b;
+    border-radius: 8px;
+    padding: 9px;
+    cursor: pointer;
+    text-decoration: none;
   }
 }
 

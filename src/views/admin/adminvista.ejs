@@ -29,34 +29,27 @@
 
     <div>
 
-        <div><% users.forEach(user => { %>
-            </br>
-            <section class="new-product" name="new-product">
-                <article class="new-product" name="new-product">
-                    <img src="/images/users/<%=user.image%>" width="300px">
-                    <div class="informacion">
-                        <div>
-                            <div>
-                                <%= user.name %>
-                            </div>
-                            <hr>
-                            <div class="buttonsDeleateAndUpdate">
-                                <div class="botonesBorraryEditar">
-                                </div>
-                                <div class="botonesBorraryEditar">
-                                    <a href="/admin/useredit/<%=user.id %>">
-                                        <input type="submit" value="Editar" class="botonesBorraryEditar color-editar">
-                                    </a>
-                                </div>
-                            </div>
+        
+            <main>
+                <section class="new-product">
+                     <br>
+                    <% users.forEach(user => { %>
+                    <div class="card card-bosstrap">
+                        <div class="card-body">
+                            <h5 class="card-title title-bosstrap"><%= user.name %></h5>
+                          <div>
+                            <img alt="" class="card-img-top img-bosstrap" src="/images/users/<%=user.image%>" />
+                          </div>
+                        <hr>
+                          <a class="btn btn-primary" href="/admin/useredit/<%=user.id %>">Editar</a>
                         </div>
-                        <span class="descripcion"><%= users.name%></span>
                     </div>
-                </article>
-            </section>
+                    <% }) %>
+              
+                    </section>
+              
+                </main>
             </br>
-            <% }) %>
-        </div>
 
     </div>
 

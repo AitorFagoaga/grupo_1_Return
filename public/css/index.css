@@ -3,6 +3,10 @@
 * {
   box-sizing: border-box;
 }
+
+.icon-admin {
+  margin-left: 4px;
+}
 .img-index {
   background-color: rgb(12, 12, 82);
   display: flex;
@@ -629,11 +633,7 @@ body {
     height: auto;
   }
   .eslogan-index {
-    display: block;
-    color: #ffffff;
-    margin-left: 20%;
-    font-size: 2.5rem;
-    font-family: "Goldman", cursive;
+    display: none;
   }
   .bottom-navigation-bar {
     display: none;
@@ -859,6 +859,7 @@ body {
     height: auto;
   }
   .eslogan-index {
+    display: block;
     color: #ffffff;
     margin-left: 20%;
     font-size: 2.5rem;

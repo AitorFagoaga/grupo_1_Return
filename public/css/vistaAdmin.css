@@ -100,6 +100,18 @@ ul {
   text-align: center;
   box-shadow: 10px 10px 10px -6px black;
 }
+.contenedorprincipal-edit {
+  height: 400px;
+  max-width: 500px;
+  background: #ffff;
+  border-radius: 1vh;
+  margin: auto;
+  position: relative;
+  top: 20px;
+  font-family: "Mulish";
+  text-align: center;
+  box-shadow: 10px 10px 10px -6px black;
+}
 .centrado {
   border: 1px solid rgb(197, 197, 197);
   margin: auto;
