@@ -77,7 +77,7 @@ const usersController = {
       where: { userId: req.session.userLogged.id },
     });
 
-    db.Products.findAll({
+    await db.Products.findAll({
       where: { user_id: req.session.userLogged.id },
     }).then(function (product) {
       return res.render("./users/profile", {
@@ -86,6 +86,26 @@ const usersController = {
         orders: orders,
       });
     });
+  },
+  edit: (req, res) => {
+    db.User.findByPk(req.params.id).then(function (user) {
+      res.render("./users/editUser", { user: user });
+    });
+  },
+  editUpdate: function (req, res)  {
+    db.User.update(
+      {
+        name:req.body.name,
+        email: req.body.email
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
+    );
+
+    return res.redirect("/users/profile");
   },
   logout: (req, res) => {
     res.clearCookie("coockieEmail");

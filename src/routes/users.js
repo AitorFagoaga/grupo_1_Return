@@ -57,6 +57,9 @@ router.post(
   usersController.processRegister
 );
 
+router.get("/editUser/:id", usersController.edit);
+router.put("/:id/", usersController.editUpdate);
+
 router.get("/profile", profileAuthMiddleware, usersController.profile);
 router.get("/logout", usersController.logout);
 

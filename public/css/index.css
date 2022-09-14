@@ -480,17 +480,7 @@ body {
     align-items: center;
     justify-content: center;
   }
-  .burbuja2 {
-    /* border-radius: 50%;
-    background-color: rgb(12, 12, 82);
-    opacity: 0.1; */
-    position: absolute;
-    bottom: -1000;
-    animation: burbujas 6s linear infinite;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+
   .cuadrado {
     border: solid rgb(230, 136, 152) 7px;
     height: 40px;
@@ -621,25 +611,10 @@ body {
     0% {
       bottom: 0;
       opacity: 0;
-      transform: rotate(360deg);
     }
     50% {
       opacity: 0.4;
-      transform: translate(150px, 150px);
-    }
-    100% {
-      bottom: 100vh;
-      opacity: 0;
-      transform: rotate(180deg);
-    }
-  }
-  @keyframes burbujas2 {
-    0% {
-      bottom: 0;
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.4;
+
       transform: rotate(360deg);
     }
     100% {
@@ -647,6 +622,7 @@ body {
       opacity: 0;
     }
   }
+
   /* Fin de burbujas */
   .image {
     width: auto;

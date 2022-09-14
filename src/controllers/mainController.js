@@ -2,7 +2,8 @@ const db = require("../database/models");
 
 const mainController = {
   index: (req, res) => {
-    db.Products.findAll({limit: 20}).then(function (product) {
+    db.Products.findAll(
+      {limit: 20}).then(function (product) {
       return res.render("./index", { product: product });
     });
   },
