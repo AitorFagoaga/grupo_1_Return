@@ -51,4 +51,15 @@ module.exports = {
       });
     });
   },
+  ordenes: (req, res) => {
+    db.Order.findAll().then((personaje) => {
+      let array = [];
+      for (personajes in personaje) {
+        array.push(
+          "id : " + personaje[personajes].id
+        );
+      }
+      res.json(array);
+    });
+  },
 };

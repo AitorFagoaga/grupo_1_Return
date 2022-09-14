@@ -50,6 +50,11 @@ class App extends React.Component {
                 <Productos />
                 </th>
             </tr>
+            <tr>
+                <th>
+                <Orders />
+                </th>
+            </tr>
           </tbody>
         </table>
       </div>

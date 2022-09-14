@@ -39,16 +39,12 @@ class Productos extends React.Component {
             </tr>
           </thead>
           <tbody className="cartRows">
-            <tr>
               <th className="Productos">
                 <strong>{this.state.productos}</strong>
               </th>
-            </tr>
-            <tr>
               <th>
                 <strong>{this.state.productos}</strong>
               </th>
-            </tr>
           </tbody>
         </table>
       </div>
