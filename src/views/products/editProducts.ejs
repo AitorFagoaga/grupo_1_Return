@@ -23,30 +23,35 @@
 </br>
 </br>
     <div class="contenedorprincipal">
-
+        <br>
+        <div class="imagenajustar">
+            <img src="/images/productos/<%=product.image%>" alt="profileImage" class="imagenajustar">  
+        </div>
+        <br>
     <form class="form-new" action="/products/<%= product.id %>?_method=put" method="POST" >
-        <div>
-            <label for="name" class="letra">Nombre</label>
-            <input type="text" name="name"  value="<%= product.name %>">
+        <div class="edit-form">
+            <label for="name" class="letra">Nombre:</label>
+            <input type="text" name="name"  value=" <%= product.name %>" class="name-edit">
         </div>
     </br>
 </br>
-        <div>
-            <label for="price" class="letra">Precio</label>
-            <input type="text" name="price"  value="<%= product.price %>">
+        <div class="edit-form">
+            <label for="price" class="letra">Precio:</label>
+            <input type="text" name="price"  value=" <%= product.price %>" class="price-edit">
         </div>
     </br>
     </br>
-        <div>
-            <label for="descripcion" class="letra">Descripcion</label>
-            <input type="text" name="description"  value="<%= product.description %>">
+        <div class="edit-form">
+            <label for="descripcion" class="letra">Descripcion:</label>
+            <input type="text" name="description"  value=" <%= product.description %>" class="description-edit">
         </div>
+        <br>
     </div>
 </br>
 </br>
-        <div class="imagenajustar">
+        <!-- <div class="imagenajustar">
           <img src="/images/productos/<%=product.image%>" alt="profileImage" class="imagenajustar">  
-        </div>
+        </div> -->
         
         <!-- <div>
             <input type="file" name="imagen">
@@ -54,7 +59,7 @@
         <br>
         <br>
         <div>
-            <button type="submit" class="wallpaper-button">Editar</button>
+            <button type="submit" class="wallpaper-button">Editar <i class="fa-regular fa-pen-to-square"></i></button>
         </div>
 
         

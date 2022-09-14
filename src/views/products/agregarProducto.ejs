@@ -3,8 +3,6 @@
 
 <head>
     <link href="/css/vistaAdmin.css" rel="stylesheet">
-    
-    <link rel="stylesheet" href="/css/register.css">
     <link href="/css/index.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
@@ -34,14 +32,16 @@
                 </ul>
             </div>
             </br>
-            <input type="text" placeholder="Nombre del producto" class="titulo" name="name" id="name"> <br></input>
+            <input type="text" placeholder=" Nombre del producto" class="titulo" name="name" id="name"> <br></input>
             </br>
             <br>
-            <input type="text" placeholder="Precio" class="titulo" name="price" id="price"> <br>
+            <input type="text" placeholder=" Precio" class="titulo" name="price" id="price"> <br>
             <br></input>
             </br>
+            
+            <p class="p-category-phone">Elige una categoria:</p>
             <div class="input-contenedor">
-                <label class="categoria"><b>Categoria:</b></label>
+                <!-- <label class="categoria"><b>Categoria:</b></label> -->
                 <select name="category" class="sinborde-category category">
                     <option value="">Elegí una Categoria</option>
                     <%  
@@ -64,19 +64,21 @@
                 <i class="fas fa-download"></i>
                 
             </div> -->
-            <div class="titulo-file">
-                <br>
-                <label class="label-file">
-                    <input type="file" name="image" id="file" value="<%= locals.oldData ? oldData.image : null %>">
-                    <i class="fas fa-download"></i> Agrega una imagen
-                </label> <br>
-                <br>
+            <br>
+            <br>
+            <div class="agrega-imagen">
+                <!-- <i class="fa-solid fa-at icon"></i> -->
+                <label>
+                    <input type="file" name="image" id="file" class="sinborde-image image" value="<%= locals.oldData ? oldData.email : null %>"
+                    placeholder="Correo Electronico" maxlength="20" />
+                    <i class="fas fa-download"></i>  Agrega una imagen
                 <% if (locals.errors && errors.image){ %>
                 <div class="error-msg">
                     <%= errors.image.msg %>
                 </div>
                 <% } %>
-
+                </label>
+                
             </div>
             </br>
             <div class="area">

@@ -23,6 +23,18 @@
 .joystick {
   display: none;
 }
+.celular {
+  display: none;
+}
+.headphones {
+  display: none;
+}
+.laptop {
+  display: none;
+}
+.img-animation {
+  display: none;
+}
 .slider {
   width: 100%;
   margin: 0;
@@ -458,9 +470,20 @@ body {
     height: 70vh;
   }
   .burbuja {
-    border-radius: 50%;
+    /* border-radius: 50%;
     background-color: rgb(12, 12, 82);
-    opacity: 0.3;
+    opacity: 0.1; */
+    position: absolute;
+    bottom: -1000;
+    animation: burbujas 6s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .burbuja2 {
+    /* border-radius: 50%;
+    background-color: rgb(12, 12, 82);
+    opacity: 0.1; */
     position: absolute;
     bottom: -1000;
     animation: burbujas 6s linear infinite;
@@ -484,8 +507,8 @@ body {
   .triangulo {
     height: 100px;
     width: 100px;
-    background: #ffffff;
-    border-radius: 50%;
+    /* background: #c2c5ee;
+    border-radius: 50%; */
     position: relative;
   }
   .triangulo:after {
@@ -524,7 +547,21 @@ body {
     font-size: 50px;
   }
   .celular {
-    content: "&#128241";
+    display: block;
+    font-size: 70px;
+  }
+  .headphones {
+    display: block;
+    font-size: 50px;
+  }
+  .laptop {
+    display: block;
+    font-size: 50px;
+  }
+  .img-animation {
+    display: block;
+    height: 100px;
+    width: 100px;
   }
   .burbuja:nth-child(1) {
     width: 80px;
@@ -556,13 +593,54 @@ body {
     left: 45%;
     animation-duration: 7s;
   }
+  .burbuja:nth-child(6) {
+    width: 100px;
+    height: 100px;
+    left: 30%;
+    animation-duration: 8s;
+  }
+  .burbuja:nth-child(7) {
+    width: 100px;
+    height: 100px;
+    left: 75%;
+    animation-duration: 10s;
+  }
+  .burbuja:nth-child(8) {
+    width: 100px;
+    height: 100px;
+    left: 37%;
+    animation-duration: 4s;
+  }
+  .burbuja2:nth-child(1) {
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    animation-duration: 12s;
+  }
   @keyframes burbujas {
+    0% {
+      bottom: 0;
+      opacity: 0;
+      transform: rotate(360deg);
+    }
+    50% {
+      opacity: 0.4;
+      transform: translate(150px, 150px);
+    }
+    100% {
+      bottom: 100vh;
+      opacity: 0;
+      transform: rotate(180deg);
+    }
+  }
+  @keyframes burbujas2 {
     0% {
       bottom: 0;
       opacity: 0;
     }
     50% {
       opacity: 0.4;
+      transform: rotate(360deg);
     }
     100% {
       bottom: 100vh;
