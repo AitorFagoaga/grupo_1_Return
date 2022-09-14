@@ -36,7 +36,7 @@
       <div class="contenedor-perfil">
 
         
-        <a class="wallpaper-button" href="./logout">Salir de mi cuenta.</a>  
+        <!-- <a class="wallpaper-button" href="./logout">Salir de mi cuenta.</a>   -->
         <div class="perfil">
           <br>
           <img src="/images/users/<%= user.image %>" class="iman" >
@@ -53,27 +53,18 @@
             <hr>
             <div class="btn-productos-profile">
               <div class="btn-producto-misProductos">
-                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Ver mis Productos</button>
+                <button class="btn-sidebars" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Ver mis Productos <i class="fa-solid fa-eye"></i></button>
               </div>
               <div class="btn-producto-carrito">
-                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Productos en mi carrito</button>
+                <button class="btn-sidebars" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Productos en mi carrito <i class="fa-solid fa-cart-shopping"></i></button>
                 </div>
               </div>
-            <!-- <small>
-              Texto de descripcion
-            </small>
+            <a class="wallpaper-button" href="./logout">Salir  <i class="fa-sharp fa-solid fa-right-from-bracket icon-exit"></i></a>  
             <br>
-            <small>
-              Texto de descripcion
-            </small>
-            <br>
-            <small>
-              Texto de descripcion
-            </small> -->
         </div>
         <div class="card-desktop mb-5 desktop-card">
           <div class="card-header">
-              Mis Pedidos
+              Mis Pedidos <i class="fa-solid fa-truck-fast"></i>
           </div>
           <div class="card-body">
               <table class="table table-responsive-md mb-0">
@@ -163,7 +154,7 @@
               </table>
               <br>
               <br>
-              <a href="/products/productCartEmpty" class="btn-carrito">Mi carrito</a>
+              <a href="/products/productCartEmpty" class="btn-carrito">Mi carrito <i class="fa-solid fa-cart-shopping"></i></a>
             </div>
 
           </div>

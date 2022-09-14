@@ -13,6 +13,16 @@ body {
   );
   font-family: "Mulish";
 }
+.btn-sidebars {
+  border: none;
+  color: white;
+  font-size: 15px;
+  background: #3a506b;
+  border-radius: 8px;
+  padding: 9px;
+  cursor: pointer;
+  text-decoration: none;
+}
 /* .btn-producto-carrito {
   margin-top: 2vh;
 } */
@@ -102,6 +112,9 @@ h3 {
   text-decoration: none;
   z-index: 2;
 }
+.icon-exit {
+  margin-left: 10px;
+}
 hr {
   margin: auto;
   width: 80%;
@@ -185,6 +198,24 @@ hr {
   .card-phone {
     display: block;
   }
+  .wallpaper-button {
+    align-items: center;
+
+    background-color: rgb(12, 12, 82);
+    border-radius: 5px;
+    bottom: 15%;
+    color: #ffffff;
+    display: flex;
+    font-size: 12px;
+    height: 40px;
+    justify-content: center;
+    left: 10%;
+    max-width: 200px;
+    padding: 18px 15px;
+    position: relative;
+    text-decoration: none;
+    z-index: 2;
+  }
 }
 @media (min-width: 1131px) {
   .contenedor-perfil {
@@ -262,5 +293,23 @@ hr {
   }
   .desktop-card {
     display: block;
+  }
+  .wallpaper-button {
+    align-items: center;
+
+    background-color: rgb(12, 12, 82);
+    border-radius: 5px;
+    bottom: 15%;
+    color: #ffffff;
+    display: flex;
+    font-size: 12px;
+    height: 40px;
+    justify-content: center;
+    left: 10%;
+    max-width: 200px;
+    padding: 18px 15px;
+    position: relative;
+    text-decoration: none;
+    z-index: 2;
   }
 }
