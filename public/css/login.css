@@ -2,7 +2,6 @@
   box-sizing: border-box;
 }
 
-
 body {
   background: linear-gradient(
     180deg,
@@ -61,7 +60,7 @@ h1 {
   color: #fcfcfc;
 }
 .form-login {
-  height: 500px;
+  height: 550px;
   max-width: 420px;
   background: #ffff;
   border-radius: 1vh;
