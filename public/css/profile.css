@@ -111,7 +111,7 @@ h3 {
   padding: 18px 15px;
   position: relative;
   text-decoration: none;
-  z-index: 2;
+  z-index: -1;
 }
 .icon-exit {
   margin-left: 10px;

@@ -13,4 +13,10 @@ router.get("/detalle/:id", controller.detalle);
 router.get("/listaProductos", controller.listaProductos);
 router.get("/detalleProducto/:id", controller.detalleProductos);
 
+
+
+
+router.get("/ordenes", controller.ordenes);
+
+
 module.exports = router;
