@@ -23,6 +23,15 @@
 .joystick {
   display: none;
 }
+.celular {
+  display: none;
+}
+.headphones {
+  display: none;
+}
+.laptop {
+  display: none;
+}
 .slider {
   width: 100%;
   margin: 0;
@@ -458,9 +467,9 @@ body {
     height: 70vh;
   }
   .burbuja {
-    border-radius: 50%;
+    /* border-radius: 50%;
     background-color: rgb(12, 12, 82);
-    opacity: 0.3;
+    opacity: 0.1; */
     position: absolute;
     bottom: -1000;
     animation: burbujas 6s linear infinite;
@@ -484,8 +493,8 @@ body {
   .triangulo {
     height: 100px;
     width: 100px;
-    background: #ffffff;
-    border-radius: 50%;
+    /* background: #c2c5ee;
+    border-radius: 50%; */
     position: relative;
   }
   .triangulo:after {
@@ -524,7 +533,16 @@ body {
     font-size: 50px;
   }
   .celular {
+    display: block;
     content: "&#128241";
+  }
+  .headphones {
+    display: block;
+    font-size: 50px;
+  }
+  .laptop {
+    display: block;
+    font-size: 50px;
   }
   .burbuja:nth-child(1) {
     width: 80px;
@@ -555,6 +573,18 @@ body {
     height: 100px;
     left: 45%;
     animation-duration: 7s;
+  }
+  .burbuja:nth-child(6) {
+    width: 100px;
+    height: 100px;
+    left: 30%;
+    animation-duration: 8s;
+  }
+  .burbuja:nth-child(7) {
+    width: 100px;
+    height: 100px;
+    left: 75%;
+    animation-duration: 10s;
   }
   @keyframes burbujas {
     0% {
